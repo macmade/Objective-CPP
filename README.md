@@ -48,6 +48,6 @@ You can set another encoding using the new 'setDefaultCPPStringEncoding' class m
 
 ### License:
 
-CPPNotifications is released under the terms of the [Boost][1] Software License - Version 1.0.
+Objective-CPP is released under the terms of the [Boost][1] Software License - Version 1.0.
 
 [1]: http://www.boost.org/LICENSE_1_0.txt   "BOOST"
