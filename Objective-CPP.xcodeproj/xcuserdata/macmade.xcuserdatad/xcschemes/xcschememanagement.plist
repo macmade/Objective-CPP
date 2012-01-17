@@ -4,15 +4,40 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Objective-CPP.xcscheme</key>
+		<key>objc-cpp-mobile.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>objc-cpp.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+		<key>test.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>0517885B14BDE37D00974841</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>055F060714C634140042055F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>055F062B14C636F70042055F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>055F064014C637DC0042055F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
