@@ -1,0 +1,3 @@
+language: objective-c
+xcode_project: Objective-CPP.xcodeproj
+xcode_scheme: test

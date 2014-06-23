@@ -7,35 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		055F061E14C6344A0042055F /* NSString+ObjectiveCPP.h in Headers */ = {isa = PBXBuildFile; fileRef = 055F061B14C6344A0042055F /* NSString+ObjectiveCPP.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		055F061F14C6344A0042055F /* NSString+ObjectiveCPP.mm in Sources */ = {isa = PBXBuildFile; fileRef = 055F061C14C6344A0042055F /* NSString+ObjectiveCPP.mm */; };
-		055F062414C635210042055F /* clang-warnings.h in Headers */ = {isa = PBXBuildFile; fileRef = 055F062314C635210042055F /* clang-warnings.h */; };
-		055F062514C6354F0042055F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 055F061014C634140042055F /* Foundation.framework */; };
+		050F74CA19589C6700A93043 /* NSString+ObjectiveCPP.mm in Sources */ = {isa = PBXBuildFile; fileRef = 055F061C14C6344A0042055F /* NSString+ObjectiveCPP.mm */; };
 		055F062E14C636F70042055F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 055F061014C634140042055F /* Foundation.framework */; };
 		055F063914C6370D0042055F /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 055F062614C636B30042055F /* main.mm */; };
-		055F063A14C6373C0042055F /* libobjc-cpp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 055F060814C634140042055F /* libobjc-cpp.a */; };
-		055F064214C637DC0042055F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 055F061014C634140042055F /* Foundation.framework */; };
-		055F064C14C6380A0042055F /* NSString+ObjectiveCPP.mm in Sources */ = {isa = PBXBuildFile; fileRef = 055F061C14C6344A0042055F /* NSString+ObjectiveCPP.mm */; };
-		055F065314C6384F0042055F /* NSString+ObjectiveCPP.h in Headers */ = {isa = PBXBuildFile; fileRef = 055F061B14C6344A0042055F /* NSString+ObjectiveCPP.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		055F065514C638620042055F /* clang-warnings.h in Headers */ = {isa = PBXBuildFile; fileRef = 055F062314C635210042055F /* clang-warnings.h */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		055F063B14C6373F0042055F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0517885614BDE37D00974841 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 055F060714C634140042055F;
-			remoteInfo = "objc-cpp";
-		};
-		055F064D14C638330042055F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0517885614BDE37D00974841 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 055F064014C637DC0042055F;
-			remoteInfo = "objc-cpp-mobile";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		055F062A14C636F70042055F /* CopyFiles */ = {
@@ -50,7 +25,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		055F060814C634140042055F /* libobjc-cpp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libobjc-cpp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		050F74C819589B0300A93043 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		055F061014C634140042055F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		055F061314C634140042055F /* objc-cpp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "objc-cpp-Prefix.pch"; sourceTree = "<group>"; };
 		055F061B14C6344A0042055F /* NSString+ObjectiveCPP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ObjectiveCPP.h"; sourceTree = "<group>"; };
@@ -58,32 +33,14 @@
 		055F062314C635210042055F /* clang-warnings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "clang-warnings.h"; sourceTree = "<group>"; };
 		055F062614C636B30042055F /* main.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
 		055F062C14C636F70042055F /* test */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = test; sourceTree = BUILT_PRODUCTS_DIR; };
-		055F064114C637DC0042055F /* libobjc-cpp-mobile.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libobjc-cpp-mobile.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		055F060514C634140042055F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				055F062514C6354F0042055F /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		055F062914C636F70042055F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				055F063A14C6373C0042055F /* libobjc-cpp.a in Frameworks */,
 				055F062E14C636F70042055F /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		055F063E14C637DC0042055F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				055F064214C637DC0042055F /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +50,7 @@
 		0517885414BDE37D00974841 = {
 			isa = PBXGroup;
 			children = (
+				050F74C819589B0300A93043 /* README.md */,
 				055F061114C634140042055F /* objc-cpp */,
 				055F060A14C634140042055F /* Frameworks */,
 				055F060914C634140042055F /* Products */,
@@ -102,9 +60,7 @@
 		055F060914C634140042055F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				055F060814C634140042055F /* libobjc-cpp.a */,
 				055F062C14C636F70042055F /* test */,
-				055F064114C637DC0042055F /* libobjc-cpp-mobile.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -155,45 +111,7 @@
 		};
 /* End PBXGroup section */
 
-/* Begin PBXHeadersBuildPhase section */
-		055F060614C634140042055F /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				055F061E14C6344A0042055F /* NSString+ObjectiveCPP.h in Headers */,
-				055F062414C635210042055F /* clang-warnings.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		055F063F14C637DC0042055F /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				055F065314C6384F0042055F /* NSString+ObjectiveCPP.h in Headers */,
-				055F065514C638620042055F /* clang-warnings.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
 /* Begin PBXNativeTarget section */
-		055F060714C634140042055F /* objc-cpp */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 055F061714C634140042055F /* Build configuration list for PBXNativeTarget "objc-cpp" */;
-			buildPhases = (
-				055F060414C634140042055F /* Sources */,
-				055F060514C634140042055F /* Frameworks */,
-				055F060614C634140042055F /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "objc-cpp";
-			productName = "objc-cpp";
-			productReference = 055F060814C634140042055F /* libobjc-cpp.a */;
-			productType = "com.apple.product-type.library.static";
-		};
 		055F062B14C636F70042055F /* test */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 055F063614C636F70042055F /* Build configuration list for PBXNativeTarget "test" */;
@@ -205,30 +123,11 @@
 			buildRules = (
 			);
 			dependencies = (
-				055F064E14C638330042055F /* PBXTargetDependency */,
-				055F063C14C6373F0042055F /* PBXTargetDependency */,
 			);
 			name = test;
 			productName = test;
 			productReference = 055F062C14C636F70042055F /* test */;
 			productType = "com.apple.product-type.tool";
-		};
-		055F064014C637DC0042055F /* objc-cpp-mobile */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 055F064914C637DC0042055F /* Build configuration list for PBXNativeTarget "objc-cpp-mobile" */;
-			buildPhases = (
-				055F063D14C637DC0042055F /* Sources */,
-				055F063E14C637DC0042055F /* Frameworks */,
-				055F063F14C637DC0042055F /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "objc-cpp-mobile";
-			productName = "objc-cpp-mobile";
-			productReference = 055F064114C637DC0042055F /* libobjc-cpp-mobile.a */;
-			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
@@ -236,7 +135,7 @@
 		0517885614BDE37D00974841 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0460;
+				LastUpgradeCheck = 0600;
 				ORGANIZATIONNAME = DigiDNA;
 			};
 			buildConfigurationList = 0517885914BDE37D00974841 /* Build configuration list for PBXProject "Objective-CPP" */;
@@ -251,67 +150,39 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				055F060714C634140042055F /* objc-cpp */,
-				055F064014C637DC0042055F /* objc-cpp-mobile */,
 				055F062B14C636F70042055F /* test */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		055F060414C634140042055F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				055F061F14C6344A0042055F /* NSString+ObjectiveCPP.mm in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		055F062814C636F70042055F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				055F063914C6370D0042055F /* main.mm in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		055F063D14C637DC0042055F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				055F064C14C6380A0042055F /* NSString+ObjectiveCPP.mm in Sources */,
+				050F74CA19589C6700A93043 /* NSString+ObjectiveCPP.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		055F063C14C6373F0042055F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 055F060714C634140042055F /* objc-cpp */;
-			targetProxy = 055F063B14C6373F0042055F /* PBXContainerItemProxy */;
-		};
-		055F064E14C638330042055F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 055F064014C637DC0042055F /* objc-cpp-mobile */;
-			targetProxy = 055F064D14C638330042055F /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		0517885C14BDE37D00974841 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				CLANG_WARN_CXX0X_EXTENSIONS = YES;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = YES;
 				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = YES;
 				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CLANG_WARN__EXIT_TIME_DESTRUCTORS = YES;
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -365,16 +236,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				CLANG_WARN_CXX0X_EXTENSIONS = YES;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = YES;
 				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = YES;
 				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CLANG_WARN__EXIT_TIME_DESTRUCTORS = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
@@ -416,30 +289,9 @@
 			};
 			name = Release;
 		};
-		055F061814C634140042055F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "objc-cpp/objc-cpp-Prefix.pch";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		055F061914C634140042055F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "objc-cpp/objc-cpp-Prefix.pch";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 		055F063714C636F70042055F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -455,7 +307,6 @@
 		055F063814C636F70042055F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "objc-cpp/objc-cpp-Prefix.pch";
@@ -464,37 +315,6 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		055F064A14C637DC0042055F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				DSTROOT = /tmp/objc_cpp_mobile.dst;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "objc-cpp/objc-cpp-Prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = NO;
-			};
-			name = Debug;
-		};
-		055F064B14C637DC0042055F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				DSTROOT = /tmp/objc_cpp_mobile.dst;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "objc-cpp/objc-cpp-Prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = NO;
-				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
@@ -510,29 +330,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		055F061714C634140042055F /* Build configuration list for PBXNativeTarget "objc-cpp" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				055F061814C634140042055F /* Debug */,
-				055F061914C634140042055F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		055F063614C636F70042055F /* Build configuration list for PBXNativeTarget "test" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				055F063714C636F70042055F /* Debug */,
 				055F063814C636F70042055F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		055F064914C637DC0042055F /* Build configuration list for PBXNativeTarget "objc-cpp-mobile" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				055F064A14C637DC0042055F /* Debug */,
-				055F064B14C637DC0042055F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
