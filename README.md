@@ -1,7 +1,7 @@
 Objective-CPP
 =============
 
-[![Build Status](https://travis-ci.org/macmade/Objective-CPP.svg?branch=master)](https://travis-ci.org/macmade/Objective-CPP)
+[![Build Status](https://img.shields.io/travis/macmade/Objective-CPP.svg?branch=master&style=flat)](https://travis-ci.org/macmade/Objective-CPP)
 
 About
 -----
