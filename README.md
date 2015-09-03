@@ -2,8 +2,9 @@ Objective-CPP
 =============
 
 [![Build Status](https://img.shields.io/travis/macmade/Objective-CPP.svg?branch=master&style=flat)](https://travis-ci.org/macmade/Objective-CPP)
+[![Coverage Status](https://img.shields.io/coveralls/macmade/Objective-CPP.svg?branch=master&style=flat)](https://coveralls.io/r/macmade/Objective-CPP?branch=master)
 [![Issues](http://img.shields.io/github/issues/macmade/Objective-CPP.svg?style=flat)](https://github.com/macmade/Objective-CPP/issues)
-![Status](https://img.shields.io/badge/status-inactive-lightgray.svg?style=flat)
+![Status](https://img.shields.io/badge/status-active-brightgreen.svg?style=flat)
 ![License](https://img.shields.io/badge/license-boost-brightgreen.svg?style=flat)
 [![Contact](https://img.shields.io/badge/contact-@macmade-blue.svg?style=flat)](https://twitter.com/macmade)
 
