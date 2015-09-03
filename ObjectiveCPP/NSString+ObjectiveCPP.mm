@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2012, Jean-David Gadina - www.xs-labs.com
+ * Copyright (c) 2015, Jean-David Gadina - www.xs-labs.com / www.digidna.net
  * Distributed under the Boost Software License, Version 1.0.
  * 
  * Boost Software License - Version 1.0 - August 17th, 2003
@@ -28,9 +28,8 @@
  ******************************************************************************/
 
 /*!
- * @file            NSString+ObjectiveCPP.mm
- * @author          Jean-David Gadina - www.xs-labs.com
- * @copyright       (c) 2012, XS-Labs
+ * @file        NSString+ObjectiveCPP.mm
+ * @copyright   (c) 2015 - Jean-David Gadina - www.xs-labs.com / www.digidna.net
  */
 
 #import "NSString+ObjectiveCPP.h"
