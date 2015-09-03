@@ -36,6 +36,7 @@
 #ifndef OBJECTIVE_CPP
 #define OBJECTIVE_CPP
 
-#include <Objective-CPP/NSString+ObjectiveCPP.h>
+#import <Foundation/Foundation.h>
+#import <ObjectiveCPP/NSString+ObjectiveCPP.h>
 
 #endif /* OBJECTIVE_CPP */

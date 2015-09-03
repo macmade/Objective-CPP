@@ -32,7 +32,7 @@
  * @copyright   (c) 2015 - Jean-David Gadina - www.xs-labs.com / www.digidna.net
  */
 
-#import "NSString+ObjectiveCPP.h"
+#import <ObjectiveCPP.h>
 
 static NSStringEncoding __defaultCPPStringEncoding = NSUTF8StringEncoding;
 
