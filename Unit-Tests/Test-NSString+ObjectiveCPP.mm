@@ -33,7 +33,7 @@
  * @abstract    Unit tests for NSString( ObjectiveCPP )
  */
 
-#include <ObjectiveCPP/ObjectiveCPP.h>
+#include <ObjectiveCPP.h>
 #include <GoogleMock/GoogleMock.h>
 
 using namespace testing;
