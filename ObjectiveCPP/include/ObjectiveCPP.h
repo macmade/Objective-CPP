@@ -28,7 +28,7 @@
  ******************************************************************************/
 
 /*!
- * @header      CF++.h
+ * @header      ObjectiveCPP.h
  * @copyright   (c) 2015 - Jean-David Gadina - www.xs-labs.com / www.digidna.net
  * @abstract    Objective-C++ main header file
  */
