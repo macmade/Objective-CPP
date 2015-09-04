@@ -40,6 +40,8 @@ using namespace testing;
 
 TEST( Objective_CPP, defaultCPPStringEncoding )
 {
+    ASSERT_TRUE( [ NSString defaultCPPStringEncoding ] == NSUTF8StringEncoding );
+    
     [ NSString setDefaultCPPStringEncoding: NSASCIIStringEncoding ];
     
     ASSERT_TRUE( [ NSString defaultCPPStringEncoding ] == NSASCIIStringEncoding );
