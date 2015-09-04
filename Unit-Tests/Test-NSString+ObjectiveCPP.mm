@@ -39,10 +39,15 @@
 using namespace testing;
 
 TEST( Objective_CPP, defaultCPPStringEncoding )
-{}
-
-TEST( Objective_CPP, setDefaultCPPStringEncoding )
-{}
+{
+    [ NSString setDefaultCPPStringEncoding: NSASCIIStringEncoding ];
+    
+    ASSERT_EQ( [ NSString defaultCPPStringEncoding ], NSASCIIStringEncoding );
+    
+    [ NSString setDefaultCPPStringEncoding: NSUTF8StringEncoding ];
+    
+    ASSERT_EQ( [ NSString defaultCPPStringEncoding ], NSUTF8StringEncoding );
+}
 
 TEST( Objective_CPP, stringWithCPPString )
 {}
