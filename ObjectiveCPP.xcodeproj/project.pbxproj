@@ -120,7 +120,7 @@
 		052B363A1B4EB828009D98A4 /* ObjectiveCPP Tests (C++98).xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ObjectiveCPP Tests (C++98).xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		054702AC1B1D8FA00036259D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		056C58AB1B18985500C6214A /* GoogleMock.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GoogleMock.xcodeproj; path = "Submodules/gmock-xcode/GoogleMock.xcodeproj"; sourceTree = "<group>"; };
-		056C58BF1B1898FF00C6214A /* ObjectiveCPP Tests (C++11).xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "ObjectiveCPP Tests (C++11).xctest"; path = "ObjectiveCPP Tests (C++11).xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		056C58BF1B1898FF00C6214A /* ObjectiveCPP Tests (C++11).xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ObjectiveCPP Tests (C++11).xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		056C590E1B18A15A00C6214A /* travis-after.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "travis-after.sh"; sourceTree = "<group>"; };
 		056C590F1B18A15A00C6214A /* travis-before.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "travis-before.sh"; sourceTree = "<group>"; };
 		056C881218C8B85F006260B3 /* libObjectiveCPP.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libObjectiveCPP.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -387,7 +387,7 @@
 			dependencies = (
 			);
 			name = "ObjectiveCPP Mac Static Library (C++98)";
-			productName = "ObjectiveCPP";
+			productName = ObjectiveCPP;
 			productReference = 052B35951B4EB810009D98A4 /* libObjectiveCPP.a */;
 			productType = "com.apple.product-type.library.static";
 		};
@@ -404,7 +404,7 @@
 			dependencies = (
 			);
 			name = "ObjectiveCPP Mac Dynamic Library (C++98)";
-			productName = "ObjectiveCPP";
+			productName = ObjectiveCPP;
 			productReference = 052B35C51B4EB814009D98A4 /* libObjectiveCPP.dylib */;
 			productType = "com.apple.product-type.library.dynamic";
 		};
@@ -422,7 +422,7 @@
 			dependencies = (
 			);
 			name = "ObjectiveCPP Mac Framework (C++98)";
-			productName = "ObjectiveCPP";
+			productName = ObjectiveCPP;
 			productReference = 052B35F61B4EB81C009D98A4 /* ObjectiveCPP.framework */;
 			productType = "com.apple.product-type.framework";
 		};
@@ -439,7 +439,7 @@
 			dependencies = (
 			);
 			name = "ObjectiveCPP iOS Static Library (C++98)";
-			productName = "ObjectiveCPP";
+			productName = ObjectiveCPP;
 			productReference = 052B36141B4EB825009D98A4 /* libObjectiveCPP.a */;
 			productType = "com.apple.product-type.library.static";
 		};
@@ -497,7 +497,7 @@
 			dependencies = (
 			);
 			name = "ObjectiveCPP Mac Static Library (C++11)";
-			productName = "ObjectiveCPP";
+			productName = ObjectiveCPP;
 			productReference = 056C881218C8B85F006260B3 /* libObjectiveCPP.a */;
 			productType = "com.apple.product-type.library.static";
 		};
@@ -514,7 +514,7 @@
 			dependencies = (
 			);
 			name = "ObjectiveCPP Mac Dynamic Library (C++11)";
-			productName = "ObjectiveCPP";
+			productName = ObjectiveCPP;
 			productReference = 056C884A18C8C547006260B3 /* libObjectiveCPP.dylib */;
 			productType = "com.apple.product-type.library.dynamic";
 		};
@@ -532,7 +532,7 @@
 			dependencies = (
 			);
 			name = "ObjectiveCPP Mac Framework (C++11)";
-			productName = "ObjectiveCPP";
+			productName = ObjectiveCPP;
 			productReference = 056C885F18C8C76B006260B3 /* ObjectiveCPP.framework */;
 			productType = "com.apple.product-type.framework";
 		};
@@ -549,7 +549,7 @@
 			dependencies = (
 			);
 			name = "ObjectiveCPP iOS Static Library (C++11)";
-			productName = "ObjectiveCPP";
+			productName = ObjectiveCPP;
 			productReference = 056C88AA18C8C8AC006260B3 /* libObjectiveCPP.a */;
 			productType = "com.apple.product-type.library.static";
 		};
@@ -1077,6 +1077,7 @@
 				);
 				INFOPLIST_FILE = "Unit-Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.xs-labs.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -1101,6 +1102,7 @@
 				);
 				INFOPLIST_FILE = "Unit-Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.xs-labs.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -1125,6 +1127,7 @@
 				);
 				INFOPLIST_FILE = "Unit-Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.xs-labs.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -1147,6 +1150,7 @@
 				);
 				INFOPLIST_FILE = "Unit-Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.xs-labs.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -1169,6 +1173,7 @@
 				);
 				INFOPLIST_FILE = "Unit-Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.xs-labs.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -1367,6 +1372,7 @@
 				);
 				INFOPLIST_FILE = "Unit-Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.xs-labs.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
