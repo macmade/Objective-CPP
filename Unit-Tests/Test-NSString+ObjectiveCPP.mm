@@ -50,10 +50,15 @@ TEST( Objective_CPP, defaultCPPStringEncoding )
 }
 
 TEST( Objective_CPP, stringWithCPPString )
-{}
+{
+    ASSERT_TRUE( [ [ NSString stringWithCPPString: "hello, world" ] isEqualToString: @"hello, world" ] );
+}
 
 TEST( Objective_CPP, stringWithCPPString_encoding )
-{}
+{
+    ASSERT_TRUE( [ [ NSString stringWithCPPString: "hello, world" encoding: NSUTF8StringEncoding  ] isEqualToString: @"hello, world" ] );
+    ASSERT_TRUE( [ [ NSString stringWithCPPString: "hello, world" encoding: NSASCIIStringEncoding ] isEqualToString: @"hello, world" ] );
+}
 
 TEST( Objective_CPP, cppStringWithContentsOfFile_encoding_error )
 {}
