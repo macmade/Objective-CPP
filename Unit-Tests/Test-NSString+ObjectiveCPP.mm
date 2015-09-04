@@ -42,11 +42,11 @@ TEST( Objective_CPP, defaultCPPStringEncoding )
 {
     [ NSString setDefaultCPPStringEncoding: NSASCIIStringEncoding ];
     
-    ASSERT_EQ( [ NSString defaultCPPStringEncoding ], NSASCIIStringEncoding );
+    ASSERT_TRUE( [ NSString defaultCPPStringEncoding ] == NSASCIIStringEncoding );
     
     [ NSString setDefaultCPPStringEncoding: NSUTF8StringEncoding ];
     
-    ASSERT_EQ( [ NSString defaultCPPStringEncoding ], NSUTF8StringEncoding );
+    ASSERT_TRUE( [ NSString defaultCPPStringEncoding ] == NSUTF8StringEncoding );
 }
 
 TEST( Objective_CPP, stringWithCPPString )
