@@ -75,22 +75,36 @@ TEST( Objective_CPP, cppStringWithContentsOfURL_usedEncoding_error )
 {}
 
 TEST( Objective_CPP, initWithCPPString )
-{}
+{
+    ASSERT_TRUE( [ [ [ NSString alloc ] initWithCPPString: "hello, world" ] isEqualToString: @"hello, world" ] );
+}
 
 TEST( Objective_CPP, initWithCPPString_encoding )
-{}
+{
+    ASSERT_TRUE( [ [ [ NSString alloc ] initWithCPPString: "hello, world" encoding: NSUTF8StringEncoding  ] isEqualToString: @"hello, world" ] );
+    ASSERT_TRUE( [ [ [ NSString alloc ] initWithCPPString: "hello, world" encoding: NSASCIIStringEncoding ] isEqualToString: @"hello, world" ] );
+}
 
 TEST( Objective_CPP, cppString )
-{}
+{
+    ASSERT_TRUE( [ @"hello, world" cppString ] == "hello, world" );
+}
 
 TEST( Objective_CPP, cppStringUsingEncoding )
-{}
+{
+    ASSERT_TRUE( [ @"hello, world" cppStringUsingEncoding: NSUTF8StringEncoding  ] == "hello, world" );
+    ASSERT_TRUE( [ @"hello, world" cppStringUsingEncoding: NSASCIIStringEncoding ] == "hello, world" );
+}
 
 TEST( Objective_CPP, cppStringByAppendingString )
-{}
+{
+    ASSERT_TRUE( [ @"hello, world" cppStringByAppendingString: @"..." ] == "hello, world..." );
+}
 
 TEST( Objective_CPP, stringByAppendingCPPString )
-{}
+{
+    ASSERT_TRUE( [ [ @"hello, world" stringByAppendingCPPString: "..." ] isEqualToString: @"hello, world..." ] );
+}
 
 TEST( Objective_CPP, cppStringByPaddingToLength_withString_startingAtIndex )
 {}
@@ -102,16 +116,34 @@ TEST( Objective_CPP, cppStringByTrimmingCharactersInSet )
 {}
 
 TEST( Objective_CPP, cppSubstringFromIndex )
-{}
+{
+    ASSERT_TRUE( [ @"hello, world" cppSubstringFromIndex: 7 ] == "world" );
+}
 
 TEST( Objective_CPP, cppSubstringWithRange )
-{}
+{
+    ASSERT_TRUE( [ @"hello, world" cppSubstringWithRange: NSMakeRange( 7, 2 ) ] == "wo" );
+}
 
 TEST( Objective_CPP, cppSubstringToIndex )
-{}
+{
+    ASSERT_TRUE( [ @"hello, world" cppSubstringToIndex: 5 ] == "hello" );
+}
 
 TEST( Objective_CPP, rangeOfCPPString )
-{}
+{
+    NSRange r;
+    
+    r = [ @"hello, world" rangeOfCPPString: "wo" ];
+    
+    ASSERT_TRUE( r.location == 7 );
+    ASSERT_TRUE( r.length   == 2 );
+    
+    r = [ @"hello, world" rangeOfCPPString: "universe" ];
+    
+    ASSERT_TRUE( r.location == NSNotFound );
+    ASSERT_TRUE( r.length   == 0 );
+}
 
 TEST( Objective_CPP, rangeOfCPPString_options )
 {}
@@ -123,19 +155,28 @@ TEST( Objective_CPP, rangeOfCPPString_options_range_locale )
 {}
 
 TEST( Objective_CPP, cppStringByReplacingOccurrencesOfString_withString )
-{}
+{
+    ASSERT_TRUE( [ @"hello, world" cppStringByReplacingOccurrencesOfString: @"world" withString: @"universe" ] == "hello, universe" );
+    ASSERT_TRUE( [ @"hello, world" cppStringByReplacingOccurrencesOfString: @"foo"   withString: @"universe" ] == "hello, world" );
+}
 
 TEST( Objective_CPP, cppStringByReplacingOccurrencesOfString_withString_options_range )
 {}
 
 TEST( Objective_CPP, stringByReplacingOccurrencesOfString_withCPPString )
-{}
+{
+    ASSERT_TRUE( [ [ @"hello, world" stringByReplacingOccurrencesOfString: @"world" withCPPString: "universe" ] isEqualToString: @"hello, universe" ] );
+    ASSERT_TRUE( [ [ @"hello, world" stringByReplacingOccurrencesOfString: @"foo"   withCPPString: "universe" ] isEqualToString: @"hello, world" ] );
+}
 
 TEST( Objective_CPP, stringByReplacingOccurrencesOfString_withCPPString_options_range )
 {}
 
 TEST( Objective_CPP, stringByReplacingOccurrencesOfCPPString_withString )
-{}
+{
+    ASSERT_TRUE( [ [ @"hello, world" stringByReplacingOccurrencesOfCPPString: "world" withString: @"universe" ] isEqualToString: @"hello, universe" ] );
+    ASSERT_TRUE( [ [ @"hello, world" stringByReplacingOccurrencesOfCPPString: "foo"   withString: @"universe" ] isEqualToString: @"hello, world" ] );
+}
 
 TEST( Objective_CPP, stringByReplacingOccurrencesOfCPPString_withString_options_range )
 {}
@@ -153,16 +194,36 @@ TEST( Objective_CPP, stringByReplacingCharactersInRange_withCPPString )
 {}
 
 TEST( Objective_CPP, caseInsensitiveCompareWithCPPString )
-{}
+{
+    ASSERT_TRUE( [ @"hello, world" caseInsensitiveCompareWithCPPString: "hello, WORLD"    ] == NSOrderedSame );
+    ASSERT_TRUE( [ @"hello, world" caseInsensitiveCompareWithCPPString: "HELLO, WORLD"    ] == NSOrderedSame );
+    ASSERT_TRUE( [ @"hello, world" caseInsensitiveCompareWithCPPString: "HELLO, WORLD..." ] != NSOrderedSame );
+    ASSERT_TRUE( [ @"hello, world" caseInsensitiveCompareWithCPPString: "hello, UNIVERSE" ] != NSOrderedSame );
+}
 
 TEST( Objective_CPP, localizedCaseInsensitiveCompareWithCPPString )
-{}
+{
+    ASSERT_TRUE( [ @"hello, world" localizedCaseInsensitiveCompareWithCPPString: "hello, WORLD"    ] == NSOrderedSame );
+    ASSERT_TRUE( [ @"hello, world" localizedCaseInsensitiveCompareWithCPPString: "HELLO, WORLD"    ] == NSOrderedSame );
+    ASSERT_TRUE( [ @"hello, world" localizedCaseInsensitiveCompareWithCPPString: "HELLO, WORLD..." ] != NSOrderedSame );
+    ASSERT_TRUE( [ @"hello, world" localizedCaseInsensitiveCompareWithCPPString: "hello, UNIVERSE" ] != NSOrderedSame );
+}
 
 TEST( Objective_CPP, compareWithCPPString )
-{}
+{
+    ASSERT_TRUE( [ @"hello, world" compareWithCPPString: "hello, world"    ] == NSOrderedSame );
+    ASSERT_TRUE( [ @"hello, world" compareWithCPPString: "HELLO, WORLD"    ] != NSOrderedSame );
+    ASSERT_TRUE( [ @"hello, world" compareWithCPPString: "hello, world..." ] != NSOrderedSame );
+    ASSERT_TRUE( [ @"hello, world" compareWithCPPString: "hello, universe" ] != NSOrderedSame );
+}
 
 TEST( Objective_CPP, localizedCompareWithCPPString )
-{}
+{
+    ASSERT_TRUE( [ @"hello, world" localizedCompareWithCPPString: "hello, world"    ] == NSOrderedSame );
+    ASSERT_TRUE( [ @"hello, world" localizedCompareWithCPPString: "HELLO, WORLD"    ] != NSOrderedSame );
+    ASSERT_TRUE( [ @"hello, world" localizedCompareWithCPPString: "hello, world..." ] != NSOrderedSame );
+    ASSERT_TRUE( [ @"hello, world" localizedCompareWithCPPString: "hello, universe" ] != NSOrderedSame );
+}
 
 TEST( Objective_CPP, compareWithCPPString_options )
 {}
@@ -177,13 +238,22 @@ TEST( Objective_CPP, localizedStandardCompareWithCPPString )
 {}
 
 TEST( Objective_CPP, hasCPPStringPrefix )
-{}
+{
+    ASSERT_TRUE(  [ @"hello, world" hasCPPStringPrefix: "hello" ] );
+    ASSERT_FALSE( [ @"hello, world" hasCPPStringPrefix: "bonjour" ] );
+}
 
 TEST( Objective_CPP, hasCPPStringSuffix )
-{}
+{
+    ASSERT_TRUE(  [ @"hello, world" hasCPPStringSuffix: "world" ] );
+    ASSERT_FALSE( [ @"hello, world" hasCPPStringSuffix: "universe" ] );
+}
 
 TEST( Objective_CPP, isEqualToCPPString )
-{}
+{
+    ASSERT_TRUE(  [ @"hello, world" isEqualToCPPString: "hello, world" ] );
+    ASSERT_FALSE( [ @"hello, world" isEqualToCPPString: "hello, universe" ] );
+}
 
 TEST( Objective_CPP, cppStringByFoldingWithOptions_locale )
 {}
@@ -195,13 +265,19 @@ TEST( Objective_CPP, commonCPPPrefixWithString_options )
 {}
 
 TEST( Objective_CPP, capitalizedCPPString )
-{}
+{
+    ASSERT_TRUE( [ @"hello, world" capitalizedCPPString ] == "Hello, World" );
+}
 
 TEST( Objective_CPP, lowercaseCPPString )
-{}
+{
+    ASSERT_TRUE( [ @"HELLO, WORLD" lowercaseCPPString ] == "hello, world" );
+}
 
 TEST( Objective_CPP, uppercaseCPPString )
-{}
+{
+    ASSERT_TRUE( [ @"hello, world" uppercaseCPPString ] == "HELLO, WORLD" );
+}
 
 TEST( Objective_CPP, decomposedCPPStringWithCanonicalMapping )
 {}
@@ -256,4 +332,3 @@ TEST( Objective_CPP, cppStringByAddingPercentEscapesUsingEncoding )
 
 TEST( Objective_CPP, cppStringByReplacingPercentEscapesUsingEncoding )
 {}
-
