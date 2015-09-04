@@ -32,9 +32,7 @@
  * @copyright   (c) 2015 - Jean-David Gadina - www.xs-labs.com / www.digidna.net
  */
 
-#ifdef __cplusplus
-
-#import <string>
+#include <string>
 
 @interface NSString( ObjectiveCPP )
 
@@ -117,5 +115,3 @@
 - ( std::string )cppStringByReplacingPercentEscapesUsingEncoding: ( NSStringEncoding )encoding;
 
 @end
-
-#endif
