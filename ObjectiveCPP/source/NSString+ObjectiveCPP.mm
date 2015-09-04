@@ -34,7 +34,7 @@
 
 #import <ObjectiveCPP.h>
 
-static NSStringEncoding __defaultCPPStringEncoding = NSUTF8StringEncoding;
+static NSStringEncoding ObjectiveCPP_defaultCPPStringEncoding = NSUTF8StringEncoding;
 
 @implementation NSString( ObjectiveCPP )
 
@@ -42,7 +42,7 @@ static NSStringEncoding __defaultCPPStringEncoding = NSUTF8StringEncoding;
 {
     @synchronized( self )
     {
-        return __defaultCPPStringEncoding;
+        return ObjectiveCPP_defaultCPPStringEncoding;
     }
 }
 
@@ -50,7 +50,7 @@ static NSStringEncoding __defaultCPPStringEncoding = NSUTF8StringEncoding;
 {
     @synchronized( self )
     {
-        __defaultCPPStringEncoding = encoding;
+        ObjectiveCPP_defaultCPPStringEncoding = encoding;
     }
 }
 
