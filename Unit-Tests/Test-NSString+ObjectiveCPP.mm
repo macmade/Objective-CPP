@@ -429,18 +429,6 @@ TEST( Objective_CPP, uppercaseCPPString )
     ASSERT_TRUE( [ @"hello, world" uppercaseCPPString ] == "HELLO, WORLD" );
 }
 
-TEST( Objective_CPP, decomposedCPPStringWithCanonicalMapping )
-{}
-
-TEST( Objective_CPP, decomposedCPPStringWithCompatibilityMapping )
-{}
-
-TEST( Objective_CPP, precomposedCPPStringWithCanonicalMapping )
-{}
-
-TEST( Objective_CPP, precomposedCPPStringWithCompatibilityMapping )
-{}
-
 TEST( Objective_CPP, lastPathComponentAsCPPString )
 {
     ASSERT_TRUE( [ @"foo/bar" lastPathComponentAsCPPString ] == "bar" );
@@ -495,16 +483,26 @@ TEST( Objective_CPP, cppStringByDeletingPathExtension )
 }
 
 TEST( Objective_CPP, cppStringByExpandingTildeInPath )
-{}
+{
+    ASSERT_TRUE( [ @"~/Documents" cppStringByExpandingTildeInPath ].length() > std::string( "~/Documents" ).length() );
+}
 
 TEST( Objective_CPP, cppStringByResolvingSymlinksInPath )
-{}
+{
+    ASSERT_TRUE( [ @"/private/etc/hosts" cppStringByResolvingSymlinksInPath ] == "/etc/hosts" );
+}
 
 TEST( Objective_CPP, cppStringByStandardizingPath )
-{}
+{
+    ASSERT_TRUE( [ @"/private/etc/hosts" cppStringByStandardizingPath ] == "/etc/hosts" );
+}
 
 TEST( Objective_CPP, cppStringByAddingPercentEscapesUsingEncoding )
-{}
+{
+    ASSERT_TRUE( [ @"hello, world" cppStringByAddingPercentEscapesUsingEncoding: NSUTF8StringEncoding ] == "hello,%20world" );
+}
 
 TEST( Objective_CPP, cppStringByReplacingPercentEscapesUsingEncoding )
-{}
+{
+    ASSERT_TRUE( [ @"hello,%20world" cppStringByReplacingPercentEscapesUsingEncoding: NSUTF8StringEncoding ] == "hello, world" );
+}

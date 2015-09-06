@@ -308,26 +308,6 @@ static NSStringEncoding ObjectiveCPP_defaultCPPStringEncoding = NSUTF8StringEnco
     return std::string( [ [ self uppercaseString ] cStringUsingEncoding: [ NSString defaultCPPStringEncoding ] ] );
 }
 
-- ( std::string )decomposedCPPStringWithCanonicalMapping
-{
-    return std::string( [ [ self decomposedStringWithCanonicalMapping ] cStringUsingEncoding: [ NSString defaultCPPStringEncoding ] ] );
-}
-
-- ( std::string )decomposedCPPStringWithCompatibilityMapping
-{
-    return std::string( [ [ self decomposedStringWithCompatibilityMapping ] cStringUsingEncoding: [ NSString defaultCPPStringEncoding ] ] );
-}
-
-- ( std::string )precomposedCPPStringWithCanonicalMapping
-{
-    return std::string( [ [ self precomposedStringWithCanonicalMapping ] cStringUsingEncoding: [ NSString defaultCPPStringEncoding ] ] );
-}
-
-- ( std::string )precomposedCPPStringWithCompatibilityMapping
-{
-    return std::string( [ [ self precomposedStringWithCompatibilityMapping ] cStringUsingEncoding: [ NSString defaultCPPStringEncoding ] ] );
-}
-
 - ( std::string )lastPathComponentAsCPPString
 {
     return std::string( [ [ self lastPathComponent ] cStringUsingEncoding: [ NSString defaultCPPStringEncoding ] ] );
