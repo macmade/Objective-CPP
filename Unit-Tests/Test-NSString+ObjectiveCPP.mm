@@ -281,7 +281,12 @@ TEST( Objective_CPP, cppStringByReplacingOccurrencesOfString_withString )
 }
 
 TEST( Objective_CPP, cppStringByReplacingOccurrencesOfString_withString_options_range )
-{}
+{
+    ASSERT_TRUE( [ @"hello, world" cppStringByReplacingOccurrencesOfString: @"world" withString: @"universe" options: NSCaseInsensitiveSearch range: NSMakeRange( 0, 12 ) ] == "hello, universe" );
+    ASSERT_TRUE( [ @"hello, world" cppStringByReplacingOccurrencesOfString: @"WORLD" withString: @"universe" options: NSCaseInsensitiveSearch range: NSMakeRange( 0, 12 ) ] == "hello, universe" );
+    ASSERT_TRUE( [ @"hello, world" cppStringByReplacingOccurrencesOfString: @"world" withString: @"universe" options: NSCaseInsensitiveSearch range: NSMakeRange( 0,  4 ) ] == "hello, world" );
+    ASSERT_TRUE( [ @"hello, world" cppStringByReplacingOccurrencesOfString: @"foo"   withString: @"universe" options: NSCaseInsensitiveSearch range: NSMakeRange( 0, 12 ) ] == "hello, world" );
+}
 
 TEST( Objective_CPP, stringByReplacingOccurrencesOfString_withCPPString )
 {
@@ -290,7 +295,12 @@ TEST( Objective_CPP, stringByReplacingOccurrencesOfString_withCPPString )
 }
 
 TEST( Objective_CPP, stringByReplacingOccurrencesOfString_withCPPString_options_range )
-{}
+{
+    ASSERT_TRUE( [ [ @"hello, world" stringByReplacingOccurrencesOfString: @"world" withCPPString: "universe" options: NSCaseInsensitiveSearch range: NSMakeRange( 0, 12 ) ] isEqualToString: @"hello, universe" ] );
+    ASSERT_TRUE( [ [ @"hello, world" stringByReplacingOccurrencesOfString: @"WORLD" withCPPString: "universe" options: NSCaseInsensitiveSearch range: NSMakeRange( 0, 12 ) ] isEqualToString: @"hello, universe" ] );
+    ASSERT_TRUE( [ [ @"hello, world" stringByReplacingOccurrencesOfString: @"world" withCPPString: "universe" options: NSCaseInsensitiveSearch range: NSMakeRange( 0,  4 ) ] isEqualToString: @"hello, world" ] );
+    ASSERT_TRUE( [ [ @"hello, world" stringByReplacingOccurrencesOfString: @"foo"   withCPPString: "universe" options: NSCaseInsensitiveSearch range: NSMakeRange( 0, 12 ) ] isEqualToString: @"hello, world" ] );
+}
 
 TEST( Objective_CPP, stringByReplacingOccurrencesOfCPPString_withString )
 {
@@ -299,19 +309,36 @@ TEST( Objective_CPP, stringByReplacingOccurrencesOfCPPString_withString )
 }
 
 TEST( Objective_CPP, stringByReplacingOccurrencesOfCPPString_withString_options_range )
-{}
+{
+    ASSERT_TRUE( [ [ @"hello, world" stringByReplacingOccurrencesOfCPPString: "world" withString: @"universe" options: NSCaseInsensitiveSearch range: NSMakeRange( 0, 12 ) ] isEqualToString: @"hello, universe" ] );
+    ASSERT_TRUE( [ [ @"hello, world" stringByReplacingOccurrencesOfCPPString: "WORLD" withString: @"universe" options: NSCaseInsensitiveSearch range: NSMakeRange( 0, 12 ) ] isEqualToString: @"hello, universe" ] );
+    ASSERT_TRUE( [ [ @"hello, world" stringByReplacingOccurrencesOfCPPString: "world" withString: @"universe" options: NSCaseInsensitiveSearch range: NSMakeRange( 0,  4 ) ] isEqualToString: @"hello, world" ] );
+    ASSERT_TRUE( [ [ @"hello, world" stringByReplacingOccurrencesOfCPPString: "foo"   withString: @"universe" options: NSCaseInsensitiveSearch range: NSMakeRange( 0, 12 ) ] isEqualToString: @"hello, world" ] );
+}
 
 TEST( Objective_CPP, stringByReplacingOccurrencesOfCPPString_withCPPString )
-{}
+{
+    ASSERT_TRUE( [ [ @"hello, world" stringByReplacingOccurrencesOfCPPString: "world" withCPPString: "universe" ] isEqualToString: @"hello, universe" ] );
+    ASSERT_TRUE( [ [ @"hello, world" stringByReplacingOccurrencesOfCPPString: "foo"   withCPPString: "universe" ] isEqualToString: @"hello, world" ] );
+}
 
 TEST( Objective_CPP, stringByReplacingOccurrencesOfCPPString_withCPPString_options_range )
-{}
+{
+    ASSERT_TRUE( [ [ @"hello, world" stringByReplacingOccurrencesOfCPPString: "world" withCPPString: "universe" options: NSCaseInsensitiveSearch range: NSMakeRange( 0, 12 ) ] isEqualToString: @"hello, universe" ] );
+    ASSERT_TRUE( [ [ @"hello, world" stringByReplacingOccurrencesOfCPPString: "WORLD" withCPPString: "universe" options: NSCaseInsensitiveSearch range: NSMakeRange( 0, 12 ) ] isEqualToString: @"hello, universe" ] );
+    ASSERT_TRUE( [ [ @"hello, world" stringByReplacingOccurrencesOfCPPString: "world" withCPPString: "universe" options: NSCaseInsensitiveSearch range: NSMakeRange( 0,  4 ) ] isEqualToString: @"hello, world" ] );
+    ASSERT_TRUE( [ [ @"hello, world" stringByReplacingOccurrencesOfCPPString: "foo"   withCPPString: "universe" options: NSCaseInsensitiveSearch range: NSMakeRange( 0, 12 ) ] isEqualToString: @"hello, world" ] );
+}
 
 TEST( Objective_CPP, cppStringByReplacingCharactersInRange_withString )
-{}
+{
+    ASSERT_TRUE( [ @"hello, world" cppStringByReplacingCharactersInRange: NSMakeRange( 7, 5 ) withString: @"universe" ] == "hello, universe" );
+}
 
 TEST( Objective_CPP, stringByReplacingCharactersInRange_withCPPString )
-{}
+{
+    ASSERT_TRUE( [ [ @"hello, world" stringByReplacingCharactersInRange: NSMakeRange( 7, 5 ) withCPPString: "universe" ] isEqualToString: @"hello, universe" ] );
+}
 
 TEST( Objective_CPP, caseInsensitiveCompareWithCPPString )
 {
