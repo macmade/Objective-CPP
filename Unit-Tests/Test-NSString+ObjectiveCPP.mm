@@ -194,13 +194,74 @@ TEST( Objective_CPP, rangeOfCPPString )
 }
 
 TEST( Objective_CPP, rangeOfCPPString_options )
-{}
+{
+    NSRange r;
+    
+    r = [ @"hello, world" rangeOfCPPString: "wo" options: NSCaseInsensitiveSearch ];
+    
+    ASSERT_TRUE( r.location == 7 );
+    ASSERT_TRUE( r.length   == 2 );
+    
+    r = [ @"hello, world" rangeOfCPPString: "WO" options: NSCaseInsensitiveSearch ];
+    
+    ASSERT_TRUE( r.location == 7 );
+    ASSERT_TRUE( r.length   == 2 );
+    
+    r = [ @"hello, world" rangeOfCPPString: "universe" options: NSCaseInsensitiveSearch ];
+    
+    ASSERT_TRUE( r.location == NSNotFound );
+    ASSERT_TRUE( r.length   == 0 );
+}
 
 TEST( Objective_CPP, rangeOfCPPString_options_range )
-{}
+{
+    NSRange r;
+    
+    r = [ @"hello, world" rangeOfCPPString: "wo" options: NSCaseInsensitiveSearch range: NSMakeRange( 0, 12 ) ];
+    
+    ASSERT_TRUE( r.location == 7 );
+    ASSERT_TRUE( r.length   == 2 );
+    
+    r = [ @"hello, world" rangeOfCPPString: "WO" options: NSCaseInsensitiveSearch range: NSMakeRange( 0, 12 ) ];
+    
+    ASSERT_TRUE( r.location == 7 );
+    ASSERT_TRUE( r.length   == 2 );
+    
+    r = [ @"hello, world" rangeOfCPPString: "wo" options: NSCaseInsensitiveSearch range: NSMakeRange( 0, 4 ) ];
+    
+    ASSERT_TRUE( r.location == NSNotFound );
+    ASSERT_TRUE( r.length   == 0 );
+    
+    r = [ @"hello, world" rangeOfCPPString: "universe" options: NSCaseInsensitiveSearch range: NSMakeRange( 0, 12 ) ];
+    
+    ASSERT_TRUE( r.location == NSNotFound );
+    ASSERT_TRUE( r.length   == 0 );
+}
 
 TEST( Objective_CPP, rangeOfCPPString_options_range_locale )
-{}
+{
+    NSRange r;
+    
+    r = [ @"hello, world" rangeOfCPPString: "wo" options: NSCaseInsensitiveSearch range: NSMakeRange( 0, 12 ) locale: nil ];
+    
+    ASSERT_TRUE( r.location == 7 );
+    ASSERT_TRUE( r.length   == 2 );
+    
+    r = [ @"hello, world" rangeOfCPPString: "WO" options: NSCaseInsensitiveSearch range: NSMakeRange( 0, 12 ) locale: nil ];
+    
+    ASSERT_TRUE( r.location == 7 );
+    ASSERT_TRUE( r.length   == 2 );
+    
+    r = [ @"hello, world" rangeOfCPPString: "wo" options: NSCaseInsensitiveSearch range: NSMakeRange( 0, 4 ) locale: nil ];
+    
+    ASSERT_TRUE( r.location == NSNotFound );
+    ASSERT_TRUE( r.length   == 0 );
+    
+    r = [ @"hello, world" rangeOfCPPString: "universe" options: NSCaseInsensitiveSearch range: NSMakeRange( 0, 12 ) locale: nil ];
+    
+    ASSERT_TRUE( r.location == NSNotFound );
+    ASSERT_TRUE( r.length   == 0 );
+}
 
 TEST( Objective_CPP, cppStringByReplacingOccurrencesOfString_withString )
 {
