@@ -288,6 +288,11 @@ static NSStringEncoding ObjectiveCPP_defaultCPPStringEncoding = NSUTF8StringEnco
     return std::string( [ [ self commonPrefixWithString: aString options: mask ] cStringUsingEncoding: [ NSString defaultCPPStringEncoding ] ] );
 }
 
+- ( std::string )commonCPPPrefixWithCPPString: ( std::string )aString options: ( NSStringCompareOptions )mask
+{
+    return std::string( [ [ self commonPrefixWithString: [ NSString stringWithCPPString: aString encoding: [ NSString defaultCPPStringEncoding ] ] options: mask ] cStringUsingEncoding: [ NSString defaultCPPStringEncoding ] ] );
+}
+
 - ( std::string )capitalizedCPPString
 {
     return std::string( [ [ self capitalizedString ] cStringUsingEncoding: [ NSString defaultCPPStringEncoding ] ] );

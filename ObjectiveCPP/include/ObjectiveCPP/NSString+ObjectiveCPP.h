@@ -104,6 +104,7 @@ NS_ASSUME_NONNULL_BEGIN
 - ( std::string )cppStringByFoldingWithOptions: ( NSStringCompareOptions )options locale: ( nullable NSLocale * )locale;
 - ( NSString * )commonPrefixWithCPPString: ( std::string )aString options: ( NSStringCompareOptions )mask;
 - ( std::string )commonCPPPrefixWithString: ( NSString * )aString options: ( NSStringCompareOptions )mask;
+- ( std::string )commonCPPPrefixWithCPPString: ( std::string )aString options: ( NSStringCompareOptions )mask;
 - ( std::string )capitalizedCPPString;
 - ( std::string )lowercaseCPPString;
 - ( std::string )uppercaseCPPString;

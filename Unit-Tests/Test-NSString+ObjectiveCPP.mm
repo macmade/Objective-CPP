@@ -389,13 +389,30 @@ TEST( Objective_CPP, isEqualToCPPString )
 }
 
 TEST( Objective_CPP, cppStringByFoldingWithOptions_locale )
-{}
+{
+    ASSERT_TRUE( [ @"ß" cppStringByFoldingWithOptions: NSCaseInsensitiveSearch | NSDiacriticInsensitiveSearch | NSWidthInsensitiveSearch locale: nil ] == "ss" );
+}
 
 TEST( Objective_CPP, commonPrefixWithCPPString_options )
-{}
+{
+    ASSERT_TRUE( [ [ @"hello, world" commonPrefixWithCPPString: "hello, universe" options: NSCaseInsensitiveSearch ] isEqualToString: @"hello, " ] );
+    ASSERT_TRUE( [ [ @"hello, world" commonPrefixWithCPPString: "HELLO, UNIVERSE" options: NSCaseInsensitiveSearch ] isEqualToString: @"hello, " ] );
+    ASSERT_TRUE( [ [ @"hello, world" commonPrefixWithCPPString: "foo"             options: NSCaseInsensitiveSearch ] isEqualToString: @"" ] );
+}
 
 TEST( Objective_CPP, commonCPPPrefixWithString_options )
-{}
+{
+    ASSERT_TRUE( [ @"hello, world" commonCPPPrefixWithString: @"hello, universe" options: NSCaseInsensitiveSearch ] == "hello, " );
+    ASSERT_TRUE( [ @"hello, world" commonCPPPrefixWithString: @"HELLO, UNIVERSE" options: NSCaseInsensitiveSearch ] == "hello, " );
+    ASSERT_TRUE( [ @"hello, world" commonCPPPrefixWithString: @"foo"             options: NSCaseInsensitiveSearch ] == "" );
+}
+
+TEST( Objective_CPP, commonCPPPrefixWithCPPString_options )
+{
+    ASSERT_TRUE( [ @"hello, world" commonCPPPrefixWithCPPString: "hello, universe" options: NSCaseInsensitiveSearch ] == "hello, " );
+    ASSERT_TRUE( [ @"hello, world" commonCPPPrefixWithCPPString: "HELLO, UNIVERSE" options: NSCaseInsensitiveSearch ] == "hello, " );
+    ASSERT_TRUE( [ @"hello, world" commonCPPPrefixWithCPPString: "foo"             options: NSCaseInsensitiveSearch ] == "" );
+}
 
 TEST( Objective_CPP, capitalizedCPPString )
 {
