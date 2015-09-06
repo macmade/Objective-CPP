@@ -169,6 +169,11 @@ TEST( Objective_CPP, cppStringByPaddingToLength_withCPPString_startingAtIndex )
     ASSERT_TRUE( [ @"hello, world" cppStringByPaddingToLength: 15 withCPPString: "." startingAtIndex: 0 ] == "hello, world..." );
 }
 
+TEST( Objective_CPP, componentsSeparatedByCPPString )
+{
+    ASSERT_TRUE( [ [ @"hello, world" componentsSeparatedByCPPString: " " ] count ] == 2 );
+}
+
 TEST( Objective_CPP, cppStringByTrimmingCharactersInSet )
 {
     ASSERT_TRUE( [ @" hello, world " cppStringByTrimmingCharactersInSet: [ NSCharacterSet whitespaceCharacterSet ] ] == "hello, world" );
@@ -478,7 +483,13 @@ TEST( Objective_CPP, pathExtensionAsCPPString )
 }
 
 TEST( Objective_CPP, cppStringByAbbreviatingWithTildeInPath )
-{}
+{
+    NSString * p;
+    
+    p = [ NSString stringWithFormat: @"/Users/%@/Desktop", NSUserName() ];
+    
+    ASSERT_TRUE( [ p cppStringByAbbreviatingWithTildeInPath ] == "~/Desktop" );
+}
 
 TEST( Objective_CPP, cppStringByAppendingPathComponent )
 {
