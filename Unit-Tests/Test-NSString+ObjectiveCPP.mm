@@ -335,7 +335,12 @@ TEST( Objective_CPP, localizedCompareWithCPPString )
 }
 
 TEST( Objective_CPP, compareWithCPPString_options )
-{}
+{
+    ASSERT_TRUE( [ @"hello, world" compareWithCPPString: "hello, world"    options: NSCaseInsensitiveSearch ] == NSOrderedSame );
+    ASSERT_TRUE( [ @"hello, world" compareWithCPPString: "HELLO, WORLD"    options: NSCaseInsensitiveSearch ] == NSOrderedSame );
+    ASSERT_TRUE( [ @"hello, world" compareWithCPPString: "hello, world..." options: NSCaseInsensitiveSearch ] != NSOrderedSame );
+    ASSERT_TRUE( [ @"hello, world" compareWithCPPString: "hello, universe" options: NSCaseInsensitiveSearch ] != NSOrderedSame );
+}
 
 TEST( Objective_CPP, compareWithCPPString_options_range )
 {}
