@@ -34,6 +34,16 @@
 
 #include <string>
 
+#ifndef NS_ASSUME_NONNULL_BEGIN
+#define NS_ASSUME_NONNULL_BEGIN
+#define NS_ASSUME_NONNULL_END
+#define nullable
+#endif
+
+#ifndef instancetype
+#define instancetype id
+#endif
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface NSString( ObjectiveCPP )
