@@ -67,6 +67,7 @@ NS_ASSUME_NONNULL_BEGIN
 - ( NSString * )stringByAppendingCPPString: ( std::string )aString;
 - ( std::string )cppStringByPaddingToLength: ( NSUInteger )newLength withString: ( NSString * )padString startingAtIndex: ( NSUInteger )padIndex;
 - ( NSString * )stringByPaddingToLength: ( NSUInteger )newLength withCPPString: ( std::string )padString startingAtIndex: ( NSUInteger )padIndex;
+- ( std::string )cppStringByPaddingToLength: ( NSUInteger )newLength withCPPString: ( std::string )padString startingAtIndex: ( NSUInteger )padIndex;
 - ( std::string )cppStringByTrimmingCharactersInSet: ( NSCharacterSet * )set;
 - ( std::string )cppSubstringFromIndex: ( NSUInteger )anIndex;
 - ( std::string )cppSubstringWithRange: ( NSRange )aRange;

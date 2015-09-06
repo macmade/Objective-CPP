@@ -155,13 +155,24 @@ TEST( Objective_CPP, stringByAppendingCPPString )
 }
 
 TEST( Objective_CPP, cppStringByPaddingToLength_withString_startingAtIndex )
-{}
+{
+    ASSERT_TRUE( [ @"hello, world" cppStringByPaddingToLength: 15 withString: @"." startingAtIndex: 0 ] == "hello, world..." );
+}
 
 TEST( Objective_CPP, stringByPaddingToLength_withCPPString_startingAtIndex )
-{}
+{
+    ASSERT_TRUE( [ [ @"hello, world" stringByPaddingToLength: 15 withCPPString: "." startingAtIndex: 0 ] isEqualToString: @"hello, world..." ] );
+}
+
+TEST( Objective_CPP, cppStringByPaddingToLength_withCPPString_startingAtIndex )
+{
+    ASSERT_TRUE( [ @"hello, world" cppStringByPaddingToLength: 15 withCPPString: "." startingAtIndex: 0 ] == "hello, world..." );
+}
 
 TEST( Objective_CPP, cppStringByTrimmingCharactersInSet )
-{}
+{
+    ASSERT_TRUE( [ @" hello, world " cppStringByTrimmingCharactersInSet: [ NSCharacterSet whitespaceCharacterSet ] ] == "hello, world" );
+}
 
 TEST( Objective_CPP, cppSubstringFromIndex )
 {

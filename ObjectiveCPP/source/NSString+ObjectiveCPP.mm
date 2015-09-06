@@ -124,6 +124,11 @@ static NSStringEncoding ObjectiveCPP_defaultCPPStringEncoding = NSUTF8StringEnco
     return [ self stringByPaddingToLength: newLength withString: [ NSString stringWithCPPString: padString encoding: [ NSString defaultCPPStringEncoding ] ] startingAtIndex: padIndex ];
 }
 
+- ( std::string )cppStringByPaddingToLength: ( NSUInteger )newLength withCPPString: ( std::string )padString startingAtIndex: ( NSUInteger )padIndex
+{
+    return std::string( [ [ self stringByPaddingToLength: newLength withString: [ NSString stringWithCPPString: padString encoding: [ NSString defaultCPPStringEncoding ] ] startingAtIndex:padIndex ] cStringUsingEncoding: [ NSString defaultCPPStringEncoding ] ] );
+}
+
 - ( NSArray * )componentsSeparatedByCPPString: ( std::string )separator
 {
     return [ self componentsSeparatedByString: [ NSString stringWithCPPString: separator encoding: [ NSString defaultCPPStringEncoding ] ] ];
