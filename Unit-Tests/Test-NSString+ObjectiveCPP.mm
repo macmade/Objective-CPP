@@ -63,16 +63,64 @@ TEST( Objective_CPP, stringWithCPPString_encoding )
 }
 
 TEST( Objective_CPP, cppStringWithContentsOfFile_encoding_error )
-{}
+{
+    NSError * e;
+    
+    e = nil;
+    
+    ASSERT_TRUE( [ NSString cppStringWithContentsOfFile: @"/etc/hosts" encoding: NSUTF8StringEncoding error: &e ].length() > 0 );
+    ASSERT_TRUE( e == nil );
+    
+    ASSERT_TRUE( [ NSString cppStringWithContentsOfFile: @"/foo/bar" encoding: NSUTF8StringEncoding error: &e ].length() == 0 );
+    ASSERT_TRUE( e != nil );
+}
 
 TEST( Objective_CPP, cppStringWithContentsOfFile_usedEncoding_error )
-{}
+{
+    NSError        * e;
+    NSStringEncoding enc;
+    
+    e   = nil;
+    enc = 0;
+    
+    ASSERT_TRUE( [ NSString cppStringWithContentsOfFile: @"/etc/hosts" usedEncoding: &enc error: &e ].length() > 0 );
+    ASSERT_TRUE( e == nil );
+    ASSERT_TRUE( enc != 0 );
+    
+    ASSERT_TRUE( [ NSString cppStringWithContentsOfFile: @"/foo/bar" usedEncoding: &enc error: &e ].length() == 0 );
+    ASSERT_TRUE( e != nil );
+    ASSERT_TRUE( enc != 0 );
+}
 
 TEST( Objective_CPP, cppStringWithContentsOfURL_encoding_error )
-{}
+{
+    NSError * e;
+    
+    e = nil;
+    
+    ASSERT_TRUE( [ NSString cppStringWithContentsOfURL: [ NSURL URLWithString: @"file:///etc/hosts" ] encoding: NSUTF8StringEncoding error: &e ].length() > 0 );
+    ASSERT_TRUE( e == nil );
+    
+    ASSERT_TRUE( [ NSString cppStringWithContentsOfURL: [ NSURL URLWithString: @"file:///foo/bar" ] encoding: NSUTF8StringEncoding error: &e ].length() == 0 );
+    ASSERT_TRUE( e != nil );
+}
 
 TEST( Objective_CPP, cppStringWithContentsOfURL_usedEncoding_error )
-{}
+{
+    NSError        * e;
+    NSStringEncoding enc;
+    
+    e   = nil;
+    enc = 0;
+    
+    ASSERT_TRUE( [ NSString cppStringWithContentsOfURL: [ NSURL URLWithString: @"file:///etc/hosts" ] usedEncoding: &enc error: &e ].length() > 0 );
+    ASSERT_TRUE( e == nil );
+    ASSERT_TRUE( enc != 0 );
+    
+    ASSERT_TRUE( [ NSString cppStringWithContentsOfURL: [ NSURL URLWithString: @"file:///foo/bar" ] usedEncoding: &enc error: &e ].length() == 0 );
+    ASSERT_TRUE( e != nil );
+    ASSERT_TRUE( enc != 0 );
+}
 
 TEST( Objective_CPP, initWithCPPString )
 {
