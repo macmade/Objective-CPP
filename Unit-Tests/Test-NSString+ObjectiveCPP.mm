@@ -343,13 +343,32 @@ TEST( Objective_CPP, compareWithCPPString_options )
 }
 
 TEST( Objective_CPP, compareWithCPPString_options_range )
-{}
+{
+    ASSERT_TRUE( [ @"hello, world" compareWithCPPString: "hello, world"    options: NSCaseInsensitiveSearch range: NSMakeRange( 0, 12 ) ] == NSOrderedSame );
+    ASSERT_TRUE( [ @"hello, world" compareWithCPPString: "hello, world"    options: NSCaseInsensitiveSearch range: NSMakeRange( 0,  4 ) ] != NSOrderedSame );
+    ASSERT_TRUE( [ @"hello, world" compareWithCPPString: "HELLO, WORLD"    options: NSCaseInsensitiveSearch range: NSMakeRange( 0, 12 ) ] == NSOrderedSame );
+    ASSERT_TRUE( [ @"hello, world" compareWithCPPString: "HELLO, WORLD"    options: NSCaseInsensitiveSearch range: NSMakeRange( 0,  4 ) ] != NSOrderedSame );
+    ASSERT_TRUE( [ @"hello, world" compareWithCPPString: "hello, world..." options: NSCaseInsensitiveSearch range: NSMakeRange( 0, 12 ) ] != NSOrderedSame );
+    ASSERT_TRUE( [ @"hello, world" compareWithCPPString: "hello, universe" options: NSCaseInsensitiveSearch range: NSMakeRange( 0, 12 ) ] != NSOrderedSame );
+}
 
 TEST( Objective_CPP, compareWithCPPString_options_range_locale )
-{}
+{
+    ASSERT_TRUE( [ @"hello, world" compareWithCPPString: "hello, world"    options: NSCaseInsensitiveSearch range: NSMakeRange( 0, 12 ) locale: nil ] == NSOrderedSame );
+    ASSERT_TRUE( [ @"hello, world" compareWithCPPString: "hello, world"    options: NSCaseInsensitiveSearch range: NSMakeRange( 0,  4 ) locale: nil ] != NSOrderedSame );
+    ASSERT_TRUE( [ @"hello, world" compareWithCPPString: "HELLO, WORLD"    options: NSCaseInsensitiveSearch range: NSMakeRange( 0, 12 ) locale: nil ] == NSOrderedSame );
+    ASSERT_TRUE( [ @"hello, world" compareWithCPPString: "HELLO, WORLD"    options: NSCaseInsensitiveSearch range: NSMakeRange( 0,  4 ) locale: nil ] != NSOrderedSame );
+    ASSERT_TRUE( [ @"hello, world" compareWithCPPString: "hello, world..." options: NSCaseInsensitiveSearch range: NSMakeRange( 0, 12 ) locale: nil ] != NSOrderedSame );
+    ASSERT_TRUE( [ @"hello, world" compareWithCPPString: "hello, universe" options: NSCaseInsensitiveSearch range: NSMakeRange( 0, 12 ) locale: nil ] != NSOrderedSame );
+}
 
 TEST( Objective_CPP, localizedStandardCompareWithCPPString )
-{}
+{
+    ASSERT_TRUE( [ @"hello, world" localizedStandardCompareWithCPPString: "hello, world"    ] == NSOrderedSame );
+    ASSERT_TRUE( [ @"hello, world" localizedStandardCompareWithCPPString: "HELLO, WORLD"    ] != NSOrderedSame );
+    ASSERT_TRUE( [ @"hello, world" localizedStandardCompareWithCPPString: "hello, world..." ] != NSOrderedSame );
+    ASSERT_TRUE( [ @"hello, world" localizedStandardCompareWithCPPString: "hello, universe" ] != NSOrderedSame );
+}
 
 TEST( Objective_CPP, hasCPPStringPrefix )
 {
