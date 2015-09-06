@@ -54,12 +54,12 @@ static NSStringEncoding ObjectiveCPP_defaultCPPStringEncoding = NSUTF8StringEnco
     }
 }
 
-+ ( instancetype )stringWithCPPString: ( std::string )cppString
++ ( nullable instancetype )stringWithCPPString: ( std::string )cppString
 {
     return [ NSString stringWithCString: cppString.c_str() encoding: [ NSString defaultCPPStringEncoding ] ];
 }
 
-+ ( instancetype )stringWithCPPString: ( std::string )cppString encoding: ( NSStringEncoding )enc
++ ( nullable instancetype )stringWithCPPString: ( std::string )cppString encoding: ( NSStringEncoding )enc
 {
     return [ NSString stringWithCString: cppString.c_str() encoding: enc ];
 }
@@ -69,7 +69,7 @@ static NSStringEncoding ObjectiveCPP_defaultCPPStringEncoding = NSUTF8StringEnco
     return std::string( [ [ NSString stringWithContentsOfFile: path encoding: enc error: error ] cppStringUsingEncoding: enc ] );
 }
 
-+ ( std::string )cppStringWithContentsOfFile: ( NSString * )path usedEncoding: ( NSStringEncoding * )enc error: ( NSError * __autoreleasing * )error
++ ( std::string )cppStringWithContentsOfFile: ( NSString * )path usedEncoding: ( nullable NSStringEncoding * )enc error: ( NSError * __autoreleasing * )error
 {
     return std::string( [ [ NSString stringWithContentsOfFile: path usedEncoding: enc error: error ] cppStringUsingEncoding: *( enc ) ] );
 }
@@ -79,17 +79,17 @@ static NSStringEncoding ObjectiveCPP_defaultCPPStringEncoding = NSUTF8StringEnco
     return std::string( [ [ NSString stringWithContentsOfURL: url encoding: enc error: error ] cppStringUsingEncoding: enc ] );
 }
 
-+ ( std::string )cppStringWithContentsOfURL: ( NSURL * )url usedEncoding: ( NSStringEncoding * )enc error: ( NSError * __autoreleasing * )error
++ ( std::string )cppStringWithContentsOfURL: ( NSURL * )url usedEncoding: ( nullable NSStringEncoding * )enc error: ( NSError * __autoreleasing * )error
 {
     return std::string( [ [ NSString stringWithContentsOfURL: url usedEncoding: enc error: error ] cppStringUsingEncoding: *( enc ) ] );
 }
 
-- ( instancetype )initWithCPPString: ( std::string )cppString
+- ( nullable instancetype )initWithCPPString: ( std::string )cppString
 {
     return [ self initWithCString: cppString.c_str()  encoding: [ NSString defaultCPPStringEncoding ] ];
 }
 
-- ( instancetype )initWithCPPString: ( std::string )cppString encoding: ( NSStringEncoding )encoding
+- ( nullable instancetype )initWithCPPString: ( std::string )cppString encoding: ( NSStringEncoding )encoding
 {
     return [ self initWithCString: cppString.c_str()  encoding: encoding ];
 }
@@ -164,7 +164,7 @@ static NSStringEncoding ObjectiveCPP_defaultCPPStringEncoding = NSUTF8StringEnco
     return [ self rangeOfString: [ NSString stringWithCPPString: aString encoding: [ NSString defaultCPPStringEncoding ] ] options: mask range: aRange ];
 }
 
-- ( NSRange )rangeOfCPPString: ( std::string )aString options: ( NSStringCompareOptions )mask range: ( NSRange )searchRange locale: ( NSLocale * )locale
+- ( NSRange )rangeOfCPPString: ( std::string )aString options: ( NSStringCompareOptions )mask range: ( NSRange )searchRange locale: ( nullable NSLocale * )locale
 {
     return [ self rangeOfString: [ NSString stringWithCPPString: aString encoding: [ NSString defaultCPPStringEncoding ] ] options: mask range: searchRange locale: locale ];
 }
@@ -248,7 +248,7 @@ static NSStringEncoding ObjectiveCPP_defaultCPPStringEncoding = NSUTF8StringEnco
     return [ self compare: [ NSString stringWithCPPString: aString encoding: [ NSString defaultCPPStringEncoding ] ] options: mask range: range ];
 }
 
-- ( NSComparisonResult )compareWithCPPString: ( std::string )aString options: ( NSStringCompareOptions )mask range: ( NSRange )range locale: ( id )locale
+- ( NSComparisonResult )compareWithCPPString: ( std::string )aString options: ( NSStringCompareOptions )mask range: ( NSRange )range locale: ( nullable id )locale
 {
     return [ self compare: [ NSString stringWithCPPString: aString encoding: [ NSString defaultCPPStringEncoding ] ] options: mask range: range locale: locale ];
 }
@@ -273,7 +273,7 @@ static NSStringEncoding ObjectiveCPP_defaultCPPStringEncoding = NSUTF8StringEnco
     return [ self isEqualToString: [ NSString stringWithCPPString: aString encoding: [ NSString defaultCPPStringEncoding ] ] ];
 }
 
-- ( std::string )cppStringByFoldingWithOptions: ( NSStringCompareOptions )options locale: ( NSLocale * )locale
+- ( std::string )cppStringByFoldingWithOptions: ( NSStringCompareOptions )options locale: ( nullable NSLocale * )locale
 {
     return std::string( [ [ self stringByFoldingWithOptions: options locale: locale ] cStringUsingEncoding: [ NSString defaultCPPStringEncoding ] ] );
 }
@@ -343,9 +343,14 @@ static NSStringEncoding ObjectiveCPP_defaultCPPStringEncoding = NSUTF8StringEnco
     return std::string( [ [ self stringByAppendingPathComponent: aString ] cStringUsingEncoding: [ NSString defaultCPPStringEncoding ] ] );
 }
 
-- ( NSString * )cppStringByAppendingCPPPathComponent: ( std::string )aString
+- ( NSString * )stringByAppendingCPPPathComponent: ( std::string )aString
 {
     return [ self stringByAppendingPathComponent: [ NSString stringWithCPPString: aString encoding: [ NSString defaultCPPStringEncoding ] ] ];
+}
+
+- ( std::string )cppStringByAppendingCPPPathComponent: ( std::string )aString
+{
+    return std::string( [ [ self stringByAppendingPathComponent: [ NSString stringWithCPPString: aString encoding: [ NSString defaultCPPStringEncoding ] ] ] cStringUsingEncoding: [ NSString defaultCPPStringEncoding ] ] );
 }
 
 - ( std::string )cppStringByAppendingPathExtension: ( NSString * )ext
@@ -356,6 +361,11 @@ static NSStringEncoding ObjectiveCPP_defaultCPPStringEncoding = NSUTF8StringEnco
 - ( NSString * )stringByAppendingCPPPathExtension: ( std::string )ext
 {
     return [ self stringByAppendingPathExtension: [ NSString stringWithCPPString: ext encoding: [ NSString defaultCPPStringEncoding ] ] ];
+}
+
+- ( std::string )cppStringByAppendingCPPPathExtension: ( std::string )ext
+{
+    return std::string( [ [ self stringByAppendingPathExtension: [ NSString stringWithCPPString: ext encoding: [ NSString defaultCPPStringEncoding ] ] ] cStringUsingEncoding: [ NSString defaultCPPStringEncoding ] ] );
 }
 
 - ( std::string )cppStringByDeletingLastPathComponent

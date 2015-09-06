@@ -34,20 +34,22 @@
 
 #include <string>
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface NSString( ObjectiveCPP )
 
 + ( NSStringEncoding )defaultCPPStringEncoding;
 + ( void )setDefaultCPPStringEncoding: ( NSStringEncoding )encoding;
 
-+ ( id )stringWithCPPString: ( std::string )cppString;
-+ ( id )stringWithCPPString: ( std::string )cppString encoding: ( NSStringEncoding )enc;
++ ( nullable instancetype )stringWithCPPString: ( std::string )cppString;
++ ( nullable instancetype )stringWithCPPString: ( std::string )cppString encoding: ( NSStringEncoding )enc;
 + ( std::string )cppStringWithContentsOfFile: ( NSString * )path encoding: ( NSStringEncoding )enc error: ( NSError * __autoreleasing * )error;
-+ ( std::string )cppStringWithContentsOfFile: ( NSString * )path usedEncoding: ( NSStringEncoding * )enc error: ( NSError * __autoreleasing * )error;
++ ( std::string )cppStringWithContentsOfFile: ( NSString * )path usedEncoding: ( nullable NSStringEncoding * )enc error: ( NSError * __autoreleasing * )error;
 + ( std::string )cppStringWithContentsOfURL: ( NSURL * )url encoding: ( NSStringEncoding )enc error: ( NSError * __autoreleasing * )error;
-+ ( std::string )cppStringWithContentsOfURL: ( NSURL * )url usedEncoding: ( NSStringEncoding * )enc error: ( NSError * __autoreleasing * )error;
++ ( std::string )cppStringWithContentsOfURL: ( NSURL * )url usedEncoding: ( nullable NSStringEncoding * )enc error: ( NSError * __autoreleasing * )error;
 
-- ( id )initWithCPPString: ( std::string )cppString;
-- ( id )initWithCPPString: ( std::string )cppString encoding: ( NSStringEncoding )encoding;
+- ( nullable instancetype )initWithCPPString: ( std::string )cppString;
+- ( nullable instancetype )initWithCPPString: ( std::string )cppString encoding: ( NSStringEncoding )encoding;
 
 - ( std::string )cppString;
 - ( std::string )cppStringUsingEncoding: ( NSStringEncoding )encoding;
@@ -63,7 +65,7 @@
 - ( NSRange )rangeOfCPPString: ( std::string )aString;
 - ( NSRange )rangeOfCPPString: ( std::string )aString options: ( NSStringCompareOptions )mask;
 - ( NSRange )rangeOfCPPString: ( std::string )aString options: ( NSStringCompareOptions )mask range: ( NSRange )aRange;
-- ( NSRange )rangeOfCPPString: ( std::string )aString options: ( NSStringCompareOptions )mask range: ( NSRange )searchRange locale: ( NSLocale * )locale;
+- ( NSRange )rangeOfCPPString: ( std::string )aString options: ( NSStringCompareOptions )mask range: ( NSRange )searchRange locale: ( nullable NSLocale * )locale;
 
 - ( std::string )cppStringByReplacingOccurrencesOfString: ( NSString * )target withString: ( NSString * )replacement;
 - ( std::string )cppStringByReplacingOccurrencesOfString: ( NSString * )target withString: ( NSString * )replacement options: ( NSStringCompareOptions )options range: ( NSRange )searchRange;
@@ -82,14 +84,14 @@
 - ( NSComparisonResult )localizedCompareWithCPPString: ( std::string )aString;
 - ( NSComparisonResult )compareWithCPPString: ( std::string )aString options: ( NSStringCompareOptions )mask;
 - ( NSComparisonResult )compareWithCPPString: ( std::string )aString options: ( NSStringCompareOptions )mask range: ( NSRange )range;
-- ( NSComparisonResult )compareWithCPPString: ( std::string )aString options: ( NSStringCompareOptions )mask range: ( NSRange )range locale: ( id )locale;
+- ( NSComparisonResult )compareWithCPPString: ( std::string )aString options: ( NSStringCompareOptions )mask range: ( NSRange )range locale: ( nullable id )locale;
 - ( NSComparisonResult )localizedStandardCompareWithCPPString: ( std::string )string;
 
 - ( BOOL )hasCPPStringPrefix: ( std::string )aString;
 - ( BOOL )hasCPPStringSuffix: ( std::string )aString;
 - ( BOOL )isEqualToCPPString: ( std::string )aString;
 
-- ( std::string )cppStringByFoldingWithOptions: ( NSStringCompareOptions )options locale: ( NSLocale * )locale;
+- ( std::string )cppStringByFoldingWithOptions: ( NSStringCompareOptions )options locale: ( nullable NSLocale * )locale;
 - ( NSString * )commonPrefixWithCPPString: ( std::string )aString options: ( NSStringCompareOptions )mask;
 - ( std::string )commonCPPPrefixWithString: ( NSString * )aString options: ( NSStringCompareOptions )mask;
 - ( std::string )capitalizedCPPString;
@@ -103,9 +105,11 @@
 - ( std::string )pathExtensionAsCPPString;
 - ( std::string )cppStringByAbbreviatingWithTildeInPath;
 - ( std::string )cppStringByAppendingPathComponent: ( NSString * )aString;
-- ( NSString * )cppStringByAppendingCPPPathComponent: ( std::string )aString;
+- ( NSString * )stringByAppendingCPPPathComponent: ( std::string )aString;
+- ( std::string )cppStringByAppendingCPPPathComponent: ( std::string )aString;
 - ( std::string )cppStringByAppendingPathExtension: ( NSString * )ext;
 - ( NSString * )stringByAppendingCPPPathExtension: ( std::string )ext;
+- ( std::string )cppStringByAppendingCPPPathExtension: ( std::string )ext;
 - ( std::string )cppStringByDeletingLastPathComponent;
 - ( std::string )cppStringByDeletingPathExtension;
 - ( std::string )cppStringByExpandingTildeInPath;
@@ -115,3 +119,5 @@
 - ( std::string )cppStringByReplacingPercentEscapesUsingEncoding: ( NSStringEncoding )encoding;
 
 @end
+
+NS_ASSUME_NONNULL_END

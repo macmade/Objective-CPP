@@ -292,31 +292,57 @@ TEST( Objective_CPP, precomposedCPPStringWithCompatibilityMapping )
 {}
 
 TEST( Objective_CPP, lastPathComponentAsCPPString )
-{}
+{
+    ASSERT_TRUE( [ @"foo/bar" lastPathComponentAsCPPString ] == "bar" );
+}
 
 TEST( Objective_CPP, pathExtensionAsCPPString )
-{}
+{
+    ASSERT_TRUE( [ @"foo/bar.txt" pathExtensionAsCPPString ] == "txt" );
+}
 
 TEST( Objective_CPP, cppStringByAbbreviatingWithTildeInPath )
 {}
 
 TEST( Objective_CPP, cppStringByAppendingPathComponent )
-{}
+{
+    ASSERT_TRUE( [ @"/foo/bar" cppStringByAppendingPathComponent: @"foobar" ] == "/foo/bar/foobar" );
+}
+
+TEST( Objective_CPP, stringByAppendingCPPPathComponent )
+{
+    ASSERT_TRUE( [ [ @"/foo/bar" stringByAppendingCPPPathComponent: "foobar" ] isEqualToString: @"/foo/bar/foobar" ] );
+}
 
 TEST( Objective_CPP, cppStringByAppendingCPPPathComponent )
-{}
+{
+    ASSERT_TRUE( [ @"/foo/bar" cppStringByAppendingCPPPathComponent: "foobar" ] == "/foo/bar/foobar" );
+}
 
 TEST( Objective_CPP, cppStringByAppendingPathExtension )
-{}
+{
+    ASSERT_TRUE( [ @"/foo/bar" cppStringByAppendingPathExtension: @"txt" ] == "/foo/bar.txt" );
+}
 
 TEST( Objective_CPP, stringByAppendingCPPPathExtension )
-{}
+{
+    ASSERT_TRUE( [ [ @"/foo/bar" stringByAppendingCPPPathExtension: "txt" ] isEqualToString: @"/foo/bar.txt" ] );
+}
+
+TEST( Objective_CPP, cppStringByAppendingCPPPathExtension )
+{
+    ASSERT_TRUE( [ @"/foo/bar" cppStringByAppendingCPPPathExtension: "txt" ] == "/foo/bar.txt" );
+}
 
 TEST( Objective_CPP, cppStringByDeletingLastPathComponent )
-{}
+{
+    ASSERT_TRUE( [ @"/foo/bar" cppStringByDeletingLastPathComponent ] == "/foo" );
+}
 
 TEST( Objective_CPP, cppStringByDeletingPathExtension )
-{}
+{
+    ASSERT_TRUE( [ @"/foo/bar.txt" cppStringByDeletingPathExtension ] == "/foo/bar" );
+}
 
 TEST( Objective_CPP, cppStringByExpandingTildeInPath )
 {}
