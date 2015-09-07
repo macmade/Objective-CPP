@@ -64,12 +64,47 @@
 
 using namespace testing;
 
-TEST( ObjectiveCPP_Vector, ArrayFromVector_Int )
+TEST( ObjectiveCPP_Vector, ArrayFromVector_String )
 {
-    std::vector< int > v = { 0, 1, 2, 42 };
-    NSArray          * a;
+    std::vector< std::string > v = { "hello, world", "hello, universe" };
+    NSArray                  * a;
     
-    a = ObjectiveCPP::ArrayFromVector< int, NSNumber >( v, @selector( initWithInt: ) );
+    a = ObjectiveCPP::ArrayFromVector( v );
+    
+    ASSERT_TRUE( a.count == v.size() );
+    
+    ASSERT_TRUE( [ a[ 0 ] isKindOfClass: [ NSString class ] ] );
+    ASSERT_TRUE( [ a[ 1 ] isKindOfClass: [ NSString class ] ] );
+    
+    ASSERT_TRUE( [ a[ 0 ] isEqualToString: @"hello, world" ] );
+    ASSERT_TRUE( [ a[ 1 ] isEqualToString: @"hello, universe" ] );
+}
+
+TEST( ObjectiveCPP_Vector, ArrayFromVector_Bool )
+{
+    std::vector< bool > v = { true, false, true };
+    NSArray           * a;
+    
+    a = ObjectiveCPP::ArrayFromVector( v );
+    
+    ASSERT_TRUE( a.count == v.size() );
+    
+    ASSERT_TRUE( [ a[ 0 ] isKindOfClass: [ NSNumber class ] ] );
+    ASSERT_TRUE( [ a[ 1 ] isKindOfClass: [ NSNumber class ] ] );
+    ASSERT_TRUE( [ a[ 2 ] isKindOfClass: [ NSNumber class ] ] );
+    
+    ASSERT_TRUE( [ a[ 0 ] isEqual: @1 ] );
+    ASSERT_TRUE( [ a[ 1 ] isEqual: @0 ] );
+    ASSERT_TRUE( [ a[ 2 ] isEqual: @1 ] );
+}
+
+template< typename T >
+void ObjectiveCPP_Vector_ArrayFromVector_Number_T( void )
+{
+    std::vector< T > v = { 0, 1, 2, 42 };
+    NSArray        * a;
+    
+    a = ObjectiveCPP::ArrayFromVector( v );
     
     ASSERT_TRUE( a.count == v.size() );
     
@@ -84,20 +119,20 @@ TEST( ObjectiveCPP_Vector, ArrayFromVector_Int )
     ASSERT_TRUE( [ a[ 3 ] isEqual: @42 ] );
 }
 
-TEST( ObjectiveCPP_Vector, ArrayFromVector_String )
+TEST( ObjectiveCPP_Vector, ArrayFromVector_Number )
 {
-    std::vector< std::string > v = { "hello, world", "hello, universe" };
-    NSArray                  * a;
-    
-    a = ObjectiveCPP::ArrayFromVector< std::string, NSString >( v, @selector( initWithCPPString: ) );
-    
-    ASSERT_TRUE( a.count == v.size() );
-    
-    ASSERT_TRUE( [ a[ 0 ] isKindOfClass: [ NSString class ] ] );
-    ASSERT_TRUE( [ a[ 1 ] isKindOfClass: [ NSString class ] ] );
-    
-    ASSERT_TRUE( [ a[ 0 ] isEqualToString: @"hello, world" ] );
-    ASSERT_TRUE( [ a[ 1 ] isEqualToString: @"hello, universe" ] );
+    ObjectiveCPP_Vector_ArrayFromVector_Number_T< signed char >();
+    ObjectiveCPP_Vector_ArrayFromVector_Number_T< unsigned char >();
+    ObjectiveCPP_Vector_ArrayFromVector_Number_T< signed short >();
+    ObjectiveCPP_Vector_ArrayFromVector_Number_T< unsigned short >();
+    ObjectiveCPP_Vector_ArrayFromVector_Number_T< signed int >();
+    ObjectiveCPP_Vector_ArrayFromVector_Number_T< unsigned int >();
+    ObjectiveCPP_Vector_ArrayFromVector_Number_T< signed long >();
+    ObjectiveCPP_Vector_ArrayFromVector_Number_T< unsigned long >();
+    ObjectiveCPP_Vector_ArrayFromVector_Number_T< signed long long >();
+    ObjectiveCPP_Vector_ArrayFromVector_Number_T< unsigned long long >();
+    ObjectiveCPP_Vector_ArrayFromVector_Number_T< float >();
+    ObjectiveCPP_Vector_ArrayFromVector_Number_T< double >();
 }
 
 TEST( ObjectiveCPP_Vector, ArrayFromVector_Custom )

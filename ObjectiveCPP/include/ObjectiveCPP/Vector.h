@@ -43,6 +43,21 @@ NS_ASSUME_NONNULL_BEGIN
 
 namespace ObjectiveCPP
 {
+    NSArray * ArrayFromVector( const std::vector< std::string > & vector );
+    NSArray * ArrayFromVector( const std::vector< bool > & vector );
+    NSArray * ArrayFromVector( const std::vector< signed char > & vector );
+    NSArray * ArrayFromVector( const std::vector< unsigned char > & vector );
+    NSArray * ArrayFromVector( const std::vector< signed short > & vector );
+    NSArray * ArrayFromVector( const std::vector< unsigned short > & vector );
+    NSArray * ArrayFromVector( const std::vector< signed int > & vector );
+    NSArray * ArrayFromVector( const std::vector< unsigned int > & vector );
+    NSArray * ArrayFromVector( const std::vector< signed long > & vector );
+    NSArray * ArrayFromVector( const std::vector< unsigned long > & vector );
+    NSArray * ArrayFromVector( const std::vector< signed long long > & vector );
+    NSArray * ArrayFromVector( const std::vector< unsigned long long > & vector );
+    NSArray * ArrayFromVector( const std::vector< float > & vector );
+    NSArray * ArrayFromVector( const std::vector< double > & vector );
+    
     template < typename T, typename ObjCClass >
     NSArray * ArrayFromVector( const std::vector< T > & vector, SEL initMethod )
     {
