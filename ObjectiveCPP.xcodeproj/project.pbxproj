@@ -7,50 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		052B363E1B4EBA60009D98A4 /* libObjectiveCPP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 052B35951B4EB810009D98A4 /* libObjectiveCPP.a */; };
 		056BC7B21B2379D300B21D46 /* libObjectiveCPP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 056C881218C8B85F006260B3 /* libObjectiveCPP.a */; };
 		058B16A91B990D4700DF09FC /* NSString+ObjectiveCPP.h in Headers */ = {isa = PBXBuildFile; fileRef = 058B16A41B990D4000DF09FC /* NSString+ObjectiveCPP.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		058B16AA1B990D4700DF09FC /* NSString+ObjectiveCPP.h in Headers */ = {isa = PBXBuildFile; fileRef = 058B16A41B990D4000DF09FC /* NSString+ObjectiveCPP.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		058B16AB1B990D4800DF09FC /* NSString+ObjectiveCPP.h in Headers */ = {isa = PBXBuildFile; fileRef = 058B16A41B990D4000DF09FC /* NSString+ObjectiveCPP.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		058B16AC1B990D4800DF09FC /* NSString+ObjectiveCPP.h in Headers */ = {isa = PBXBuildFile; fileRef = 058B16A41B990D4000DF09FC /* NSString+ObjectiveCPP.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		058B16AD1B990D4D00DF09FC /* ObjectiveCPP.h in Headers */ = {isa = PBXBuildFile; fileRef = 058B16A51B990D4000DF09FC /* ObjectiveCPP.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		058B16AE1B990D4D00DF09FC /* ObjectiveCPP.h in Headers */ = {isa = PBXBuildFile; fileRef = 058B16A51B990D4000DF09FC /* ObjectiveCPP.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		058B16AF1B990D4E00DF09FC /* ObjectiveCPP.h in Headers */ = {isa = PBXBuildFile; fileRef = 058B16A51B990D4000DF09FC /* ObjectiveCPP.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		058B16B01B990D4E00DF09FC /* ObjectiveCPP.h in Headers */ = {isa = PBXBuildFile; fileRef = 058B16A51B990D4000DF09FC /* ObjectiveCPP.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		058B16B21B990D6100DF09FC /* NSString+ObjectiveCPP.mm in Sources */ = {isa = PBXBuildFile; fileRef = 058B16B11B990D6100DF09FC /* NSString+ObjectiveCPP.mm */; settings = {ASSET_TAGS = (); }; };
-		058B16B31B990D6600DF09FC /* NSString+ObjectiveCPP.mm in Sources */ = {isa = PBXBuildFile; fileRef = 058B16B11B990D6100DF09FC /* NSString+ObjectiveCPP.mm */; settings = {ASSET_TAGS = (); }; };
 		058B16B41B990D6700DF09FC /* NSString+ObjectiveCPP.mm in Sources */ = {isa = PBXBuildFile; fileRef = 058B16B11B990D6100DF09FC /* NSString+ObjectiveCPP.mm */; settings = {ASSET_TAGS = (); }; };
-		058B16B51B990D6700DF09FC /* NSString+ObjectiveCPP.mm in Sources */ = {isa = PBXBuildFile; fileRef = 058B16B11B990D6100DF09FC /* NSString+ObjectiveCPP.mm */; settings = {ASSET_TAGS = (); }; };
 		058B16B61B990D6700DF09FC /* NSString+ObjectiveCPP.mm in Sources */ = {isa = PBXBuildFile; fileRef = 058B16B11B990D6100DF09FC /* NSString+ObjectiveCPP.mm */; settings = {ASSET_TAGS = (); }; };
-		058B16B71B990D6800DF09FC /* NSString+ObjectiveCPP.mm in Sources */ = {isa = PBXBuildFile; fileRef = 058B16B11B990D6100DF09FC /* NSString+ObjectiveCPP.mm */; settings = {ASSET_TAGS = (); }; };
 		058B16B81B990D6800DF09FC /* NSString+ObjectiveCPP.mm in Sources */ = {isa = PBXBuildFile; fileRef = 058B16B11B990D6100DF09FC /* NSString+ObjectiveCPP.mm */; settings = {ASSET_TAGS = (); }; };
-		058B16B91B990D6900DF09FC /* NSString+ObjectiveCPP.mm in Sources */ = {isa = PBXBuildFile; fileRef = 058B16B11B990D6100DF09FC /* NSString+ObjectiveCPP.mm */; settings = {ASSET_TAGS = (); }; };
 		058B16D11B99102600DF09FC /* GoogleMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 056C58B31B18985500C6214A /* GoogleMock.framework */; };
-		058B16D41B99103800DF09FC /* GoogleMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 056C58B31B18985500C6214A /* GoogleMock.framework */; };
 		058B16D51B99106F00DF09FC /* Test-NSString+ObjectiveCPP.mm in Sources */ = {isa = PBXBuildFile; fileRef = 058B169D1B990CBF00DF09FC /* Test-NSString+ObjectiveCPP.mm */; settings = {ASSET_TAGS = (); }; };
-		058B16D61B99107000DF09FC /* Test-NSString+ObjectiveCPP.mm in Sources */ = {isa = PBXBuildFile; fileRef = 058B169D1B990CBF00DF09FC /* Test-NSString+ObjectiveCPP.mm */; settings = {ASSET_TAGS = (); }; };
 		05DEB2AD1B9D93930006607F /* Map.h in Headers */ = {isa = PBXBuildFile; fileRef = 05DEB2861B9D8BBB0006607F /* Map.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		05DEB2AE1B9D93930006607F /* Vector.h in Headers */ = {isa = PBXBuildFile; fileRef = 05DEB2821B9D8BB30006607F /* Vector.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		05DEB2AF1B9D93930006607F /* Map.h in Headers */ = {isa = PBXBuildFile; fileRef = 05DEB2861B9D8BBB0006607F /* Map.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		05DEB2B01B9D93930006607F /* Vector.h in Headers */ = {isa = PBXBuildFile; fileRef = 05DEB2821B9D8BB30006607F /* Vector.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		05DEB2B11B9D93940006607F /* Map.h in Headers */ = {isa = PBXBuildFile; fileRef = 05DEB2861B9D8BBB0006607F /* Map.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		05DEB2B21B9D93940006607F /* Vector.h in Headers */ = {isa = PBXBuildFile; fileRef = 05DEB2821B9D8BB30006607F /* Vector.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		05DEB2B31B9D93940006607F /* Map.h in Headers */ = {isa = PBXBuildFile; fileRef = 05DEB2861B9D8BBB0006607F /* Map.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		05DEB2B41B9D93940006607F /* Vector.h in Headers */ = {isa = PBXBuildFile; fileRef = 05DEB2821B9D8BB30006607F /* Vector.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		05DEB2B51B9D93B40006607F /* Test-Map.mm in Sources */ = {isa = PBXBuildFile; fileRef = 05DEB2A81B9D93820006607F /* Test-Map.mm */; settings = {ASSET_TAGS = (); }; };
 		05DEB2B61B9D93B40006607F /* Test-Vector.mm in Sources */ = {isa = PBXBuildFile; fileRef = 05DEB2AC1B9D938E0006607F /* Test-Vector.mm */; settings = {ASSET_TAGS = (); }; };
-		05DEB2B71B9D93B40006607F /* Test-Map.mm in Sources */ = {isa = PBXBuildFile; fileRef = 05DEB2A81B9D93820006607F /* Test-Map.mm */; settings = {ASSET_TAGS = (); }; };
-		05DEB2B81B9D93B40006607F /* Test-Vector.mm in Sources */ = {isa = PBXBuildFile; fileRef = 05DEB2AC1B9D938E0006607F /* Test-Vector.mm */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		052B363C1B4EBA57009D98A4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 056C87C618C8B0F8006260B3 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 052B35781B4EB810009D98A4;
-			remoteInfo = "ObjectiveCPP Mac Static Library (C++98)";
-		};
 		056C58B21B18985500C6214A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 056C58AB1B18985500C6214A /* GoogleMock.xcodeproj */;
@@ -93,25 +69,9 @@
 			remoteGlobalIDString = 05818F851A685AEA0072A469;
 			remoteInfo = GoogleMock;
 		};
-		058B16D21B99103500DF09FC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 056C58AB1B18985500C6214A /* GoogleMock.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 05818F851A685AEA0072A469;
-			remoteInfo = GoogleMock;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		052B360F1B4EB825009D98A4 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "include/$(PRODUCT_NAME)";
-			dstSubfolderSpec = 16;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		056C88A818C8C8AC006260B3 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -125,11 +85,6 @@
 
 /* Begin PBXFileReference section */
 		051F09651946EB70004B6E47 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		052B35951B4EB810009D98A4 /* libObjectiveCPP.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libObjectiveCPP.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		052B35C51B4EB814009D98A4 /* libObjectiveCPP.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libObjectiveCPP.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		052B35F61B4EB81C009D98A4 /* ObjectiveCPP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ObjectiveCPP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		052B36141B4EB825009D98A4 /* libObjectiveCPP.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libObjectiveCPP.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		052B363A1B4EB828009D98A4 /* ObjectiveCPP Tests (C++98).xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ObjectiveCPP Tests (C++98).xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		054702AC1B1D8FA00036259D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		056C58AB1B18985500C6214A /* GoogleMock.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GoogleMock.xcodeproj; path = "Submodules/gmock-xcode/GoogleMock.xcodeproj"; sourceTree = "<group>"; };
 		056C58BF1B1898FF00C6214A /* ObjectiveCPP Tests (C++11).xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ObjectiveCPP Tests (C++11).xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -153,43 +108,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		052B358E1B4EB810009D98A4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		052B35AC1B4EB814009D98A4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		052B35DC1B4EB81C009D98A4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		052B360E1B4EB825009D98A4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		052B36301B4EB828009D98A4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				058B16D41B99103800DF09FC /* GoogleMock.framework in Frameworks */,
-				052B363E1B4EBA60009D98A4 /* libObjectiveCPP.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		056C58BC1B1898FF00C6214A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -282,11 +200,6 @@
 				056C885F18C8C76B006260B3 /* ObjectiveCPP.framework */,
 				056C88AA18C8C8AC006260B3 /* libObjectiveCPP.a */,
 				056C58BF1B1898FF00C6214A /* ObjectiveCPP Tests (C++11).xctest */,
-				052B35951B4EB810009D98A4 /* libObjectiveCPP.a */,
-				052B35C51B4EB814009D98A4 /* libObjectiveCPP.dylib */,
-				052B35F61B4EB81C009D98A4 /* ObjectiveCPP.framework */,
-				052B36141B4EB825009D98A4 /* libObjectiveCPP.a */,
-				052B363A1B4EB828009D98A4 /* ObjectiveCPP Tests (C++98).xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -340,35 +253,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		052B358F1B4EB810009D98A4 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		052B35AE1B4EB814009D98A4 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				05DEB2AF1B9D93930006607F /* Map.h in Headers */,
-				05DEB2B01B9D93930006607F /* Vector.h in Headers */,
-				058B16AE1B990D4D00DF09FC /* ObjectiveCPP.h in Headers */,
-				058B16AA1B990D4700DF09FC /* NSString+ObjectiveCPP.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		052B35DE1B4EB81C009D98A4 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				05DEB2B31B9D93940006607F /* Map.h in Headers */,
-				05DEB2B41B9D93940006607F /* Vector.h in Headers */,
-				058B16B01B990D4E00DF09FC /* ObjectiveCPP.h in Headers */,
-				058B16AC1B990D4800DF09FC /* NSString+ObjectiveCPP.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		056C881018C8B85F006260B3 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -401,96 +285,6 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		052B35781B4EB810009D98A4 /* ObjectiveCPP Mac Static Library (C++98) */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 052B35911B4EB810009D98A4 /* Build configuration list for PBXNativeTarget "ObjectiveCPP Mac Static Library (C++98)" */;
-			buildPhases = (
-				052B35791B4EB810009D98A4 /* Sources */,
-				052B358E1B4EB810009D98A4 /* Frameworks */,
-				052B358F1B4EB810009D98A4 /* Headers */,
-				052B35901B4EB810009D98A4 /* ShellScript */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "ObjectiveCPP Mac Static Library (C++98)";
-			productName = ObjectiveCPP;
-			productReference = 052B35951B4EB810009D98A4 /* libObjectiveCPP.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		052B35961B4EB814009D98A4 /* ObjectiveCPP Mac Dynamic Library (C++98) */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 052B35C11B4EB814009D98A4 /* Build configuration list for PBXNativeTarget "ObjectiveCPP Mac Dynamic Library (C++98)" */;
-			buildPhases = (
-				052B35971B4EB814009D98A4 /* Sources */,
-				052B35AC1B4EB814009D98A4 /* Frameworks */,
-				052B35AE1B4EB814009D98A4 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "ObjectiveCPP Mac Dynamic Library (C++98)";
-			productName = ObjectiveCPP;
-			productReference = 052B35C51B4EB814009D98A4 /* libObjectiveCPP.dylib */;
-			productType = "com.apple.product-type.library.dynamic";
-		};
-		052B35C61B4EB81C009D98A4 /* ObjectiveCPP Mac Framework (C++98) */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 052B35F21B4EB81C009D98A4 /* Build configuration list for PBXNativeTarget "ObjectiveCPP Mac Framework (C++98)" */;
-			buildPhases = (
-				052B35C71B4EB81C009D98A4 /* Sources */,
-				052B35DC1B4EB81C009D98A4 /* Frameworks */,
-				052B35DE1B4EB81C009D98A4 /* Headers */,
-				052B35F11B4EB81C009D98A4 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "ObjectiveCPP Mac Framework (C++98)";
-			productName = ObjectiveCPP;
-			productReference = 052B35F61B4EB81C009D98A4 /* ObjectiveCPP.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		052B35F81B4EB825009D98A4 /* ObjectiveCPP iOS Static Library (C++98) */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 052B36101B4EB825009D98A4 /* Build configuration list for PBXNativeTarget "ObjectiveCPP iOS Static Library (C++98)" */;
-			buildPhases = (
-				052B35F91B4EB825009D98A4 /* Sources */,
-				052B360E1B4EB825009D98A4 /* Frameworks */,
-				052B360F1B4EB825009D98A4 /* CopyFiles */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "ObjectiveCPP iOS Static Library (C++98)";
-			productName = ObjectiveCPP;
-			productReference = 052B36141B4EB825009D98A4 /* libObjectiveCPP.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		052B36151B4EB828009D98A4 /* ObjectiveCPP Tests (C++98) */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 052B36361B4EB828009D98A4 /* Build configuration list for PBXNativeTarget "ObjectiveCPP Tests (C++98)" */;
-			buildPhases = (
-				052B361A1B4EB828009D98A4 /* Sources */,
-				052B36301B4EB828009D98A4 /* Frameworks */,
-				052B36341B4EB828009D98A4 /* Resources */,
-				052B36351B4EB828009D98A4 /* ShellScript */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				058B16D31B99103500DF09FC /* PBXTargetDependency */,
-				052B363D1B4EBA57009D98A4 /* PBXTargetDependency */,
-			);
-			name = "ObjectiveCPP Tests (C++98)";
-			productName = "ObjectiveCPP Tests";
-			productReference = 052B363A1B4EB828009D98A4 /* ObjectiveCPP Tests (C++98).xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		056C58BE1B1898FF00C6214A /* ObjectiveCPP Tests (C++11) */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 056C58C81B1898FF00C6214A /* Build configuration list for PBXNativeTarget "ObjectiveCPP Tests (C++11)" */;
@@ -614,15 +408,10 @@
 			projectRoot = "";
 			targets = (
 				056C881118C8B85F006260B3 /* ObjectiveCPP Mac Static Library (C++11) */,
-				052B35781B4EB810009D98A4 /* ObjectiveCPP Mac Static Library (C++98) */,
 				056C884918C8C547006260B3 /* ObjectiveCPP Mac Dynamic Library (C++11) */,
-				052B35961B4EB814009D98A4 /* ObjectiveCPP Mac Dynamic Library (C++98) */,
 				056C885E18C8C76B006260B3 /* ObjectiveCPP Mac Framework (C++11) */,
-				052B35C61B4EB81C009D98A4 /* ObjectiveCPP Mac Framework (C++98) */,
 				056C88A918C8C8AC006260B3 /* ObjectiveCPP iOS Static Library (C++11) */,
-				052B35F81B4EB825009D98A4 /* ObjectiveCPP iOS Static Library (C++98) */,
 				056C58BE1B1898FF00C6214A /* ObjectiveCPP Tests (C++11) */,
-				052B36151B4EB828009D98A4 /* ObjectiveCPP Tests (C++98) */,
 			);
 		};
 /* End PBXProject section */
@@ -659,20 +448,6 @@
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
-		052B35F11B4EB81C009D98A4 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		052B36341B4EB828009D98A4 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		056C58BD1B1898FF00C6214A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -690,32 +465,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		052B35901B4EB810009D98A4 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "export | egrep '(BUILT_PRODUCTS_DIR)|(CURRENT_ARCH)|(OBJECT_FILE_DIR_normal)|(SRCROOT)|(OBJROOT)' > Scripts/xcenv-lib.sh\n";
-		};
-		052B36351B4EB828009D98A4 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "export | egrep '(BUILT_PRODUCTS_DIR)|(CURRENT_ARCH)|(OBJECT_FILE_DIR_normal)|(SRCROOT)|(OBJROOT)' > Scripts/xcenv-tests.sh";
-		};
 		056C590D1B189F5B00C6214A /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -745,48 +494,6 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		052B35791B4EB810009D98A4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				058B16B31B990D6600DF09FC /* NSString+ObjectiveCPP.mm in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		052B35971B4EB814009D98A4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				058B16B51B990D6700DF09FC /* NSString+ObjectiveCPP.mm in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		052B35C71B4EB81C009D98A4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				058B16B71B990D6800DF09FC /* NSString+ObjectiveCPP.mm in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		052B35F91B4EB825009D98A4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				058B16B91B990D6900DF09FC /* NSString+ObjectiveCPP.mm in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		052B361A1B4EB828009D98A4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				05DEB2B81B9D93B40006607F /* Test-Vector.mm in Sources */,
-				05DEB2B71B9D93B40006607F /* Test-Map.mm in Sources */,
-				058B16D61B99107000DF09FC /* Test-NSString+ObjectiveCPP.mm in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		056C58BB1B1898FF00C6214A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -832,11 +539,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		052B363D1B4EBA57009D98A4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 052B35781B4EB810009D98A4 /* ObjectiveCPP Mac Static Library (C++98) */;
-			targetProxy = 052B363C1B4EBA57009D98A4 /* PBXContainerItemProxy */;
-		};
 		056C58C71B1898FF00C6214A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 056C881118C8B85F006260B3 /* ObjectiveCPP Mac Static Library (C++11) */;
@@ -847,324 +549,9 @@
 			name = GoogleMock;
 			targetProxy = 058B16CF1B99102100DF09FC /* PBXContainerItemProxy */;
 		};
-		058B16D31B99103500DF09FC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = GoogleMock;
-			targetProxy = 058B16D21B99103500DF09FC /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		052B35921B4EB810009D98A4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "c++98";
-				COMBINE_HIDPI_IMAGES = YES;
-				EXECUTABLE_PREFIX = lib;
-				GCC_C_LANGUAGE_STANDARD = c99;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = ObjectiveCPP/PrefixHeader.pch;
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					ObjectiveCPP/include,
-				);
-				PRODUCT_NAME = ObjectiveCPP;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		052B35931B4EB810009D98A4 /* GCov */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "c++98";
-				COMBINE_HIDPI_IMAGES = YES;
-				EXECUTABLE_PREFIX = lib;
-				GCC_C_LANGUAGE_STANDARD = c99;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = ObjectiveCPP/PrefixHeader.pch;
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					ObjectiveCPP/include,
-				);
-				PRODUCT_NAME = ObjectiveCPP;
-				SKIP_INSTALL = YES;
-			};
-			name = GCov;
-		};
-		052B35941B4EB810009D98A4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "c++98";
-				COMBINE_HIDPI_IMAGES = YES;
-				EXECUTABLE_PREFIX = lib;
-				GCC_C_LANGUAGE_STANDARD = c99;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = ObjectiveCPP/PrefixHeader.pch;
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					ObjectiveCPP/include,
-				);
-				PRODUCT_NAME = ObjectiveCPP;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		052B35C21B4EB814009D98A4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "c++98";
-				COMBINE_HIDPI_IMAGES = YES;
-				EXECUTABLE_PREFIX = lib;
-				GCC_C_LANGUAGE_STANDARD = c99;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = ObjectiveCPP/PrefixHeader.pch;
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					ObjectiveCPP/include,
-				);
-				PRODUCT_NAME = ObjectiveCPP;
-			};
-			name = Debug;
-		};
-		052B35C31B4EB814009D98A4 /* GCov */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "c++98";
-				COMBINE_HIDPI_IMAGES = YES;
-				EXECUTABLE_PREFIX = lib;
-				GCC_C_LANGUAGE_STANDARD = c99;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = ObjectiveCPP/PrefixHeader.pch;
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					ObjectiveCPP/include,
-				);
-				PRODUCT_NAME = ObjectiveCPP;
-			};
-			name = GCov;
-		};
-		052B35C41B4EB814009D98A4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "c++98";
-				COMBINE_HIDPI_IMAGES = YES;
-				EXECUTABLE_PREFIX = lib;
-				GCC_C_LANGUAGE_STANDARD = c99;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = ObjectiveCPP/PrefixHeader.pch;
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					ObjectiveCPP/include,
-				);
-				PRODUCT_NAME = ObjectiveCPP;
-			};
-			name = Release;
-		};
-		052B35F31B4EB81C009D98A4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "c++98";
-				COMBINE_HIDPI_IMAGES = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				FRAMEWORK_VERSION = A;
-				GCC_C_LANGUAGE_STANDARD = c99;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = ObjectiveCPP/PrefixHeader.pch;
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					ObjectiveCPP/include,
-				);
-				INFOPLIST_FILE = ObjectiveCPP/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.xs-labs.ObjectiveCPP";
-				PRODUCT_NAME = ObjectiveCPP;
-				WRAPPER_EXTENSION = framework;
-			};
-			name = Debug;
-		};
-		052B35F41B4EB81C009D98A4 /* GCov */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "c++98";
-				COMBINE_HIDPI_IMAGES = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				FRAMEWORK_VERSION = A;
-				GCC_C_LANGUAGE_STANDARD = c99;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = ObjectiveCPP/PrefixHeader.pch;
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					ObjectiveCPP/include,
-				);
-				INFOPLIST_FILE = ObjectiveCPP/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.xs-labs.ObjectiveCPP";
-				PRODUCT_NAME = ObjectiveCPP;
-				WRAPPER_EXTENSION = framework;
-			};
-			name = GCov;
-		};
-		052B35F51B4EB81C009D98A4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "c++98";
-				COMBINE_HIDPI_IMAGES = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				FRAMEWORK_VERSION = A;
-				GCC_C_LANGUAGE_STANDARD = c99;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = ObjectiveCPP/PrefixHeader.pch;
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					ObjectiveCPP/include,
-				);
-				INFOPLIST_FILE = ObjectiveCPP/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.xs-labs.ObjectiveCPP";
-				PRODUCT_NAME = ObjectiveCPP;
-				WRAPPER_EXTENSION = framework;
-			};
-			name = Release;
-		};
-		052B36111B4EB825009D98A4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "c++98";
-				DSTROOT = /tmp/CF__.dst;
-				GCC_C_LANGUAGE_STANDARD = c99;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = ObjectiveCPP/PrefixHeader.pch;
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					ObjectiveCPP/include,
-				);
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = ObjectiveCPP;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				VALID_ARCHS = "arm64 armv7 armv7s";
-			};
-			name = Debug;
-		};
-		052B36121B4EB825009D98A4 /* GCov */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "c++98";
-				DSTROOT = /tmp/CF__.dst;
-				GCC_C_LANGUAGE_STANDARD = c99;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = ObjectiveCPP/PrefixHeader.pch;
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					ObjectiveCPP/include,
-				);
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = ObjectiveCPP;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				VALID_ARCHS = "arm64 armv7 armv7s";
-			};
-			name = GCov;
-		};
-		052B36131B4EB825009D98A4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "c++98";
-				DSTROOT = /tmp/CF__.dst;
-				GCC_C_LANGUAGE_STANDARD = c99;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = ObjectiveCPP/PrefixHeader.pch;
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					ObjectiveCPP/include,
-				);
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = ObjectiveCPP;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				VALIDATE_PRODUCT = YES;
-				VALID_ARCHS = "arm64 armv7 armv7s";
-			};
-			name = Release;
-		};
-		052B36371B4EB828009D98A4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "c++98";
-				CLANG_STATIC_ANALYZER_MODE = shallow;
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				GCC_C_LANGUAGE_STANDARD = c99;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include",
-					ObjectiveCPP/include,
-				);
-				INFOPLIST_FILE = "Unit-Tests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.xs-labs.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		052B36381B4EB828009D98A4 /* GCov */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "c++98";
-				CLANG_STATIC_ANALYZER_MODE = shallow;
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				GCC_C_LANGUAGE_STANDARD = c99;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include",
-					ObjectiveCPP/include,
-				);
-				INFOPLIST_FILE = "Unit-Tests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.xs-labs.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = GCov;
-		};
-		052B36391B4EB828009D98A4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "c++98";
-				CLANG_STATIC_ANALYZER_MODE = shallow;
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				GCC_C_LANGUAGE_STANDARD = c99;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include",
-					ObjectiveCPP/include,
-				);
-				INFOPLIST_FILE = "Unit-Tests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.xs-labs.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 		056C58C91B1898FF00C6214A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1763,56 +1150,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		052B35911B4EB810009D98A4 /* Build configuration list for PBXNativeTarget "ObjectiveCPP Mac Static Library (C++98)" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				052B35921B4EB810009D98A4 /* Debug */,
-				052B35931B4EB810009D98A4 /* GCov */,
-				052B35941B4EB810009D98A4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		052B35C11B4EB814009D98A4 /* Build configuration list for PBXNativeTarget "ObjectiveCPP Mac Dynamic Library (C++98)" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				052B35C21B4EB814009D98A4 /* Debug */,
-				052B35C31B4EB814009D98A4 /* GCov */,
-				052B35C41B4EB814009D98A4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		052B35F21B4EB81C009D98A4 /* Build configuration list for PBXNativeTarget "ObjectiveCPP Mac Framework (C++98)" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				052B35F31B4EB81C009D98A4 /* Debug */,
-				052B35F41B4EB81C009D98A4 /* GCov */,
-				052B35F51B4EB81C009D98A4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		052B36101B4EB825009D98A4 /* Build configuration list for PBXNativeTarget "ObjectiveCPP iOS Static Library (C++98)" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				052B36111B4EB825009D98A4 /* Debug */,
-				052B36121B4EB825009D98A4 /* GCov */,
-				052B36131B4EB825009D98A4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		052B36361B4EB828009D98A4 /* Build configuration list for PBXNativeTarget "ObjectiveCPP Tests (C++98)" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				052B36371B4EB828009D98A4 /* Debug */,
-				052B36381B4EB828009D98A4 /* GCov */,
-				052B36391B4EB828009D98A4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		056C58C81B1898FF00C6214A /* Build configuration list for PBXNativeTarget "ObjectiveCPP Tests (C++11)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

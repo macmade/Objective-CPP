@@ -46,7 +46,7 @@ namespace ObjectiveCPP
         
         d = [ NSMutableDictionary dictionaryWithCapacity: map.size() ];
         
-        for( it = map.begin(); it != map.end(); ++it )
+        for( auto p: map )
         {
             {
                 id oK;
@@ -56,8 +56,8 @@ namespace ObjectiveCPP
                 oV = [ ObjCClassV alloc ];
                 iK = reinterpret_cast< id ( * )( id, SEL, TK ) >( [ oK methodForSelector: initMethodK ] );
                 iV = reinterpret_cast< id ( * )( id, SEL, TV ) >( [ oV methodForSelector: initMethodV ] );
-                oK = iK( oK, initMethodK, it->first );
-                oV = iV( oV, initMethodV, it->second );
+                oK = iK( oK, initMethodK, p.first );
+                oV = iV( oV, initMethodV, p.second );
                 
                 if( oK != nil && oV != nil )
                 {

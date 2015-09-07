@@ -46,14 +46,14 @@ namespace ObjectiveCPP
         
         a = [ NSMutableArray arrayWithCapacity: vector.size() ];
         
-        for( it = vector.begin(); it != vector.end(); ++it )
+        for( auto v: vector )
         {
             {
                 id o;
                 
                 o = [ ObjCClass alloc ];
                 i = reinterpret_cast< id ( * )( id, SEL, T ) >( [ o methodForSelector: initMethod ] );
-                o = i( o, initMethod, *( it ) );
+                o = i( o, initMethod, v );
                 
                 if( o != nil )
                 {
