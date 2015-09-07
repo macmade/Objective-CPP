@@ -16,20 +16,20 @@
 		051EA6131B9E50720018EAD6 /* Map.mm in Sources */ = {isa = PBXBuildFile; fileRef = 051EA6101B9E50720018EAD6 /* Map.mm */; settings = {ASSET_TAGS = (); }; };
 		051EA6141B9E50720018EAD6 /* Map.mm in Sources */ = {isa = PBXBuildFile; fileRef = 051EA6101B9E50720018EAD6 /* Map.mm */; settings = {ASSET_TAGS = (); }; };
 		056BC7B21B2379D300B21D46 /* libObjectiveCPP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 056C881218C8B85F006260B3 /* libObjectiveCPP.a */; };
-		058B16A91B990D4700DF09FC /* NSString+ObjectiveCPP.h in Headers */ = {isa = PBXBuildFile; fileRef = 058B16A41B990D4000DF09FC /* NSString+ObjectiveCPP.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		058B16AB1B990D4800DF09FC /* NSString+ObjectiveCPP.h in Headers */ = {isa = PBXBuildFile; fileRef = 058B16A41B990D4000DF09FC /* NSString+ObjectiveCPP.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		058B16AD1B990D4D00DF09FC /* ObjectiveCPP.h in Headers */ = {isa = PBXBuildFile; fileRef = 058B16A51B990D4000DF09FC /* ObjectiveCPP.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		058B16AF1B990D4E00DF09FC /* ObjectiveCPP.h in Headers */ = {isa = PBXBuildFile; fileRef = 058B16A51B990D4000DF09FC /* ObjectiveCPP.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		058B16A91B990D4700DF09FC /* NSString+ObjectiveCPP.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 058B16A41B990D4000DF09FC /* NSString+ObjectiveCPP.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		058B16AB1B990D4800DF09FC /* NSString+ObjectiveCPP.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 058B16A41B990D4000DF09FC /* NSString+ObjectiveCPP.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		058B16AD1B990D4D00DF09FC /* ObjectiveCPP.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 058B16A51B990D4000DF09FC /* ObjectiveCPP.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		058B16AF1B990D4E00DF09FC /* ObjectiveCPP.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 058B16A51B990D4000DF09FC /* ObjectiveCPP.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
 		058B16B21B990D6100DF09FC /* NSString+ObjectiveCPP.mm in Sources */ = {isa = PBXBuildFile; fileRef = 058B16B11B990D6100DF09FC /* NSString+ObjectiveCPP.mm */; settings = {ASSET_TAGS = (); }; };
 		058B16B41B990D6700DF09FC /* NSString+ObjectiveCPP.mm in Sources */ = {isa = PBXBuildFile; fileRef = 058B16B11B990D6100DF09FC /* NSString+ObjectiveCPP.mm */; settings = {ASSET_TAGS = (); }; };
 		058B16B61B990D6700DF09FC /* NSString+ObjectiveCPP.mm in Sources */ = {isa = PBXBuildFile; fileRef = 058B16B11B990D6100DF09FC /* NSString+ObjectiveCPP.mm */; settings = {ASSET_TAGS = (); }; };
 		058B16B81B990D6800DF09FC /* NSString+ObjectiveCPP.mm in Sources */ = {isa = PBXBuildFile; fileRef = 058B16B11B990D6100DF09FC /* NSString+ObjectiveCPP.mm */; settings = {ASSET_TAGS = (); }; };
 		058B16D11B99102600DF09FC /* GoogleMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 056C58B31B18985500C6214A /* GoogleMock.framework */; };
 		058B16D51B99106F00DF09FC /* Test-NSString+ObjectiveCPP.mm in Sources */ = {isa = PBXBuildFile; fileRef = 058B169D1B990CBF00DF09FC /* Test-NSString+ObjectiveCPP.mm */; settings = {ASSET_TAGS = (); }; };
-		05DEB2AD1B9D93930006607F /* Map.h in Headers */ = {isa = PBXBuildFile; fileRef = 05DEB2861B9D8BBB0006607F /* Map.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		05DEB2AE1B9D93930006607F /* Vector.h in Headers */ = {isa = PBXBuildFile; fileRef = 05DEB2821B9D8BB30006607F /* Vector.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		05DEB2B11B9D93940006607F /* Map.h in Headers */ = {isa = PBXBuildFile; fileRef = 05DEB2861B9D8BBB0006607F /* Map.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		05DEB2B21B9D93940006607F /* Vector.h in Headers */ = {isa = PBXBuildFile; fileRef = 05DEB2821B9D8BB30006607F /* Vector.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05DEB2AD1B9D93930006607F /* Map.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 05DEB2861B9D8BBB0006607F /* Map.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		05DEB2AE1B9D93930006607F /* Vector.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 05DEB2821B9D8BB30006607F /* Vector.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		05DEB2B11B9D93940006607F /* Map.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 05DEB2861B9D8BBB0006607F /* Map.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		05DEB2B21B9D93940006607F /* Vector.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 05DEB2821B9D8BB30006607F /* Vector.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
 		05DEB2B51B9D93B40006607F /* Test-Map.mm in Sources */ = {isa = PBXBuildFile; fileRef = 05DEB2A81B9D93820006607F /* Test-Map.mm */; settings = {ASSET_TAGS = (); }; };
 		05DEB2B61B9D93B40006607F /* Test-Vector.mm in Sources */ = {isa = PBXBuildFile; fileRef = 05DEB2AC1B9D938E0006607F /* Test-Vector.mm */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
@@ -105,14 +105,14 @@
 		056C885F18C8C76B006260B3 /* ObjectiveCPP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ObjectiveCPP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		056C88AA18C8C8AC006260B3 /* libObjectiveCPP.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libObjectiveCPP.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		058B169D1B990CBF00DF09FC /* Test-NSString+ObjectiveCPP.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "Test-NSString+ObjectiveCPP.mm"; sourceTree = "<group>"; };
-		058B16A41B990D4000DF09FC /* NSString+ObjectiveCPP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ObjectiveCPP.h"; sourceTree = "<group>"; };
-		058B16A51B990D4000DF09FC /* ObjectiveCPP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectiveCPP.h; sourceTree = "<group>"; };
+		058B16A41B990D4000DF09FC /* NSString+ObjectiveCPP.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = "NSString+ObjectiveCPP.hpp"; sourceTree = "<group>"; };
+		058B16A51B990D4000DF09FC /* ObjectiveCPP.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ObjectiveCPP.hpp; sourceTree = "<group>"; };
 		058B16B11B990D6100DF09FC /* NSString+ObjectiveCPP.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "NSString+ObjectiveCPP.mm"; sourceTree = "<group>"; };
 		05AFBBB81B3E0F78003830B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		05BDE01818CDB2450028F339 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		05BDE01918CDB2450028F339 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		05DEB2821B9D8BB30006607F /* Vector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Vector.h; sourceTree = "<group>"; };
-		05DEB2861B9D8BBB0006607F /* Map.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Map.h; sourceTree = "<group>"; };
+		05DEB2821B9D8BB30006607F /* Vector.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Vector.hpp; sourceTree = "<group>"; };
+		05DEB2861B9D8BBB0006607F /* Map.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Map.hpp; sourceTree = "<group>"; };
 		05DEB2A81B9D93820006607F /* Test-Map.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "Test-Map.mm"; sourceTree = "<group>"; };
 		05DEB2AC1B9D938E0006607F /* Test-Vector.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "Test-Vector.mm"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -225,9 +225,9 @@
 		058B16A31B990D4000DF09FC /* ObjectiveCPP */ = {
 			isa = PBXGroup;
 			children = (
-				058B16A41B990D4000DF09FC /* NSString+ObjectiveCPP.h */,
-				05DEB2861B9D8BBB0006607F /* Map.h */,
-				05DEB2821B9D8BB30006607F /* Vector.h */,
+				058B16A41B990D4000DF09FC /* NSString+ObjectiveCPP.hpp */,
+				05DEB2861B9D8BBB0006607F /* Map.hpp */,
+				05DEB2821B9D8BB30006607F /* Vector.hpp */,
 			);
 			path = ObjectiveCPP;
 			sourceTree = "<group>";
@@ -247,7 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				058B16A31B990D4000DF09FC /* ObjectiveCPP */,
-				058B16A51B990D4000DF09FC /* ObjectiveCPP.h */,
+				058B16A51B990D4000DF09FC /* ObjectiveCPP.hpp */,
 			);
 			path = include;
 			sourceTree = "<group>";
@@ -276,10 +276,10 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05DEB2AD1B9D93930006607F /* Map.h in Headers */,
-				05DEB2AE1B9D93930006607F /* Vector.h in Headers */,
-				058B16AD1B990D4D00DF09FC /* ObjectiveCPP.h in Headers */,
-				058B16A91B990D4700DF09FC /* NSString+ObjectiveCPP.h in Headers */,
+				05DEB2AD1B9D93930006607F /* Map.hpp in Headers */,
+				05DEB2AE1B9D93930006607F /* Vector.hpp in Headers */,
+				058B16AD1B990D4D00DF09FC /* ObjectiveCPP.hpp in Headers */,
+				058B16A91B990D4700DF09FC /* NSString+ObjectiveCPP.hpp in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,10 +287,10 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05DEB2B11B9D93940006607F /* Map.h in Headers */,
-				05DEB2B21B9D93940006607F /* Vector.h in Headers */,
-				058B16AF1B990D4E00DF09FC /* ObjectiveCPP.h in Headers */,
-				058B16AB1B990D4800DF09FC /* NSString+ObjectiveCPP.h in Headers */,
+				05DEB2B11B9D93940006607F /* Map.hpp in Headers */,
+				05DEB2B21B9D93940006607F /* Vector.hpp in Headers */,
+				058B16AF1B990D4E00DF09FC /* ObjectiveCPP.hpp in Headers */,
+				058B16AB1B990D4800DF09FC /* NSString+ObjectiveCPP.hpp in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

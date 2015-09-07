@@ -40,9 +40,9 @@
 
 #ifdef __cplusplus
 
-#import <ObjectiveCPP/NSString+ObjectiveCPP.h>
-#import <ObjectiveCPP/Map.h>
-#import <ObjectiveCPP/Vector.h>
+#import <ObjectiveCPP/NSString+ObjectiveCPP.hpp>
+#import <ObjectiveCPP/Map.hpp>
+#import <ObjectiveCPP/Vector.hpp>
 
 #endif
 

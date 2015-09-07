@@ -33,7 +33,7 @@
  * @abstract    Unit tests for vector functions
  */
 
-#import <ObjectiveCPP.h>
+#import <ObjectiveCPP.hpp>
 #import <GoogleMock/GoogleMock.h>
 
 /* Not wanted for Objective-C */

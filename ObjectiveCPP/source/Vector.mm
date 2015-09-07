@@ -32,7 +32,7 @@
  * @copyright   (c) 2015 - Jean-David Gadina - www.xs-labs.com / www.digidna.net
  */
 
-#import <ObjectiveCPP.h>
+#import <ObjectiveCPP.hpp>
 
 namespace ObjectiveCPP
 {
