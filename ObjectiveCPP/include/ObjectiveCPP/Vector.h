@@ -66,23 +66,30 @@ namespace ObjectiveCPP
         
         a = [ NSMutableArray arrayWithCapacity: vector.size() ];
         
-        for( auto v: vector )
+        if( [ ObjCClass instancesRespondToSelector: initMethod ] )
         {
+            for( auto v: vector )
             {
-                id o;
-                
-                o = [ ObjCClass alloc ];
-                i = reinterpret_cast< id ( * )( id, SEL, T ) >( [ o methodForSelector: initMethod ] );
-                o = i( o, initMethod, v );
-                
-                if( o != nil )
                 {
-                    [ a addObject: o ];
+                    id o;
+                    
+                    o = [ ObjCClass alloc ];
+                    i = reinterpret_cast< id ( * )( id, SEL, T ) >( [ o methodForSelector: initMethod ] );
+                    
+                    if( i != NULL )
+                    {
+                        o = i( o, initMethod, v );
+                        
+                        if( o != nil )
+                        {
+                            [ a addObject: o ];
+                        }
+                    }
+                    
+                    #if !defined( __clang__ ) || !defined( __has_feature ) || !__has_feature( objc_arc )
+                    [ o release ];
+                    #endif
                 }
-                
-                #if !defined( __clang__ ) || !defined( __has_feature ) || !__has_feature( objc_arc )
-                [ o release ];
-                #endif
             }
         }
         

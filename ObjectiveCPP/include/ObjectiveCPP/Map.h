@@ -54,28 +54,35 @@ namespace ObjectiveCPP
         
         d = [ NSMutableDictionary dictionaryWithCapacity: map.size() ];
         
-        for( auto p: map )
+        if( [ ObjCClassK instancesRespondToSelector: initMethodK ] && [ ObjCClassV instancesRespondToSelector: initMethodV ] )
         {
+            for( auto p: map )
             {
-                id oK;
-                id oV;
-                
-                oK = [ ObjCClassK alloc ];
-                oV = [ ObjCClassV alloc ];
-                iK = reinterpret_cast< id ( * )( id, SEL, TK ) >( [ oK methodForSelector: initMethodK ] );
-                iV = reinterpret_cast< id ( * )( id, SEL, TV ) >( [ oV methodForSelector: initMethodV ] );
-                oK = iK( oK, initMethodK, p.first );
-                oV = iV( oV, initMethodV, p.second );
-                
-                if( oK != nil && oV != nil )
                 {
-                    [ d setObject: oV forKey: oK ];
+                    id oK;
+                    id oV;
+                    
+                    oK = [ ObjCClassK alloc ];
+                    oV = [ ObjCClassV alloc ];
+                    iK = reinterpret_cast< id ( * )( id, SEL, TK ) >( [ oK methodForSelector: initMethodK ] );
+                    iV = reinterpret_cast< id ( * )( id, SEL, TV ) >( [ oV methodForSelector: initMethodV ] );
+                    
+                    if( iK != NULL && iV != NULL )
+                    {
+                        oK = iK( oK, initMethodK, p.first );
+                        oV = iV( oV, initMethodV, p.second );
+                        
+                        if( oK != nil && oV != nil )
+                        {
+                            [ d setObject: oV forKey: oK ];
+                        }
+                    }
+                    
+                    #if !defined( __clang__ ) || !defined( __has_feature ) || !__has_feature( objc_arc )
+                    [ oK release ];
+                    [ oV release ];
+                    #endif
                 }
-                
-                #if !defined( __clang__ ) || !defined( __has_feature ) || !__has_feature( objc_arc )
-                [ oK release ];
-                [ oV release ];
-                #endif
             }
         }
         
