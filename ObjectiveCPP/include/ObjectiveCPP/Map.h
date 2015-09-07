@@ -39,10 +39,9 @@ namespace ObjectiveCPP
     template < typename TK, typename TV, typename ObjCClassK, typename ObjCClassV >
     NSDictionary * DictionaryFromMap( std::map< TK, TV > map, SEL initMethodK, SEL initMethodV )
     {
-        NSMutableDictionary                 * d;
-        typename std::map< TK, TV >::iterator it;
-        id                                ( * iK )( id, SEL, TK );
-        id                                ( * iV )( id, SEL, TV );
+        NSMutableDictionary * d;
+        id ( * iK )( id, SEL, TK );
+        id ( * iV )( id, SEL, TV );
         
         d = [ NSMutableDictionary dictionaryWithCapacity: map.size() ];
         

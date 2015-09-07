@@ -40,9 +40,8 @@ namespace ObjectiveCPP
     template < typename T, typename ObjCClass >
     NSArray * ArrayFromVector( std::vector< T > vector, SEL initMethod )
     {
-        NSMutableArray                    * a;
-        typename std::vector< T >::iterator it;
-        id                              ( * i )( id, SEL, T );
+        NSMutableArray * a;
+        id ( * i )( id, SEL, T );
         
         a = [ NSMutableArray arrayWithCapacity: vector.size() ];
         
