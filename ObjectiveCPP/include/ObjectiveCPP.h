@@ -41,6 +41,8 @@
 #ifdef __cplusplus
 
 #import <ObjectiveCPP/NSString+ObjectiveCPP.h>
+#import <ObjectiveCPP/Map.h>
+#import <ObjectiveCPP/Vector.h>
 
 #endif
 
