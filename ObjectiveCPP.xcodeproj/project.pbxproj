@@ -9,14 +9,14 @@
 /* Begin PBXBuildFile section */
 		052B363E1B4EBA60009D98A4 /* libObjectiveCPP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 052B35951B4EB810009D98A4 /* libObjectiveCPP.a */; };
 		056BC7B21B2379D300B21D46 /* libObjectiveCPP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 056C881218C8B85F006260B3 /* libObjectiveCPP.a */; };
-		058B16A91B990D4700DF09FC /* NSString+ObjectiveCPP.h in Headers */ = {isa = PBXBuildFile; fileRef = 058B16A41B990D4000DF09FC /* NSString+ObjectiveCPP.h */; settings = {ASSET_TAGS = (); }; };
-		058B16AA1B990D4700DF09FC /* NSString+ObjectiveCPP.h in Headers */ = {isa = PBXBuildFile; fileRef = 058B16A41B990D4000DF09FC /* NSString+ObjectiveCPP.h */; settings = {ASSET_TAGS = (); }; };
-		058B16AB1B990D4800DF09FC /* NSString+ObjectiveCPP.h in Headers */ = {isa = PBXBuildFile; fileRef = 058B16A41B990D4000DF09FC /* NSString+ObjectiveCPP.h */; settings = {ASSET_TAGS = (); }; };
-		058B16AC1B990D4800DF09FC /* NSString+ObjectiveCPP.h in Headers */ = {isa = PBXBuildFile; fileRef = 058B16A41B990D4000DF09FC /* NSString+ObjectiveCPP.h */; settings = {ASSET_TAGS = (); }; };
-		058B16AD1B990D4D00DF09FC /* ObjectiveCPP.h in Headers */ = {isa = PBXBuildFile; fileRef = 058B16A51B990D4000DF09FC /* ObjectiveCPP.h */; settings = {ASSET_TAGS = (); }; };
-		058B16AE1B990D4D00DF09FC /* ObjectiveCPP.h in Headers */ = {isa = PBXBuildFile; fileRef = 058B16A51B990D4000DF09FC /* ObjectiveCPP.h */; settings = {ASSET_TAGS = (); }; };
-		058B16AF1B990D4E00DF09FC /* ObjectiveCPP.h in Headers */ = {isa = PBXBuildFile; fileRef = 058B16A51B990D4000DF09FC /* ObjectiveCPP.h */; settings = {ASSET_TAGS = (); }; };
-		058B16B01B990D4E00DF09FC /* ObjectiveCPP.h in Headers */ = {isa = PBXBuildFile; fileRef = 058B16A51B990D4000DF09FC /* ObjectiveCPP.h */; settings = {ASSET_TAGS = (); }; };
+		058B16A91B990D4700DF09FC /* NSString+ObjectiveCPP.h in Headers */ = {isa = PBXBuildFile; fileRef = 058B16A41B990D4000DF09FC /* NSString+ObjectiveCPP.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		058B16AA1B990D4700DF09FC /* NSString+ObjectiveCPP.h in Headers */ = {isa = PBXBuildFile; fileRef = 058B16A41B990D4000DF09FC /* NSString+ObjectiveCPP.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		058B16AB1B990D4800DF09FC /* NSString+ObjectiveCPP.h in Headers */ = {isa = PBXBuildFile; fileRef = 058B16A41B990D4000DF09FC /* NSString+ObjectiveCPP.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		058B16AC1B990D4800DF09FC /* NSString+ObjectiveCPP.h in Headers */ = {isa = PBXBuildFile; fileRef = 058B16A41B990D4000DF09FC /* NSString+ObjectiveCPP.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		058B16AD1B990D4D00DF09FC /* ObjectiveCPP.h in Headers */ = {isa = PBXBuildFile; fileRef = 058B16A51B990D4000DF09FC /* ObjectiveCPP.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		058B16AE1B990D4D00DF09FC /* ObjectiveCPP.h in Headers */ = {isa = PBXBuildFile; fileRef = 058B16A51B990D4000DF09FC /* ObjectiveCPP.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		058B16AF1B990D4E00DF09FC /* ObjectiveCPP.h in Headers */ = {isa = PBXBuildFile; fileRef = 058B16A51B990D4000DF09FC /* ObjectiveCPP.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		058B16B01B990D4E00DF09FC /* ObjectiveCPP.h in Headers */ = {isa = PBXBuildFile; fileRef = 058B16A51B990D4000DF09FC /* ObjectiveCPP.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		058B16B21B990D6100DF09FC /* NSString+ObjectiveCPP.mm in Sources */ = {isa = PBXBuildFile; fileRef = 058B16B11B990D6100DF09FC /* NSString+ObjectiveCPP.mm */; settings = {ASSET_TAGS = (); }; };
 		058B16B31B990D6600DF09FC /* NSString+ObjectiveCPP.mm in Sources */ = {isa = PBXBuildFile; fileRef = 058B16B11B990D6100DF09FC /* NSString+ObjectiveCPP.mm */; settings = {ASSET_TAGS = (); }; };
 		058B16B41B990D6700DF09FC /* NSString+ObjectiveCPP.mm in Sources */ = {isa = PBXBuildFile; fileRef = 058B16B11B990D6100DF09FC /* NSString+ObjectiveCPP.mm */; settings = {ASSET_TAGS = (); }; };
@@ -29,6 +29,18 @@
 		058B16D41B99103800DF09FC /* GoogleMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 056C58B31B18985500C6214A /* GoogleMock.framework */; };
 		058B16D51B99106F00DF09FC /* Test-NSString+ObjectiveCPP.mm in Sources */ = {isa = PBXBuildFile; fileRef = 058B169D1B990CBF00DF09FC /* Test-NSString+ObjectiveCPP.mm */; settings = {ASSET_TAGS = (); }; };
 		058B16D61B99107000DF09FC /* Test-NSString+ObjectiveCPP.mm in Sources */ = {isa = PBXBuildFile; fileRef = 058B169D1B990CBF00DF09FC /* Test-NSString+ObjectiveCPP.mm */; settings = {ASSET_TAGS = (); }; };
+		05DEB2AD1B9D93930006607F /* Map.h in Headers */ = {isa = PBXBuildFile; fileRef = 05DEB2861B9D8BBB0006607F /* Map.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05DEB2AE1B9D93930006607F /* Vector.h in Headers */ = {isa = PBXBuildFile; fileRef = 05DEB2821B9D8BB30006607F /* Vector.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05DEB2AF1B9D93930006607F /* Map.h in Headers */ = {isa = PBXBuildFile; fileRef = 05DEB2861B9D8BBB0006607F /* Map.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05DEB2B01B9D93930006607F /* Vector.h in Headers */ = {isa = PBXBuildFile; fileRef = 05DEB2821B9D8BB30006607F /* Vector.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05DEB2B11B9D93940006607F /* Map.h in Headers */ = {isa = PBXBuildFile; fileRef = 05DEB2861B9D8BBB0006607F /* Map.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05DEB2B21B9D93940006607F /* Vector.h in Headers */ = {isa = PBXBuildFile; fileRef = 05DEB2821B9D8BB30006607F /* Vector.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05DEB2B31B9D93940006607F /* Map.h in Headers */ = {isa = PBXBuildFile; fileRef = 05DEB2861B9D8BBB0006607F /* Map.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05DEB2B41B9D93940006607F /* Vector.h in Headers */ = {isa = PBXBuildFile; fileRef = 05DEB2821B9D8BB30006607F /* Vector.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05DEB2B51B9D93B40006607F /* Test-Map.mm in Sources */ = {isa = PBXBuildFile; fileRef = 05DEB2A81B9D93820006607F /* Test-Map.mm */; settings = {ASSET_TAGS = (); }; };
+		05DEB2B61B9D93B40006607F /* Test-Vector.mm in Sources */ = {isa = PBXBuildFile; fileRef = 05DEB2AC1B9D938E0006607F /* Test-Vector.mm */; settings = {ASSET_TAGS = (); }; };
+		05DEB2B71B9D93B40006607F /* Test-Map.mm in Sources */ = {isa = PBXBuildFile; fileRef = 05DEB2A81B9D93820006607F /* Test-Map.mm */; settings = {ASSET_TAGS = (); }; };
+		05DEB2B81B9D93B40006607F /* Test-Vector.mm in Sources */ = {isa = PBXBuildFile; fileRef = 05DEB2AC1B9D938E0006607F /* Test-Vector.mm */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -134,6 +146,10 @@
 		05AFBBB81B3E0F78003830B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		05BDE01818CDB2450028F339 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		05BDE01918CDB2450028F339 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		05DEB2821B9D8BB30006607F /* Vector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Vector.h; sourceTree = "<group>"; };
+		05DEB2861B9D8BBB0006607F /* Map.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Map.h; sourceTree = "<group>"; };
+		05DEB2A81B9D93820006607F /* Test-Map.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "Test-Map.mm"; sourceTree = "<group>"; };
+		05DEB2AC1B9D938E0006607F /* Test-Vector.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "Test-Vector.mm"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +234,8 @@
 			isa = PBXGroup;
 			children = (
 				058B169D1B990CBF00DF09FC /* Test-NSString+ObjectiveCPP.mm */,
+				05DEB2A81B9D93820006607F /* Test-Map.mm */,
+				05DEB2AC1B9D938E0006607F /* Test-Vector.mm */,
 				054702AC1B1D8FA00036259D /* Info.plist */,
 			);
 			path = "Unit-Tests";
@@ -285,6 +303,8 @@
 			isa = PBXGroup;
 			children = (
 				058B16A41B990D4000DF09FC /* NSString+ObjectiveCPP.h */,
+				05DEB2861B9D8BBB0006607F /* Map.h */,
+				05DEB2821B9D8BB30006607F /* Vector.h */,
 			);
 			path = ObjectiveCPP;
 			sourceTree = "<group>";
@@ -331,6 +351,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05DEB2AF1B9D93930006607F /* Map.h in Headers */,
+				05DEB2B01B9D93930006607F /* Vector.h in Headers */,
 				058B16AE1B990D4D00DF09FC /* ObjectiveCPP.h in Headers */,
 				058B16AA1B990D4700DF09FC /* NSString+ObjectiveCPP.h in Headers */,
 			);
@@ -340,6 +362,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05DEB2B31B9D93940006607F /* Map.h in Headers */,
+				05DEB2B41B9D93940006607F /* Vector.h in Headers */,
 				058B16B01B990D4E00DF09FC /* ObjectiveCPP.h in Headers */,
 				058B16AC1B990D4800DF09FC /* NSString+ObjectiveCPP.h in Headers */,
 			);
@@ -356,6 +380,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05DEB2AD1B9D93930006607F /* Map.h in Headers */,
+				05DEB2AE1B9D93930006607F /* Vector.h in Headers */,
 				058B16AD1B990D4D00DF09FC /* ObjectiveCPP.h in Headers */,
 				058B16A91B990D4700DF09FC /* NSString+ObjectiveCPP.h in Headers */,
 			);
@@ -365,6 +391,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05DEB2B11B9D93940006607F /* Map.h in Headers */,
+				05DEB2B21B9D93940006607F /* Vector.h in Headers */,
 				058B16AF1B990D4E00DF09FC /* ObjectiveCPP.h in Headers */,
 				058B16AB1B990D4800DF09FC /* NSString+ObjectiveCPP.h in Headers */,
 			);
@@ -753,6 +781,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05DEB2B81B9D93B40006607F /* Test-Vector.mm in Sources */,
+				05DEB2B71B9D93B40006607F /* Test-Map.mm in Sources */,
 				058B16D61B99107000DF09FC /* Test-NSString+ObjectiveCPP.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -761,6 +791,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05DEB2B61B9D93B40006607F /* Test-Vector.mm in Sources */,
+				05DEB2B51B9D93B40006607F /* Test-Map.mm in Sources */,
 				058B16D51B99106F00DF09FC /* Test-NSString+ObjectiveCPP.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
