@@ -38,7 +38,7 @@
 namespace ObjectiveCPP
 {
     template < typename T, typename ObjCClass >
-    NSArray * ArrayFromVector( std::vector< T > vector, SEL initMethod )
+    NSArray * ArrayFromVector( const std::vector< T > & vector, SEL initMethod )
     {
         NSMutableArray * a;
         id ( * i )( id, SEL, T );
