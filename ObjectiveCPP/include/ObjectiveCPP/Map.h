@@ -34,6 +34,13 @@
 
 #include <map>
 
+#ifndef NS_ASSUME_NONNULL_BEGIN
+#define NS_ASSUME_NONNULL_BEGIN
+#define NS_ASSUME_NONNULL_END
+#endif
+
+NS_ASSUME_NONNULL_BEGIN
+
 namespace ObjectiveCPP
 {
     template < typename TK, typename TV, typename ObjCClassK, typename ObjCClassV >
@@ -73,3 +80,5 @@ namespace ObjectiveCPP
         return [ NSDictionary dictionaryWithDictionary: d ];
     }
 }
+
+NS_ASSUME_NONNULL_END

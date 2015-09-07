@@ -33,7 +33,13 @@
  */
 
 #include <vector>
-#include <iostream>
+
+#ifndef NS_ASSUME_NONNULL_BEGIN
+#define NS_ASSUME_NONNULL_BEGIN
+#define NS_ASSUME_NONNULL_END
+#endif
+
+NS_ASSUME_NONNULL_BEGIN
 
 namespace ObjectiveCPP
 {
@@ -68,3 +74,5 @@ namespace ObjectiveCPP
         return [ NSArray arrayWithArray: a ];
     }
 }
+
+NS_ASSUME_NONNULL_END
