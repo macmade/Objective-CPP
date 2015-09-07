@@ -91,7 +91,7 @@ TEST( ObjectiveCPP_Map, DictionaryFromMap_Int_Int )
     std::map< int, int > map = { { 0, 1 }, { 2, 3 }, { 42, 43 } };
     NSDictionary       * d;
     
-    d = ObjectiveCPP::DictionaryFromMap< int, int, NSNumber, NSNumber >( map, @selector( initWithInt: ), @selector( initWithInt: ) );
+    d = ObjectiveCPP::DictionaryFromMap< int, NSNumber >( map, @selector( initWithInt: ) );
     
     ASSERT_TRUE( d.count == map.size() );
     
@@ -113,7 +113,7 @@ TEST( ObjectiveCPP_Map, DictionaryFromMap_String_String )
     std::map< std::string, std::string > map = { { "hello", "world" }, { "foo", "bar" } };
     NSDictionary                       * d;
     
-    d = ObjectiveCPP::DictionaryFromMap< std::string, std::string, NSString, NSString >( map, @selector( initWithCPPString: ), @selector( initWithCPPString: ) );
+    d = ObjectiveCPP::DictionaryFromMap( map );
     
     ASSERT_TRUE( d.count == map.size() );
     
@@ -127,7 +127,7 @@ TEST( ObjectiveCPP_Map, DictionaryFromMap_String_String )
     ASSERT_TRUE( [ [ d objectForKey: @"foo"   ] isEqualToString: @"bar" ] );
 }
 
-TEST( ObjectiveCPP_Map, ArrayFromVector_Custom_Custom )
+TEST( ObjectiveCPP_Map, ArrayFromVector_String_Custom )
 {
     std::map< std::string, std::string > map = { { "hello", "world" }, { "foo", "bar" } };
     NSDictionary                       * d;

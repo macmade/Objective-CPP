@@ -43,6 +43,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 namespace ObjectiveCPP
 {
+    NSDictionary * DictionaryFromMap( const std::map< std::string, std::string > & map );
+    
     template < typename TK, typename TV, typename ObjCClassK, typename ObjCClassV >
     NSDictionary * DictionaryFromMap( const std::map< TK, TV > & map, SEL initMethodK, SEL initMethodV )
     {
@@ -78,6 +80,12 @@ namespace ObjectiveCPP
         }
         
         return [ NSDictionary dictionaryWithDictionary: d ];
+    }
+    
+    template < typename T, typename ObjCClass >
+    NSDictionary * DictionaryFromMap( const std::map< T, T > & map, SEL initMethod )
+    {
+        return DictionaryFromMap< T, T, ObjCClass, ObjCClass >( map, initMethod, initMethod );
     }
 }
 
