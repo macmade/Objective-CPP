@@ -94,6 +94,43 @@ namespace ObjectiveCPP
     {
         return DictionaryFromMap< T, T, ObjCClass, ObjCClass >( map, initMethod, initMethod );
     }
+    
+    template < typename TK, typename TV, typename ObjCClassK, typename ObjCClassV >
+    std::map< TK, TV > MapFromDictionary( NSDictionary * dictionary, SEL getterK, SEL getterV )
+    {
+        std::map< TK, TV > m;
+        id                 oK;
+        id                 oV;
+        TK ( * iK )( id, SEL );
+        TV ( * iV )( id, SEL );
+        
+        if( [ ObjCClassK instancesRespondToSelector: getterK ] &&  [ ObjCClassV instancesRespondToSelector: getterV ] )
+        {
+            for( oK in dictionary )
+            {
+                oV = [ dictionary objectForKey: oK ];
+                
+                if( [ oK isKindOfClass: [ ObjCClassK class ] ] && [ oV isKindOfClass: [ ObjCClassV class ] ] )
+                {
+                    iK = reinterpret_cast< TK ( * )( id, SEL ) >( [ oK methodForSelector: getterK ] );
+                    iV = reinterpret_cast< TV ( * )( id, SEL ) >( [ oV methodForSelector: getterV ] );
+                    
+                    if( iK != NULL && iV != NULL )
+                    {
+                        m.insert( { iK( oK, getterK ), iV( oV, getterV ) } );
+                    }
+                }
+            }
+        }
+        
+        return m;
+    }
+    
+    template < typename T, typename ObjCClass >
+    std::map< T, T > MapFromDictionary( NSDictionary * dictionary, SEL getter )
+    {
+        return MapFromDictionary< T, T, ObjCClass, ObjCClass >( dictionary, getter, getter );
+    }
 }
 
 NS_ASSUME_NONNULL_END

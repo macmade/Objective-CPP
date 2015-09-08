@@ -88,12 +88,12 @@ using namespace testing;
 
 TEST( ObjectiveCPP_Map, DictionaryFromMap_Int_Int )
 {
-    std::map< int, int > map = { { 0, 1 }, { 2, 3 }, { 42, 43 } };
+    std::map< int, int > m = { { 0, 1 }, { 2, 3 }, { 42, 43 } };
     NSDictionary       * d;
     
-    d = ObjectiveCPP::DictionaryFromMap< int, NSNumber >( map, @selector( initWithInt: ) );
+    d = ObjectiveCPP::DictionaryFromMap< int, NSNumber >( m, @selector( initWithInt: ) );
     
-    ASSERT_TRUE( d.count == map.size() );
+    ASSERT_TRUE( d.count == m.size() );
     
     ASSERT_TRUE( [ d objectForKey: @0  ] != nil );
     ASSERT_TRUE( [ d objectForKey: @2  ] != nil );
@@ -110,12 +110,12 @@ TEST( ObjectiveCPP_Map, DictionaryFromMap_Int_Int )
 
 TEST( ObjectiveCPP_Map, DictionaryFromMap_String_String )
 {
-    std::map< std::string, std::string > map = { { "hello", "world" }, { "foo", "bar" } };
+    std::map< std::string, std::string > m = { { "hello", "world" }, { "foo", "bar" } };
     NSDictionary                       * d;
     
-    d = ObjectiveCPP::DictionaryFromMap( map );
+    d = ObjectiveCPP::DictionaryFromMap( m );
     
-    ASSERT_TRUE( d.count == map.size() );
+    ASSERT_TRUE( d.count == m.size() );
     
     ASSERT_TRUE( [ d objectForKey: @"hello" ] != nil );
     ASSERT_TRUE( [ d objectForKey: @"foo"   ] != nil );
@@ -129,12 +129,12 @@ TEST( ObjectiveCPP_Map, DictionaryFromMap_String_String )
 
 TEST( ObjectiveCPP_Map, ArrayFromVector_String_Custom )
 {
-    std::map< std::string, std::string > map = { { "hello", "world" }, { "foo", "bar" } };
+    std::map< std::string, std::string > m = { { "hello", "world" }, { "foo", "bar" } };
     NSDictionary                       * d;
     
-    d = ObjectiveCPP::DictionaryFromMap< std::string, std::string, NSString, ObjectiveCPP_Map_Test_V >( map, @selector( initWithCPPString: ), @selector( initWithSTDString: ) );
+    d = ObjectiveCPP::DictionaryFromMap< std::string, std::string, NSString, ObjectiveCPP_Map_Test_V >( m, @selector( initWithCPPString: ), @selector( initWithSTDString: ) );
     
-    ASSERT_TRUE( d.count == map.size() );
+    ASSERT_TRUE( d.count == m.size() );
     
     ASSERT_TRUE( [ d objectForKey: @"hello" ] != nil );
     ASSERT_TRUE( [ d objectForKey: @"foo"   ] != nil );
@@ -144,4 +144,38 @@ TEST( ObjectiveCPP_Map, ArrayFromVector_String_Custom )
     
     ASSERT_TRUE( ( ( ObjectiveCPP_Map_Test_K * )[ d objectForKey: @"hello" ] ).string == "world" );
     ASSERT_TRUE( ( ( ObjectiveCPP_Map_Test_V * )[ d objectForKey: @"foo"   ] ).string == "bar" );
+}
+
+TEST( ObjectiveCPP_Map, MapFromDictionary_String_String )
+{
+    NSDictionary                       * d;
+    std::map< std::string, std::string > m;
+    
+    d = @{ @"hello": @"world", @"foo": @"bar" };
+    m = ObjectiveCPP::MapFromDictionary< std::string, NSString >( d, @selector( cppString ) );
+    
+    ASSERT_TRUE( d.count == m.size() );
+    
+    ASSERT_TRUE( m.find( "hello" ) != m.end() );
+    ASSERT_TRUE( m.find( "foo" )   != m.end() );
+    
+    ASSERT_TRUE( m[ "hello" ] == "world" );
+    ASSERT_TRUE( m[ "foo" ]   == "bar" );
+}
+
+TEST( ObjectiveCPP_Map, MapFromDictionary_String_Int )
+{
+    NSDictionary               * d;
+    std::map< std::string, int > m;
+    
+    d = @{ @"hello": @1, @"foo": @42 };
+    m = ObjectiveCPP::MapFromDictionary< std::string, int, NSString, NSNumber >( d, @selector( cppString ), @selector( intValue ) );
+    
+    ASSERT_TRUE( d.count == m.size() );
+    
+    ASSERT_TRUE( m.find( "hello" ) != m.end() );
+    ASSERT_TRUE( m.find( "foo" )   != m.end() );
+    
+    ASSERT_TRUE( m[ "hello" ] == 1 );
+    ASSERT_TRUE( m[ "foo" ]   == 42 );
 }
