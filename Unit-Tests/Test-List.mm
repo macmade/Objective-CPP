@@ -66,12 +66,12 @@ using namespace testing;
 
 TEST( ObjectiveCPP_List, ArrayFromList_String )
 {
-    std::list< std::string > v = { "hello, world", "hello, universe" };
-    NSArray                  * a;
+    std::list< std::string > l = { "hello, world", "hello, universe" };
+    NSArray                * a;
     
-    a = ObjectiveCPP::ArrayFromList( v );
+    a = ObjectiveCPP::ArrayFromList( l );
     
-    ASSERT_TRUE( a.count == v.size() );
+    ASSERT_TRUE( a.count == l.size() );
     
     ASSERT_TRUE( [ a[ 0 ] isKindOfClass: [ NSString class ] ] );
     ASSERT_TRUE( [ a[ 1 ] isKindOfClass: [ NSString class ] ] );
@@ -82,12 +82,12 @@ TEST( ObjectiveCPP_List, ArrayFromList_String )
 
 TEST( ObjectiveCPP_List, ArrayFromList_Bool )
 {
-    std::list< bool > v = { true, false, true };
-    NSArray           * a;
+    std::list< bool > l = { true, false, true };
+    NSArray         * a;
     
-    a = ObjectiveCPP::ArrayFromList( v );
+    a = ObjectiveCPP::ArrayFromList( l );
     
-    ASSERT_TRUE( a.count == v.size() );
+    ASSERT_TRUE( a.count == l.size() );
     
     ASSERT_TRUE( [ a[ 0 ] isKindOfClass: [ NSNumber class ] ] );
     ASSERT_TRUE( [ a[ 1 ] isKindOfClass: [ NSNumber class ] ] );
@@ -101,12 +101,12 @@ TEST( ObjectiveCPP_List, ArrayFromList_Bool )
 template< typename T >
 void ObjectiveCPP_List_ArrayFromList_Number_T( void )
 {
-    std::list< T > v = { 0, 1, 2, 42 };
-    NSArray        * a;
+    std::list< T > l = { 0, 1, 2, 42 };
+    NSArray      * a;
     
-    a = ObjectiveCPP::ArrayFromList( v );
+    a = ObjectiveCPP::ArrayFromList( l );
     
-    ASSERT_TRUE( a.count == v.size() );
+    ASSERT_TRUE( a.count == l.size() );
     
     ASSERT_TRUE( [ a[ 0 ] isKindOfClass: [ NSNumber class ] ] );
     ASSERT_TRUE( [ a[ 1 ] isKindOfClass: [ NSNumber class ] ] );
@@ -137,16 +137,46 @@ TEST( ObjectiveCPP_List, ArrayFromList_Number )
 
 TEST( ObjectiveCPP_List, ArrayFromList_Custom )
 {
-    std::list< std::string > v = { "hello, world", "hello, universe" };
-    NSArray                  * a;
+    std::list< std::string > l = { "hello, world", "hello, universe" };
+    NSArray                * a;
     
-    a = ObjectiveCPP::ArrayFromList< std::string, ObjectiveCPP_List_Test >( v, @selector( initWithSTDString: ) );
+    a = ObjectiveCPP::ArrayFromList< std::string, ObjectiveCPP_List_Test >( l, @selector( initWithSTDString: ) );
     
-    ASSERT_TRUE( a.count == v.size() );
+    ASSERT_TRUE( a.count == l.size() );
     
     ASSERT_TRUE( [ a[ 0 ] isKindOfClass: [ ObjectiveCPP_List_Test class ] ] );
     ASSERT_TRUE( [ a[ 1 ] isKindOfClass: [ ObjectiveCPP_List_Test class ] ] );
     
     ASSERT_TRUE( ( ( ObjectiveCPP_List_Test * )a[ 0 ] ).string == "hello, world" );
     ASSERT_TRUE( ( ( ObjectiveCPP_List_Test * )a[ 1 ] ).string == "hello, universe" );
+}
+
+TEST( ObjectiveCPP_List, ListFromArray_String )
+{
+    NSArray                * a;
+    std::list< std::string > l;
+    
+    a = @[ @"hello, world", @"hello, universe" ];
+    l = ObjectiveCPP::ListFromArray< std::string, NSString >( a, @selector( cppString ) );
+    
+    ASSERT_TRUE( a.count == l.size() );
+    
+    ASSERT_TRUE( *( std::next( l.begin(), 0 ) ) == "hello, world" );
+    ASSERT_TRUE( *( std::next( l.begin(), 1 ) ) == "hello, universe" );
+}
+
+TEST( ObjectiveCPP_List, ListFromArray_Int )
+{
+    NSArray        * a;
+    std::list< int > l;
+    
+    a = @[ @0, @1, @2, @42 ];
+    l = ObjectiveCPP::ListFromArray< int, NSNumber >( a, @selector( intValue ) );
+    
+    ASSERT_TRUE( a.count == l.size() );
+    
+    ASSERT_TRUE( *( std::next( l.begin(), 0 ) ) == 0 );
+    ASSERT_TRUE( *( std::next( l.begin(), 1 ) ) == 1 );
+    ASSERT_TRUE( *( std::next( l.begin(), 2 ) ) == 2 );
+    ASSERT_TRUE( *( std::next( l.begin(), 3 ) ) == 42 );
 }

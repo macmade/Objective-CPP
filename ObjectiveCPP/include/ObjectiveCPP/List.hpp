@@ -95,6 +95,32 @@ namespace ObjectiveCPP
         
         return [ NSArray arrayWithArray: a ];
     }
+    
+    template < typename T, typename ObjCClass >
+    std::list< T > ListFromArray( NSArray * array, SEL getter )
+    {
+        std::list< T > l;
+        id             o;
+        T ( * i )( id, SEL );
+        
+        if( [ ObjCClass instancesRespondToSelector: getter ] )
+        {
+            for( o in array )
+            {
+                if( [ o isKindOfClass: [ ObjCClass class ] ] )
+                {
+                    i = reinterpret_cast< T ( * )( id, SEL ) >( [ o methodForSelector: getter ] );
+                    
+                    if( i != NULL )
+                    {
+                        l.push_back( i( o, getter ) );
+                    }
+                }
+            }
+        }
+        
+        return l;
+    }
 }
 
 NS_ASSUME_NONNULL_END
