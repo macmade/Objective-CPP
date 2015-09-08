@@ -28,7 +28,7 @@
  ******************************************************************************/
 
 /*!
- * @header      ObjectiveCPP.h
+ * @header      ObjectiveCPP.hpp
  * @copyright   (c) 2015 - Jean-David Gadina - www.xs-labs.com / www.digidna.net
  * @abstract    Objective-C++ main header file
  */
@@ -41,6 +41,7 @@
 #ifdef __cplusplus
 
 #import <ObjectiveCPP/NSString+ObjectiveCPP.hpp>
+#import <ObjectiveCPP/List.hpp>
 #import <ObjectiveCPP/Map.hpp>
 #import <ObjectiveCPP/Vector.hpp>
 

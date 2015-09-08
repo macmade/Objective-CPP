@@ -15,21 +15,28 @@
 		051EA6121B9E50720018EAD6 /* Map.mm in Sources */ = {isa = PBXBuildFile; fileRef = 051EA6101B9E50720018EAD6 /* Map.mm */; settings = {ASSET_TAGS = (); }; };
 		051EA6131B9E50720018EAD6 /* Map.mm in Sources */ = {isa = PBXBuildFile; fileRef = 051EA6101B9E50720018EAD6 /* Map.mm */; settings = {ASSET_TAGS = (); }; };
 		051EA6141B9E50720018EAD6 /* Map.mm in Sources */ = {isa = PBXBuildFile; fileRef = 051EA6101B9E50720018EAD6 /* Map.mm */; settings = {ASSET_TAGS = (); }; };
+		055AF8DE1B9E5C4400C3F939 /* List.mm in Sources */ = {isa = PBXBuildFile; fileRef = 055AF8DD1B9E5C4400C3F939 /* List.mm */; settings = {ASSET_TAGS = (); }; };
+		055AF8E41B9E5D0B00C3F939 /* Test-List.mm in Sources */ = {isa = PBXBuildFile; fileRef = 055AF8DF1B9E5C4C00C3F939 /* Test-List.mm */; settings = {ASSET_TAGS = (); }; };
+		055AF8E51B9E5D1000C3F939 /* List.mm in Sources */ = {isa = PBXBuildFile; fileRef = 055AF8DD1B9E5C4400C3F939 /* List.mm */; settings = {ASSET_TAGS = (); }; };
+		055AF8E61B9E5D1000C3F939 /* List.mm in Sources */ = {isa = PBXBuildFile; fileRef = 055AF8DD1B9E5C4400C3F939 /* List.mm */; settings = {ASSET_TAGS = (); }; };
+		055AF8E71B9E5D1100C3F939 /* List.mm in Sources */ = {isa = PBXBuildFile; fileRef = 055AF8DD1B9E5C4400C3F939 /* List.mm */; settings = {ASSET_TAGS = (); }; };
+		055AF8ED1B9E5D1900C3F939 /* List.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 055AF8DB1B9E5C3D00C3F939 /* List.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		055AF8EE1B9E5D1900C3F939 /* Map.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 05DEB2861B9D8BBB0006607F /* Map.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		055AF8EF1B9E5D1900C3F939 /* NSString+ObjectiveCPP.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 058B16A41B990D4000DF09FC /* NSString+ObjectiveCPP.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		055AF8F01B9E5D1900C3F939 /* Vector.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 05DEB2821B9D8BB30006607F /* Vector.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		055AF8F11B9E5D1900C3F939 /* ObjectiveCPP.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 058B16A51B990D4000DF09FC /* ObjectiveCPP.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		055AF8F31B9E5D1A00C3F939 /* List.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 055AF8DB1B9E5C3D00C3F939 /* List.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		055AF8F41B9E5D1A00C3F939 /* Map.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 05DEB2861B9D8BBB0006607F /* Map.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		055AF8F51B9E5D1A00C3F939 /* NSString+ObjectiveCPP.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 058B16A41B990D4000DF09FC /* NSString+ObjectiveCPP.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		055AF8F61B9E5D1A00C3F939 /* Vector.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 05DEB2821B9D8BB30006607F /* Vector.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		055AF8F71B9E5D1A00C3F939 /* ObjectiveCPP.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 058B16A51B990D4000DF09FC /* ObjectiveCPP.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
 		056BC7B21B2379D300B21D46 /* libObjectiveCPP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 056C881218C8B85F006260B3 /* libObjectiveCPP.a */; };
-		058B16A91B990D4700DF09FC /* NSString+ObjectiveCPP.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 058B16A41B990D4000DF09FC /* NSString+ObjectiveCPP.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
-		058B16AB1B990D4800DF09FC /* NSString+ObjectiveCPP.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 058B16A41B990D4000DF09FC /* NSString+ObjectiveCPP.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
-		058B16AD1B990D4D00DF09FC /* ObjectiveCPP.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 058B16A51B990D4000DF09FC /* ObjectiveCPP.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
-		058B16AF1B990D4E00DF09FC /* ObjectiveCPP.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 058B16A51B990D4000DF09FC /* ObjectiveCPP.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
 		058B16B21B990D6100DF09FC /* NSString+ObjectiveCPP.mm in Sources */ = {isa = PBXBuildFile; fileRef = 058B16B11B990D6100DF09FC /* NSString+ObjectiveCPP.mm */; settings = {ASSET_TAGS = (); }; };
 		058B16B41B990D6700DF09FC /* NSString+ObjectiveCPP.mm in Sources */ = {isa = PBXBuildFile; fileRef = 058B16B11B990D6100DF09FC /* NSString+ObjectiveCPP.mm */; settings = {ASSET_TAGS = (); }; };
 		058B16B61B990D6700DF09FC /* NSString+ObjectiveCPP.mm in Sources */ = {isa = PBXBuildFile; fileRef = 058B16B11B990D6100DF09FC /* NSString+ObjectiveCPP.mm */; settings = {ASSET_TAGS = (); }; };
 		058B16B81B990D6800DF09FC /* NSString+ObjectiveCPP.mm in Sources */ = {isa = PBXBuildFile; fileRef = 058B16B11B990D6100DF09FC /* NSString+ObjectiveCPP.mm */; settings = {ASSET_TAGS = (); }; };
 		058B16D11B99102600DF09FC /* GoogleMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 056C58B31B18985500C6214A /* GoogleMock.framework */; };
 		058B16D51B99106F00DF09FC /* Test-NSString+ObjectiveCPP.mm in Sources */ = {isa = PBXBuildFile; fileRef = 058B169D1B990CBF00DF09FC /* Test-NSString+ObjectiveCPP.mm */; settings = {ASSET_TAGS = (); }; };
-		05DEB2AD1B9D93930006607F /* Map.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 05DEB2861B9D8BBB0006607F /* Map.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
-		05DEB2AE1B9D93930006607F /* Vector.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 05DEB2821B9D8BB30006607F /* Vector.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
-		05DEB2B11B9D93940006607F /* Map.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 05DEB2861B9D8BBB0006607F /* Map.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
-		05DEB2B21B9D93940006607F /* Vector.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 05DEB2821B9D8BB30006607F /* Vector.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
 		05DEB2B51B9D93B40006607F /* Test-Map.mm in Sources */ = {isa = PBXBuildFile; fileRef = 05DEB2A81B9D93820006607F /* Test-Map.mm */; settings = {ASSET_TAGS = (); }; };
 		05DEB2B61B9D93B40006607F /* Test-Vector.mm in Sources */ = {isa = PBXBuildFile; fileRef = 05DEB2AC1B9D938E0006607F /* Test-Vector.mm */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
@@ -96,6 +103,9 @@
 		051EA6101B9E50720018EAD6 /* Map.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Map.mm; sourceTree = "<group>"; };
 		051F09651946EB70004B6E47 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		054702AC1B1D8FA00036259D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		055AF8DB1B9E5C3D00C3F939 /* List.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = List.hpp; sourceTree = "<group>"; };
+		055AF8DD1B9E5C4400C3F939 /* List.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = List.mm; sourceTree = "<group>"; };
+		055AF8DF1B9E5C4C00C3F939 /* Test-List.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "Test-List.mm"; sourceTree = "<group>"; };
 		056C58AB1B18985500C6214A /* GoogleMock.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GoogleMock.xcodeproj; path = "Submodules/gmock-xcode/GoogleMock.xcodeproj"; sourceTree = "<group>"; };
 		056C58BF1B1898FF00C6214A /* ObjectiveCPP Tests (C++11).xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ObjectiveCPP Tests (C++11).xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		056C590E1B18A15A00C6214A /* travis-after.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "travis-after.sh"; sourceTree = "<group>"; };
@@ -161,10 +171,11 @@
 		0547029B1B1D8FA00036259D /* Unit-Tests */ = {
 			isa = PBXGroup;
 			children = (
-				058B169D1B990CBF00DF09FC /* Test-NSString+ObjectiveCPP.mm */,
-				05DEB2A81B9D93820006607F /* Test-Map.mm */,
-				05DEB2AC1B9D938E0006607F /* Test-Vector.mm */,
 				054702AC1B1D8FA00036259D /* Info.plist */,
+				055AF8DF1B9E5C4C00C3F939 /* Test-List.mm */,
+				05DEB2A81B9D93820006607F /* Test-Map.mm */,
+				058B169D1B990CBF00DF09FC /* Test-NSString+ObjectiveCPP.mm */,
+				05DEB2AC1B9D938E0006607F /* Test-Vector.mm */,
 			);
 			path = "Unit-Tests";
 			sourceTree = "<group>";
@@ -225,8 +236,9 @@
 		058B16A31B990D4000DF09FC /* ObjectiveCPP */ = {
 			isa = PBXGroup;
 			children = (
-				058B16A41B990D4000DF09FC /* NSString+ObjectiveCPP.hpp */,
+				055AF8DB1B9E5C3D00C3F939 /* List.hpp */,
 				05DEB2861B9D8BBB0006607F /* Map.hpp */,
+				058B16A41B990D4000DF09FC /* NSString+ObjectiveCPP.hpp */,
 				05DEB2821B9D8BB30006607F /* Vector.hpp */,
 			);
 			path = ObjectiveCPP;
@@ -255,8 +267,9 @@
 		05BDE01A18CDB2450028F339 /* source */ = {
 			isa = PBXGroup;
 			children = (
-				058B16B11B990D6100DF09FC /* NSString+ObjectiveCPP.mm */,
+				055AF8DD1B9E5C4400C3F939 /* List.mm */,
 				051EA6101B9E50720018EAD6 /* Map.mm */,
+				058B16B11B990D6100DF09FC /* NSString+ObjectiveCPP.mm */,
 				051EA5FA1B9E4BCE0018EAD6 /* Vector.mm */,
 			);
 			path = source;
@@ -276,10 +289,11 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05DEB2AD1B9D93930006607F /* Map.hpp in Headers */,
-				05DEB2AE1B9D93930006607F /* Vector.hpp in Headers */,
-				058B16AD1B990D4D00DF09FC /* ObjectiveCPP.hpp in Headers */,
-				058B16A91B990D4700DF09FC /* NSString+ObjectiveCPP.hpp in Headers */,
+				055AF8ED1B9E5D1900C3F939 /* List.hpp in Headers */,
+				055AF8EF1B9E5D1900C3F939 /* NSString+ObjectiveCPP.hpp in Headers */,
+				055AF8EE1B9E5D1900C3F939 /* Map.hpp in Headers */,
+				055AF8F01B9E5D1900C3F939 /* Vector.hpp in Headers */,
+				055AF8F11B9E5D1900C3F939 /* ObjectiveCPP.hpp in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,10 +301,11 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05DEB2B11B9D93940006607F /* Map.hpp in Headers */,
-				05DEB2B21B9D93940006607F /* Vector.hpp in Headers */,
-				058B16AF1B990D4E00DF09FC /* ObjectiveCPP.hpp in Headers */,
-				058B16AB1B990D4800DF09FC /* NSString+ObjectiveCPP.hpp in Headers */,
+				055AF8F31B9E5D1A00C3F939 /* List.hpp in Headers */,
+				055AF8F51B9E5D1A00C3F939 /* NSString+ObjectiveCPP.hpp in Headers */,
+				055AF8F41B9E5D1A00C3F939 /* Map.hpp in Headers */,
+				055AF8F61B9E5D1A00C3F939 /* Vector.hpp in Headers */,
+				055AF8F71B9E5D1A00C3F939 /* ObjectiveCPP.hpp in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,6 +526,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				05DEB2B61B9D93B40006607F /* Test-Vector.mm in Sources */,
+				055AF8E41B9E5D0B00C3F939 /* Test-List.mm in Sources */,
 				05DEB2B51B9D93B40006607F /* Test-Map.mm in Sources */,
 				058B16D51B99106F00DF09FC /* Test-NSString+ObjectiveCPP.mm in Sources */,
 			);
@@ -523,6 +539,7 @@
 				051EA6111B9E50720018EAD6 /* Map.mm in Sources */,
 				051EA5FB1B9E4BCE0018EAD6 /* Vector.mm in Sources */,
 				058B16B21B990D6100DF09FC /* NSString+ObjectiveCPP.mm in Sources */,
+				055AF8DE1B9E5C4400C3F939 /* List.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -533,6 +550,7 @@
 				051EA6121B9E50720018EAD6 /* Map.mm in Sources */,
 				051EA5FC1B9E4BCE0018EAD6 /* Vector.mm in Sources */,
 				058B16B41B990D6700DF09FC /* NSString+ObjectiveCPP.mm in Sources */,
+				055AF8E51B9E5D1000C3F939 /* List.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -543,6 +561,7 @@
 				051EA6131B9E50720018EAD6 /* Map.mm in Sources */,
 				051EA5FD1B9E4BCE0018EAD6 /* Vector.mm in Sources */,
 				058B16B61B990D6700DF09FC /* NSString+ObjectiveCPP.mm in Sources */,
+				055AF8E61B9E5D1000C3F939 /* List.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -553,6 +572,7 @@
 				051EA6141B9E50720018EAD6 /* Map.mm in Sources */,
 				051EA5FE1B9E4BCE0018EAD6 /* Vector.mm in Sources */,
 				058B16B81B990D6800DF09FC /* NSString+ObjectiveCPP.mm in Sources */,
+				055AF8E71B9E5D1100C3F939 /* List.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -28,7 +28,7 @@
  ******************************************************************************/
 
 /*!
- * @header      Map.h
+ * @header      Map.hpp
  * @copyright   (c) 2015 - Jean-David Gadina - www.xs-labs.com / www.digidna.net
  */
 
