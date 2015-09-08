@@ -150,3 +150,33 @@ TEST( ObjectiveCPP_Vector, ArrayFromVector_Custom )
     ASSERT_TRUE( ( ( ObjectiveCPP_Vector_Test * )a[ 0 ] ).string == "hello, world" );
     ASSERT_TRUE( ( ( ObjectiveCPP_Vector_Test * )a[ 1 ] ).string == "hello, universe" );
 }
+
+TEST( ObjectiveCPP_List, VectorFromArray_String )
+{
+    NSArray                  * a;
+    std::vector< std::string > v;
+    
+    a = @[ @"hello, world", @"hello, universe" ];
+    v = ObjectiveCPP::VectorFromArray< std::string, NSString >( a, @selector( cppString ) );
+    
+    ASSERT_TRUE( a.count == v.size() );
+    
+    ASSERT_TRUE( *( std::next( v.begin(), 0 ) ) == "hello, world" );
+    ASSERT_TRUE( *( std::next( v.begin(), 1 ) ) == "hello, universe" );
+}
+
+TEST( ObjectiveCPP_List, VectorFromArray_Int )
+{
+    NSArray          * a;
+    std::vector< int > v;
+    
+    a = @[ @0, @1, @2, @42 ];
+    v = ObjectiveCPP::VectorFromArray< int, NSNumber >( a, @selector( intValue ) );
+    
+    ASSERT_TRUE( a.count == v.size() );
+    
+    ASSERT_TRUE( *( std::next( v.begin(), 0 ) ) == 0 );
+    ASSERT_TRUE( *( std::next( v.begin(), 1 ) ) == 1 );
+    ASSERT_TRUE( *( std::next( v.begin(), 2 ) ) == 2 );
+    ASSERT_TRUE( *( std::next( v.begin(), 3 ) ) == 42 );
+}
