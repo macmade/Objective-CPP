@@ -66,22 +66,22 @@ static NSStringEncoding ObjectiveCPP_defaultCPPStringEncoding = NSUTF8StringEnco
 
 + ( std::string )cppStringWithContentsOfFile: ( NSString * )path encoding: ( NSStringEncoding )enc error: ( NSError * __autoreleasing * )error
 {
-    return std::string( [ [ NSString stringWithContentsOfFile: path encoding: enc error: error ] cppStringUsingEncoding: enc ] );
+    return [ [ NSString stringWithContentsOfFile: path encoding: enc error: error ] cppStringUsingEncoding: enc ];
 }
 
 + ( std::string )cppStringWithContentsOfFile: ( NSString * )path usedEncoding: ( nullable NSStringEncoding * )enc error: ( NSError * __autoreleasing * )error
 {
-    return std::string( [ [ NSString stringWithContentsOfFile: path usedEncoding: enc error: error ] cppStringUsingEncoding: *( enc ) ] );
+    return [ [ NSString stringWithContentsOfFile: path usedEncoding: enc error: error ] cppStringUsingEncoding: *( enc ) ];
 }
 
 + ( std::string )cppStringWithContentsOfURL: ( NSURL * )url encoding: ( NSStringEncoding )enc error: ( NSError * __autoreleasing * )error
 {
-    return std::string( [ [ NSString stringWithContentsOfURL: url encoding: enc error: error ] cppStringUsingEncoding: enc ] );
+    return [ [ NSString stringWithContentsOfURL: url encoding: enc error: error ] cppStringUsingEncoding: enc ];
 }
 
 + ( std::string )cppStringWithContentsOfURL: ( NSURL * )url usedEncoding: ( nullable NSStringEncoding * )enc error: ( NSError * __autoreleasing * )error
 {
-    return std::string( [ [ NSString stringWithContentsOfURL: url usedEncoding: enc error: error ] cppStringUsingEncoding: *( enc ) ] );
+    return [ [ NSString stringWithContentsOfURL: url usedEncoding: enc error: error ] cppStringUsingEncoding: *( enc ) ];
 }
 
 - ( nullable instancetype )initWithCPPString: ( const std::string & )cppString
@@ -96,17 +96,31 @@ static NSStringEncoding ObjectiveCPP_defaultCPPStringEncoding = NSUTF8StringEnco
 
 - ( std::string )cppString
 {
-    return std::string( [ self cStringUsingEncoding: [ NSString defaultCPPStringEncoding ] ] );
+    const char * cp;
+    
+    cp = [ self cStringUsingEncoding: [ NSString defaultCPPStringEncoding ] ];
+    
+    return std::string( ( cp ) ? cp : "" );
 }
 
 - ( std::string )cppStringUsingEncoding: ( NSStringEncoding )encoding
 {
-    return std::string( [ self cStringUsingEncoding: encoding ] );
+    const char * cp;
+    
+    cp = [ self cStringUsingEncoding: encoding ];
+    
+    return std::string( ( cp ) ? cp : "" );
 }
 
 - ( std::string )cppStringByAppendingString: ( NSString * )aString
 {
-    return std::string( [ [ self stringByAppendingString: aString ] cStringUsingEncoding: [ NSString defaultCPPStringEncoding ] ] );
+    NSString   * s;
+    const char * cp;
+    
+    s  = [ self stringByAppendingString: aString ];
+    cp = [ s cStringUsingEncoding: [ NSString defaultCPPStringEncoding ] ];
+    
+    return std::string( ( cp ) ? cp : "" );
 }
 
 - ( NSString * )stringByAppendingCPPString: ( const std::string & )aString
@@ -116,7 +130,13 @@ static NSStringEncoding ObjectiveCPP_defaultCPPStringEncoding = NSUTF8StringEnco
 
 - ( std::string )cppStringByPaddingToLength: ( NSUInteger )newLength withString: ( NSString * )padString startingAtIndex: ( NSUInteger )padIndex
 {
-    return std::string( [ [ self stringByPaddingToLength: newLength withString: padString startingAtIndex:padIndex ] cStringUsingEncoding: [ NSString defaultCPPStringEncoding ] ] );
+    NSString   * s;
+    const char * cp;
+    
+    s  = [ self stringByPaddingToLength: newLength withString: padString startingAtIndex:padIndex ];
+    cp = [ s cStringUsingEncoding: [ NSString defaultCPPStringEncoding ] ];
+    
+    return std::string( ( cp ) ? cp : "" );
 }
 
 - ( NSString * )stringByPaddingToLength: ( NSUInteger )newLength withCPPString: ( const std::string & )padString startingAtIndex: ( NSUInteger )padIndex
@@ -126,7 +146,13 @@ static NSStringEncoding ObjectiveCPP_defaultCPPStringEncoding = NSUTF8StringEnco
 
 - ( std::string )cppStringByPaddingToLength: ( NSUInteger )newLength withCPPString: ( const std::string & )padString startingAtIndex: ( NSUInteger )padIndex
 {
-    return std::string( [ [ self stringByPaddingToLength: newLength withString: [ NSString stringWithCPPString: padString encoding: [ NSString defaultCPPStringEncoding ] ] startingAtIndex:padIndex ] cStringUsingEncoding: [ NSString defaultCPPStringEncoding ] ] );
+    NSString   * s;
+    const char * cp;
+    
+    s  = [ self stringByPaddingToLength: newLength withString: [ NSString stringWithCPPString: padString encoding: [ NSString defaultCPPStringEncoding ] ] startingAtIndex: padIndex ];
+    cp = [ s cStringUsingEncoding: [ NSString defaultCPPStringEncoding ] ];
+    
+    return std::string( ( cp ) ? cp : "" );
 }
 
 - ( NSArray * )componentsSeparatedByCPPString: ( const std::string & )separator
@@ -136,22 +162,46 @@ static NSStringEncoding ObjectiveCPP_defaultCPPStringEncoding = NSUTF8StringEnco
 
 - ( std::string )cppStringByTrimmingCharactersInSet: ( NSCharacterSet * )set
 {
-    return std::string( [ [ self stringByTrimmingCharactersInSet: set ] cStringUsingEncoding: [ NSString defaultCPPStringEncoding ] ] );
+    NSString   * s;
+    const char * cp;
+    
+    s  = [ self stringByTrimmingCharactersInSet: set ];
+    cp = [ s cStringUsingEncoding: [ NSString defaultCPPStringEncoding ] ];
+    
+    return std::string( ( cp ) ? cp : "" );
 }
 
 - ( std::string )cppSubstringFromIndex: ( NSUInteger )anIndex
 {
-    return std::string( [ [ self substringFromIndex: anIndex ] cStringUsingEncoding: [ NSString defaultCPPStringEncoding ] ] );
+    NSString   * s;
+    const char * cp;
+    
+    s  = [ self substringFromIndex: anIndex ];
+    cp = [ s cStringUsingEncoding: [ NSString defaultCPPStringEncoding ] ];
+    
+    return std::string( ( cp ) ? cp : "" );
 }
 
 - ( std::string )cppSubstringWithRange: ( NSRange )aRange
 {
-    return std::string( [ [ self substringWithRange: aRange ] cStringUsingEncoding: [ NSString defaultCPPStringEncoding ] ] );
+    NSString   * s;
+    const char * cp;
+    
+    s  = [ self substringWithRange: aRange ];
+    cp = [ s cStringUsingEncoding: [ NSString defaultCPPStringEncoding ] ];
+    
+    return std::string( ( cp ) ? cp : "" );
 }
 
 - ( std::string )cppSubstringToIndex: ( NSUInteger )anIndex
 {
-    return std::string( [ [ self substringToIndex: anIndex ] cStringUsingEncoding: [ NSString defaultCPPStringEncoding ] ] );
+    NSString   * s;
+    const char * cp;
+    
+    s  = [ self substringToIndex: anIndex ];
+    cp = [ s cStringUsingEncoding: [ NSString defaultCPPStringEncoding ] ];
+    
+    return std::string( ( cp ) ? cp : "" );
 }
 
 - ( NSRange )rangeOfCPPString: ( const std::string & )aString
@@ -176,13 +226,26 @@ static NSStringEncoding ObjectiveCPP_defaultCPPStringEncoding = NSUTF8StringEnco
 
 - ( std::string )cppStringByReplacingOccurrencesOfString: ( NSString * )target withString: ( NSString * )replacement
 {
-    return std::string( [ [ self stringByReplacingOccurrencesOfString: target withString: replacement ] cStringUsingEncoding: [ NSString defaultCPPStringEncoding ] ] );
+    NSString   * s;
+    const char * cp;
+    
+    s  = [ self stringByReplacingOccurrencesOfString: target withString: replacement ];
+    cp = [ s cStringUsingEncoding: [ NSString defaultCPPStringEncoding ] ];
+    
+    return std::string( ( cp ) ? cp : "" );
 }
 
 - ( std::string )cppStringByReplacingOccurrencesOfString: ( NSString * )target withString: ( NSString * )replacement options: ( NSStringCompareOptions )options range: ( NSRange )searchRange
 {
-    return std::string( [ [ self stringByReplacingOccurrencesOfString: target withString: replacement options: options range: searchRange ] cStringUsingEncoding: [ NSString defaultCPPStringEncoding ] ] );
+    NSString   * s;
+    const char * cp;
+    
+    s  = [ self stringByReplacingOccurrencesOfString: target withString: replacement options: options range: searchRange ];
+    cp = [ s cStringUsingEncoding: [ NSString defaultCPPStringEncoding ] ];
+    
+    return std::string( ( cp ) ? cp : "" );
 }
+
 - ( NSString * )stringByReplacingOccurrencesOfString: ( NSString * )target withCPPString: ( const std::string & )replacement
 {
     return [ self stringByReplacingOccurrencesOfString: target withString: [ NSString stringWithCPPString: replacement encoding: [ NSString defaultCPPStringEncoding ] ] ];
@@ -215,7 +278,13 @@ static NSStringEncoding ObjectiveCPP_defaultCPPStringEncoding = NSUTF8StringEnco
 
 - ( std::string )cppStringByReplacingCharactersInRange: ( NSRange )range withString: ( NSString * )replacement
 {
-    return std::string( [ [ self stringByReplacingCharactersInRange: range withString: replacement ] cStringUsingEncoding: [ NSString defaultCPPStringEncoding ] ] );
+    NSString   * s;
+    const char * cp;
+    
+    s  = [ self stringByReplacingCharactersInRange: range withString: replacement ];
+    cp = [ s cStringUsingEncoding: [ NSString defaultCPPStringEncoding ] ];
+    
+    return std::string( ( cp ) ? cp : "" );
 }
 
 - ( NSString * )stringByReplacingCharactersInRange: ( NSRange )range withCPPString: ( const std::string & )replacement
@@ -280,7 +349,13 @@ static NSStringEncoding ObjectiveCPP_defaultCPPStringEncoding = NSUTF8StringEnco
 
 - ( std::string )cppStringByFoldingWithOptions: ( NSStringCompareOptions )options locale: ( nullable NSLocale * )locale
 {
-    return std::string( [ [ self stringByFoldingWithOptions: options locale: locale ] cStringUsingEncoding: [ NSString defaultCPPStringEncoding ] ] );
+    NSString   * s;
+    const char * cp;
+    
+    s  = [ self stringByFoldingWithOptions: options locale: locale ];
+    cp = [ s cStringUsingEncoding: [ NSString defaultCPPStringEncoding ] ];
+    
+    return std::string( ( cp ) ? cp : "" );
 }
 
 - ( NSString * )commonPrefixWithCPPString: ( const std::string & )aString options: ( NSStringCompareOptions )mask
@@ -290,47 +365,101 @@ static NSStringEncoding ObjectiveCPP_defaultCPPStringEncoding = NSUTF8StringEnco
 
 - ( std::string )commonCPPPrefixWithString: ( NSString * )aString options: ( NSStringCompareOptions )mask
 {
-    return std::string( [ [ self commonPrefixWithString: aString options: mask ] cStringUsingEncoding: [ NSString defaultCPPStringEncoding ] ] );
+    NSString   * s;
+    const char * cp;
+    
+    s  = [ self commonPrefixWithString: aString options: mask ];
+    cp = [ s cStringUsingEncoding: [ NSString defaultCPPStringEncoding ] ];
+    
+    return std::string( ( cp ) ? cp : "" );
 }
 
 - ( std::string )commonCPPPrefixWithCPPString: ( const std::string & )aString options: ( NSStringCompareOptions )mask
 {
-    return std::string( [ [ self commonPrefixWithString: [ NSString stringWithCPPString: aString encoding: [ NSString defaultCPPStringEncoding ] ] options: mask ] cStringUsingEncoding: [ NSString defaultCPPStringEncoding ] ] );
+    NSString   * s;
+    const char * cp;
+    
+    s  = [ self commonPrefixWithString: [ NSString stringWithCPPString: aString encoding: [ NSString defaultCPPStringEncoding ] ] options: mask ];
+    cp = [ s cStringUsingEncoding: [ NSString defaultCPPStringEncoding ] ];
+    
+    return std::string( ( cp ) ? cp : "" );
 }
 
 - ( std::string )capitalizedCPPString
 {
-    return std::string( [ [ self capitalizedString ] cStringUsingEncoding: [ NSString defaultCPPStringEncoding ] ] );
+    NSString   * s;
+    const char * cp;
+    
+    s  = [ self capitalizedString ];
+    cp = [ s cStringUsingEncoding: [ NSString defaultCPPStringEncoding ] ];
+    
+    return std::string( ( cp ) ? cp : "" );
 }
 
 - ( std::string )lowercaseCPPString
 {
-    return std::string( [ [ self lowercaseString ] cStringUsingEncoding: [ NSString defaultCPPStringEncoding ] ] );
+    NSString   * s;
+    const char * cp;
+    
+    s  = [ self lowercaseString ];
+    cp = [ s cStringUsingEncoding: [ NSString defaultCPPStringEncoding ] ];
+    
+    return std::string( ( cp ) ? cp : "" );
 }
 
 - ( std::string )uppercaseCPPString
 {
-    return std::string( [ [ self uppercaseString ] cStringUsingEncoding: [ NSString defaultCPPStringEncoding ] ] );
+    NSString   * s;
+    const char * cp;
+    
+    s  = [ self uppercaseString ];
+    cp = [ s cStringUsingEncoding: [ NSString defaultCPPStringEncoding ] ];
+    
+    return std::string( ( cp ) ? cp : "" );
 }
 
 - ( std::string )lastPathComponentAsCPPString
 {
-    return std::string( [ [ self lastPathComponent ] cStringUsingEncoding: [ NSString defaultCPPStringEncoding ] ] );
+    NSString   * s;
+    const char * cp;
+    
+    s  = [ self lastPathComponent ];
+    cp = [ s cStringUsingEncoding: [ NSString defaultCPPStringEncoding ] ];
+    
+    return std::string( ( cp ) ? cp : "" );
 }
 
 - ( std::string )pathExtensionAsCPPString
 {
-    return std::string( [ [ self pathExtension ] cStringUsingEncoding: [ NSString defaultCPPStringEncoding ] ] );
+    NSString   * s;
+    const char * cp;
+    
+    s  = [ self pathExtension ];
+    cp = [ s cStringUsingEncoding: [ NSString defaultCPPStringEncoding ] ];
+    
+    return std::string( ( cp ) ? cp : "" );
 }
 
 - ( std::string )cppStringByAbbreviatingWithTildeInPath
 {
-    return std::string( [ [ self stringByAbbreviatingWithTildeInPath ] cStringUsingEncoding: [ NSString defaultCPPStringEncoding ] ] );
+    NSString   * s;
+    const char * cp;
+    
+    s  = [ self stringByAbbreviatingWithTildeInPath ];
+    cp = [ s cStringUsingEncoding: [ NSString defaultCPPStringEncoding ] ];
+    
+    return std::string( ( cp ) ? cp : "" );
 }
 
 - ( std::string )cppStringByAppendingPathComponent: ( NSString * )aString
 {
-    return std::string( [ [ self stringByAppendingPathComponent: aString ] cStringUsingEncoding: [ NSString defaultCPPStringEncoding ] ] );
+    NSString   * s;
+    const char * cp;
+    
+    s  = [ self stringByAppendingPathComponent: aString ];
+    cp = [ s cStringUsingEncoding: [ NSString defaultCPPStringEncoding ] ];
+    
+    return std::string( ( cp ) ? cp : "" );
 }
 
 - ( NSString * )stringByAppendingCPPPathComponent: ( const std::string & )aString
@@ -340,12 +469,24 @@ static NSStringEncoding ObjectiveCPP_defaultCPPStringEncoding = NSUTF8StringEnco
 
 - ( std::string )cppStringByAppendingCPPPathComponent: ( const std::string & )aString
 {
-    return std::string( [ [ self stringByAppendingPathComponent: [ NSString stringWithCPPString: aString encoding: [ NSString defaultCPPStringEncoding ] ] ] cStringUsingEncoding: [ NSString defaultCPPStringEncoding ] ] );
+    NSString   * s;
+    const char * cp;
+    
+    s  = [ self stringByAppendingPathComponent: [ NSString stringWithCPPString: aString encoding: [ NSString defaultCPPStringEncoding ] ] ];
+    cp = [ s cStringUsingEncoding: [ NSString defaultCPPStringEncoding ] ];
+    
+    return std::string( ( cp ) ? cp : "" );
 }
 
 - ( std::string )cppStringByAppendingPathExtension: ( NSString * )ext
 {
-    return std::string( [ [ self stringByAppendingPathExtension: ext ] cStringUsingEncoding: [ NSString defaultCPPStringEncoding ] ] );
+    NSString   * s;
+    const char * cp;
+    
+    s  = [ self stringByAppendingPathExtension: ext ];
+    cp = [ s cStringUsingEncoding: [ NSString defaultCPPStringEncoding ] ];
+    
+    return std::string( ( cp ) ? cp : "" );
 }
 
 - ( NSString * )stringByAppendingCPPPathExtension: ( const std::string & )ext
@@ -355,42 +496,90 @@ static NSStringEncoding ObjectiveCPP_defaultCPPStringEncoding = NSUTF8StringEnco
 
 - ( std::string )cppStringByAppendingCPPPathExtension: ( const std::string & )ext
 {
-    return std::string( [ [ self stringByAppendingPathExtension: [ NSString stringWithCPPString: ext encoding: [ NSString defaultCPPStringEncoding ] ] ] cStringUsingEncoding: [ NSString defaultCPPStringEncoding ] ] );
+    NSString   * s;
+    const char * cp;
+    
+    s  = [ self stringByAppendingPathExtension: [ NSString stringWithCPPString: ext encoding: [ NSString defaultCPPStringEncoding ] ] ];
+    cp = [ s cStringUsingEncoding: [ NSString defaultCPPStringEncoding ] ];
+    
+    return std::string( ( cp ) ? cp : "" );
 }
 
 - ( std::string )cppStringByDeletingLastPathComponent
 {
-    return std::string( [ [ self stringByDeletingLastPathComponent ] cStringUsingEncoding: [ NSString defaultCPPStringEncoding ] ] );
+    NSString   * s;
+    const char * cp;
+    
+    s  = [ self stringByDeletingLastPathComponent ];
+    cp = [ s cStringUsingEncoding: [ NSString defaultCPPStringEncoding ] ];
+    
+    return std::string( ( cp ) ? cp : "" );
 }
 
 - ( std::string )cppStringByDeletingPathExtension
 {
-    return std::string( [ [ self stringByDeletingPathExtension ] cStringUsingEncoding: [ NSString defaultCPPStringEncoding ] ] );
+    NSString   * s;
+    const char * cp;
+    
+    s  = [ self stringByDeletingPathExtension ];
+    cp = [ s cStringUsingEncoding: [ NSString defaultCPPStringEncoding ] ];
+    
+    return std::string( ( cp ) ? cp : "" );
 }
 
 - ( std::string )cppStringByExpandingTildeInPath
 {
-    return std::string( [ [ self stringByExpandingTildeInPath ] cStringUsingEncoding: [ NSString defaultCPPStringEncoding ] ] );
+    NSString   * s;
+    const char * cp;
+    
+    s  = [ self stringByExpandingTildeInPath ];
+    cp = [ s cStringUsingEncoding: [ NSString defaultCPPStringEncoding ] ];
+    
+    return std::string( ( cp ) ? cp : "" );
 }
 
 - ( std::string )cppStringByResolvingSymlinksInPath
 {
-    return std::string( [ [ self stringByResolvingSymlinksInPath ] cStringUsingEncoding: [ NSString defaultCPPStringEncoding ] ] );
+    NSString   * s;
+    const char * cp;
+    
+    s  = [ self stringByResolvingSymlinksInPath ];
+    cp = [ s cStringUsingEncoding: [ NSString defaultCPPStringEncoding ] ];
+    
+    return std::string( ( cp ) ? cp : "" );
 }
 
 - ( std::string )cppStringByStandardizingPath
 {
-    return std::string( [ [ self stringByStandardizingPath ] cStringUsingEncoding: [ NSString defaultCPPStringEncoding ] ] );
+    NSString   * s;
+    const char * cp;
+    
+    s  = [ self stringByStandardizingPath ];
+    cp = [ s cStringUsingEncoding: [ NSString defaultCPPStringEncoding ] ];
+    
+    return std::string( ( cp ) ? cp : "" );
 }
 
 - ( std::string )cppStringByAddingPercentEscapesUsingEncoding: ( NSStringEncoding )encoding
 {
-    return std::string( [ [ self stringByAddingPercentEscapesUsingEncoding: encoding ] cStringUsingEncoding: [ NSString defaultCPPStringEncoding ] ] );
+    NSString   * s;
+    const char * cp;
+    
+    s  = [ self stringByAddingPercentEscapesUsingEncoding: encoding ];
+    cp = [ s cStringUsingEncoding: [ NSString defaultCPPStringEncoding ] ];
+    
+    return std::string( ( cp ) ? cp : "" );
 }
 
 - ( std::string )cppStringByReplacingPercentEscapesUsingEncoding: ( NSStringEncoding )encoding
 {
-    return std::string( [ [ self stringByReplacingPercentEscapesUsingEncoding: encoding ] cStringUsingEncoding: [ NSString defaultCPPStringEncoding ] ] );
+    NSString   * s;
+    const char * cp;
+    
+    s  = [ self stringByReplacingPercentEscapesUsingEncoding: encoding ];
+    cp = [ s cStringUsingEncoding: [ NSString defaultCPPStringEncoding ] ];
+    
+    return std::string( ( cp ) ? cp : "" );
 }
 
 @end
