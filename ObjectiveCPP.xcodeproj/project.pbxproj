@@ -7,19 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		051EA5FB1B9E4BCE0018EAD6 /* Vector.mm in Sources */ = {isa = PBXBuildFile; fileRef = 051EA5FA1B9E4BCE0018EAD6 /* Vector.mm */; settings = {ASSET_TAGS = (); }; };
-		051EA5FC1B9E4BCE0018EAD6 /* Vector.mm in Sources */ = {isa = PBXBuildFile; fileRef = 051EA5FA1B9E4BCE0018EAD6 /* Vector.mm */; settings = {ASSET_TAGS = (); }; };
-		051EA5FD1B9E4BCE0018EAD6 /* Vector.mm in Sources */ = {isa = PBXBuildFile; fileRef = 051EA5FA1B9E4BCE0018EAD6 /* Vector.mm */; settings = {ASSET_TAGS = (); }; };
-		051EA5FE1B9E4BCE0018EAD6 /* Vector.mm in Sources */ = {isa = PBXBuildFile; fileRef = 051EA5FA1B9E4BCE0018EAD6 /* Vector.mm */; settings = {ASSET_TAGS = (); }; };
-		051EA6111B9E50720018EAD6 /* Map.mm in Sources */ = {isa = PBXBuildFile; fileRef = 051EA6101B9E50720018EAD6 /* Map.mm */; settings = {ASSET_TAGS = (); }; };
-		051EA6121B9E50720018EAD6 /* Map.mm in Sources */ = {isa = PBXBuildFile; fileRef = 051EA6101B9E50720018EAD6 /* Map.mm */; settings = {ASSET_TAGS = (); }; };
-		051EA6131B9E50720018EAD6 /* Map.mm in Sources */ = {isa = PBXBuildFile; fileRef = 051EA6101B9E50720018EAD6 /* Map.mm */; settings = {ASSET_TAGS = (); }; };
-		051EA6141B9E50720018EAD6 /* Map.mm in Sources */ = {isa = PBXBuildFile; fileRef = 051EA6101B9E50720018EAD6 /* Map.mm */; settings = {ASSET_TAGS = (); }; };
-		055AF8DE1B9E5C4400C3F939 /* List.mm in Sources */ = {isa = PBXBuildFile; fileRef = 055AF8DD1B9E5C4400C3F939 /* List.mm */; settings = {ASSET_TAGS = (); }; };
-		055AF8E41B9E5D0B00C3F939 /* Test-List.mm in Sources */ = {isa = PBXBuildFile; fileRef = 055AF8DF1B9E5C4C00C3F939 /* Test-List.mm */; settings = {ASSET_TAGS = (); }; };
-		055AF8E51B9E5D1000C3F939 /* List.mm in Sources */ = {isa = PBXBuildFile; fileRef = 055AF8DD1B9E5C4400C3F939 /* List.mm */; settings = {ASSET_TAGS = (); }; };
-		055AF8E61B9E5D1000C3F939 /* List.mm in Sources */ = {isa = PBXBuildFile; fileRef = 055AF8DD1B9E5C4400C3F939 /* List.mm */; settings = {ASSET_TAGS = (); }; };
-		055AF8E71B9E5D1100C3F939 /* List.mm in Sources */ = {isa = PBXBuildFile; fileRef = 055AF8DD1B9E5C4400C3F939 /* List.mm */; settings = {ASSET_TAGS = (); }; };
+		051EA5FB1B9E4BCE0018EAD6 /* Vector.mm in Sources */ = {isa = PBXBuildFile; fileRef = 051EA5FA1B9E4BCE0018EAD6 /* Vector.mm */; };
+		051EA5FC1B9E4BCE0018EAD6 /* Vector.mm in Sources */ = {isa = PBXBuildFile; fileRef = 051EA5FA1B9E4BCE0018EAD6 /* Vector.mm */; };
+		051EA5FD1B9E4BCE0018EAD6 /* Vector.mm in Sources */ = {isa = PBXBuildFile; fileRef = 051EA5FA1B9E4BCE0018EAD6 /* Vector.mm */; };
+		051EA5FE1B9E4BCE0018EAD6 /* Vector.mm in Sources */ = {isa = PBXBuildFile; fileRef = 051EA5FA1B9E4BCE0018EAD6 /* Vector.mm */; };
+		051EA6111B9E50720018EAD6 /* Map.mm in Sources */ = {isa = PBXBuildFile; fileRef = 051EA6101B9E50720018EAD6 /* Map.mm */; };
+		051EA6121B9E50720018EAD6 /* Map.mm in Sources */ = {isa = PBXBuildFile; fileRef = 051EA6101B9E50720018EAD6 /* Map.mm */; };
+		051EA6131B9E50720018EAD6 /* Map.mm in Sources */ = {isa = PBXBuildFile; fileRef = 051EA6101B9E50720018EAD6 /* Map.mm */; };
+		051EA6141B9E50720018EAD6 /* Map.mm in Sources */ = {isa = PBXBuildFile; fileRef = 051EA6101B9E50720018EAD6 /* Map.mm */; };
+		055AF8DE1B9E5C4400C3F939 /* List.mm in Sources */ = {isa = PBXBuildFile; fileRef = 055AF8DD1B9E5C4400C3F939 /* List.mm */; };
+		055AF8E41B9E5D0B00C3F939 /* Test-List.mm in Sources */ = {isa = PBXBuildFile; fileRef = 055AF8DF1B9E5C4C00C3F939 /* Test-List.mm */; };
+		055AF8E51B9E5D1000C3F939 /* List.mm in Sources */ = {isa = PBXBuildFile; fileRef = 055AF8DD1B9E5C4400C3F939 /* List.mm */; };
+		055AF8E61B9E5D1000C3F939 /* List.mm in Sources */ = {isa = PBXBuildFile; fileRef = 055AF8DD1B9E5C4400C3F939 /* List.mm */; };
+		055AF8E71B9E5D1100C3F939 /* List.mm in Sources */ = {isa = PBXBuildFile; fileRef = 055AF8DD1B9E5C4400C3F939 /* List.mm */; };
 		055AF8ED1B9E5D1900C3F939 /* List.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 055AF8DB1B9E5C3D00C3F939 /* List.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
 		055AF8EE1B9E5D1900C3F939 /* Map.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 05DEB2861B9D8BBB0006607F /* Map.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
 		055AF8EF1B9E5D1900C3F939 /* NSString+ObjectiveCPP.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 058B16A41B990D4000DF09FC /* NSString+ObjectiveCPP.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -31,14 +31,14 @@
 		055AF8F61B9E5D1A00C3F939 /* Vector.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 05DEB2821B9D8BB30006607F /* Vector.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
 		055AF8F71B9E5D1A00C3F939 /* ObjectiveCPP.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 058B16A51B990D4000DF09FC /* ObjectiveCPP.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
 		056BC7B21B2379D300B21D46 /* libObjectiveCPP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 056C881218C8B85F006260B3 /* libObjectiveCPP.a */; };
-		058B16B21B990D6100DF09FC /* NSString+ObjectiveCPP.mm in Sources */ = {isa = PBXBuildFile; fileRef = 058B16B11B990D6100DF09FC /* NSString+ObjectiveCPP.mm */; settings = {ASSET_TAGS = (); }; };
-		058B16B41B990D6700DF09FC /* NSString+ObjectiveCPP.mm in Sources */ = {isa = PBXBuildFile; fileRef = 058B16B11B990D6100DF09FC /* NSString+ObjectiveCPP.mm */; settings = {ASSET_TAGS = (); }; };
-		058B16B61B990D6700DF09FC /* NSString+ObjectiveCPP.mm in Sources */ = {isa = PBXBuildFile; fileRef = 058B16B11B990D6100DF09FC /* NSString+ObjectiveCPP.mm */; settings = {ASSET_TAGS = (); }; };
-		058B16B81B990D6800DF09FC /* NSString+ObjectiveCPP.mm in Sources */ = {isa = PBXBuildFile; fileRef = 058B16B11B990D6100DF09FC /* NSString+ObjectiveCPP.mm */; settings = {ASSET_TAGS = (); }; };
+		058B16B21B990D6100DF09FC /* NSString+ObjectiveCPP.mm in Sources */ = {isa = PBXBuildFile; fileRef = 058B16B11B990D6100DF09FC /* NSString+ObjectiveCPP.mm */; };
+		058B16B41B990D6700DF09FC /* NSString+ObjectiveCPP.mm in Sources */ = {isa = PBXBuildFile; fileRef = 058B16B11B990D6100DF09FC /* NSString+ObjectiveCPP.mm */; };
+		058B16B61B990D6700DF09FC /* NSString+ObjectiveCPP.mm in Sources */ = {isa = PBXBuildFile; fileRef = 058B16B11B990D6100DF09FC /* NSString+ObjectiveCPP.mm */; };
+		058B16B81B990D6800DF09FC /* NSString+ObjectiveCPP.mm in Sources */ = {isa = PBXBuildFile; fileRef = 058B16B11B990D6100DF09FC /* NSString+ObjectiveCPP.mm */; };
 		058B16D11B99102600DF09FC /* GoogleMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 056C58B31B18985500C6214A /* GoogleMock.framework */; };
-		058B16D51B99106F00DF09FC /* Test-NSString+ObjectiveCPP.mm in Sources */ = {isa = PBXBuildFile; fileRef = 058B169D1B990CBF00DF09FC /* Test-NSString+ObjectiveCPP.mm */; settings = {ASSET_TAGS = (); }; };
-		05DEB2B51B9D93B40006607F /* Test-Map.mm in Sources */ = {isa = PBXBuildFile; fileRef = 05DEB2A81B9D93820006607F /* Test-Map.mm */; settings = {ASSET_TAGS = (); }; };
-		05DEB2B61B9D93B40006607F /* Test-Vector.mm in Sources */ = {isa = PBXBuildFile; fileRef = 05DEB2AC1B9D938E0006607F /* Test-Vector.mm */; settings = {ASSET_TAGS = (); }; };
+		058B16D51B99106F00DF09FC /* Test-NSString+ObjectiveCPP.mm in Sources */ = {isa = PBXBuildFile; fileRef = 058B169D1B990CBF00DF09FC /* Test-NSString+ObjectiveCPP.mm */; };
+		05DEB2B51B9D93B40006607F /* Test-Map.mm in Sources */ = {isa = PBXBuildFile; fileRef = 05DEB2A81B9D93820006607F /* Test-Map.mm */; };
+		05DEB2B61B9D93B40006607F /* Test-Vector.mm in Sources */ = {isa = PBXBuildFile; fileRef = 05DEB2AC1B9D938E0006607F /* Test-Vector.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -408,7 +408,7 @@
 		056C87C618C8B0F8006260B3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "XS-Labs";
 				TargetAttributes = {
 					056C58BE1B1898FF00C6214A = {
@@ -644,9 +644,14 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_DEADCODE_DEADSTORES = YES;
 				CLANG_ANALYZER_GCD = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_EMPTY_CONTEXT = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_MEMORY_MANAGEMENT = YES;
+				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_OBJC_ATSYNC = YES;
 				CLANG_ANALYZER_OBJC_COLLECTIONS = YES;
+				CLANG_ANALYZER_OBJC_DEALLOC = YES;
+				CLANG_ANALYZER_OBJC_GENERICS = YES;
 				CLANG_ANALYZER_OBJC_INCOMP_METHOD_TYPES = YES;
 				CLANG_ANALYZER_OBJC_NSCFERROR = YES;
 				CLANG_ANALYZER_OBJC_RETAIN_COUNT = YES;
@@ -696,6 +701,7 @@
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -805,7 +811,7 @@
 					"$(inherited)",
 					ObjectiveCPP/include,
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = ObjectiveCPP;
 				SDKROOT = iphoneos;
@@ -843,9 +849,14 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_DEADCODE_DEADSTORES = YES;
 				CLANG_ANALYZER_GCD = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_EMPTY_CONTEXT = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_MEMORY_MANAGEMENT = YES;
+				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_OBJC_ATSYNC = YES;
 				CLANG_ANALYZER_OBJC_COLLECTIONS = YES;
+				CLANG_ANALYZER_OBJC_DEALLOC = YES;
+				CLANG_ANALYZER_OBJC_GENERICS = YES;
 				CLANG_ANALYZER_OBJC_INCOMP_METHOD_TYPES = YES;
 				CLANG_ANALYZER_OBJC_NSCFERROR = YES;
 				CLANG_ANALYZER_OBJC_RETAIN_COUNT = YES;
@@ -896,6 +907,7 @@
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_GENERATE_TEST_COVERAGE_FILES = NO;
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -950,9 +962,14 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_DEADCODE_DEADSTORES = YES;
 				CLANG_ANALYZER_GCD = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_EMPTY_CONTEXT = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_MEMORY_MANAGEMENT = YES;
+				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_OBJC_ATSYNC = YES;
 				CLANG_ANALYZER_OBJC_COLLECTIONS = YES;
+				CLANG_ANALYZER_OBJC_DEALLOC = YES;
+				CLANG_ANALYZER_OBJC_GENERICS = YES;
 				CLANG_ANALYZER_OBJC_INCOMP_METHOD_TYPES = YES;
 				CLANG_ANALYZER_OBJC_NSCFERROR = YES;
 				CLANG_ANALYZER_OBJC_RETAIN_COUNT = YES;
@@ -1003,6 +1020,7 @@
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_GENERATE_TEST_COVERAGE_FILES = NO;
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
 				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = YES;
@@ -1158,7 +1176,7 @@
 					"$(inherited)",
 					ObjectiveCPP/include,
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = ObjectiveCPP;
 				SDKROOT = iphoneos;
@@ -1177,7 +1195,7 @@
 					"$(inherited)",
 					ObjectiveCPP/include,
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = ObjectiveCPP;
 				SDKROOT = iphoneos;
