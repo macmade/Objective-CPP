@@ -51,15 +51,15 @@ NS_ASSUME_NONNULL_BEGIN
 + ( NSStringEncoding )defaultCPPStringEncoding;
 + ( void )setDefaultCPPStringEncoding: ( NSStringEncoding )encoding;
 
-+ ( nullable instancetype )stringWithCPPString: ( const std::string & )cppString;
-+ ( nullable instancetype )stringWithCPPString: ( const std::string & )cppString encoding: ( NSStringEncoding )enc;
++ ( instancetype )stringWithCPPString: ( const std::string & )cppString;
++ ( instancetype )stringWithCPPString: ( const std::string & )cppString encoding: ( NSStringEncoding )enc;
 + ( std::string )cppStringWithContentsOfFile: ( NSString * )path encoding: ( NSStringEncoding )enc error: ( NSError * __autoreleasing * )error;
 + ( std::string )cppStringWithContentsOfFile: ( NSString * )path usedEncoding: ( nullable NSStringEncoding * )enc error: ( NSError * __autoreleasing * )error;
 + ( std::string )cppStringWithContentsOfURL: ( NSURL * )url encoding: ( NSStringEncoding )enc error: ( NSError * __autoreleasing * )error;
 + ( std::string )cppStringWithContentsOfURL: ( NSURL * )url usedEncoding: ( nullable NSStringEncoding * )enc error: ( NSError * __autoreleasing * )error;
 
-- ( nullable instancetype )initWithCPPString: ( const std::string & )cppString;
-- ( nullable instancetype )initWithCPPString: ( const std::string & )cppString encoding: ( NSStringEncoding )encoding;
+- ( instancetype )initWithCPPString: ( const std::string & )cppString;
+- ( instancetype )initWithCPPString: ( const std::string & )cppString encoding: ( NSStringEncoding )encoding;
 
 - ( std::string )cppString;
 - ( std::string )cppStringUsingEncoding: ( NSStringEncoding )encoding;
