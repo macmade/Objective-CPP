@@ -56,12 +56,20 @@ static NSStringEncoding ObjectiveCPP_defaultCPPStringEncoding = NSUTF8StringEnco
 
 + ( instancetype )stringWithCPPString: ( const std::string & )cppString
 {
-    return [ NSString stringWithCString: cppString.c_str() encoding: [ NSString defaultCPPStringEncoding ] ];
+    NSString * str;
+    
+    str = [ NSString stringWithCString: cppString.c_str() encoding: [ NSString defaultCPPStringEncoding ] ];
+    
+    return ( str ) ? str : @"";
 }
 
 + ( instancetype )stringWithCPPString: ( const std::string & )cppString encoding: ( NSStringEncoding )enc
 {
-    return [ NSString stringWithCString: cppString.c_str() encoding: enc ];
+    NSString * str;
+    
+    str = [ NSString stringWithCString: cppString.c_str() encoding: enc ];
+    
+    return ( str ) ? str : @"";
 }
 
 + ( std::string )cppStringWithContentsOfFile: ( NSString * )path encoding: ( NSStringEncoding )enc error: ( NSError * __autoreleasing * )error
@@ -497,7 +505,7 @@ static NSStringEncoding ObjectiveCPP_defaultCPPStringEncoding = NSUTF8StringEnco
     return std::string( ( cp ) ? cp : "" );
 }
 
-- ( NSString * )stringByAppendingCPPPathExtension: ( const std::string & )ext
+- ( nullable NSString * )stringByAppendingCPPPathExtension: ( const std::string & )ext
 {
     return [ self stringByAppendingPathExtension: [ NSString stringWithCPPString: ext encoding: [ NSString defaultCPPStringEncoding ] ] ];
 }

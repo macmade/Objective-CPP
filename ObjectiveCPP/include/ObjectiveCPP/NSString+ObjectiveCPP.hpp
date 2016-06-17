@@ -117,7 +117,7 @@ NS_ASSUME_NONNULL_BEGIN
 - ( NSString * )stringByAppendingCPPPathComponent: ( const std::string & )aString;
 - ( std::string )cppStringByAppendingCPPPathComponent: ( const std::string & )aString;
 - ( std::string )cppStringByAppendingPathExtension: ( NSString * )ext;
-- ( NSString * )stringByAppendingCPPPathExtension: ( const std::string & )ext;
+- ( nullable NSString * )stringByAppendingCPPPathExtension: ( const std::string & )ext;
 - ( std::string )cppStringByAppendingCPPPathExtension: ( const std::string & )ext;
 - ( std::string )cppStringByDeletingLastPathComponent;
 - ( std::string )cppStringByDeletingPathExtension;
