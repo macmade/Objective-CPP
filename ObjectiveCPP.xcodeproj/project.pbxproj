@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		050B83FE1EB9255D0090EA12 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 050B83FD1EB9255D0090EA12 /* libc++.tbd */; };
+		050B83FF1EB925660090EA12 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 050B83FD1EB9255D0090EA12 /* libc++.tbd */; };
+		050B84001EB925700090EA12 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 050B83FD1EB9255D0090EA12 /* libc++.tbd */; };
 		051EA5FB1B9E4BCE0018EAD6 /* Vector.mm in Sources */ = {isa = PBXBuildFile; fileRef = 051EA5FA1B9E4BCE0018EAD6 /* Vector.mm */; };
 		051EA5FC1B9E4BCE0018EAD6 /* Vector.mm in Sources */ = {isa = PBXBuildFile; fileRef = 051EA5FA1B9E4BCE0018EAD6 /* Vector.mm */; };
 		051EA5FD1B9E4BCE0018EAD6 /* Vector.mm in Sources */ = {isa = PBXBuildFile; fileRef = 051EA5FA1B9E4BCE0018EAD6 /* Vector.mm */; };
@@ -99,6 +102,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		050B83FD1EB9255D0090EA12 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		051EA5FA1B9E4BCE0018EAD6 /* Vector.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Vector.mm; sourceTree = "<group>"; };
 		051EA6101B9E50720018EAD6 /* Map.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Map.mm; sourceTree = "<group>"; };
 		051F09651946EB70004B6E47 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -132,6 +136,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				050B84001EB925700090EA12 /* libc++.tbd in Frameworks */,
 				058B16D11B99102600DF09FC /* GoogleMock.framework in Frameworks */,
 				056BC7B21B2379D300B21D46 /* libObjectiveCPP.a in Frameworks */,
 			);
@@ -148,6 +153,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				050B83FF1EB925660090EA12 /* libc++.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,6 +161,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				050B83FE1EB9255D0090EA12 /* libc++.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,6 +235,7 @@
 		056C880D18C8B50E006260B3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				050B83FD1EB9255D0090EA12 /* libc++.tbd */,
 				05AFBBB81B3E0F78003830B1 /* Foundation.framework */,
 			);
 			name = Frameworks;
@@ -642,6 +650,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CC = "$(SRCROOT)/Scripts/ccache.sh";
 				CLANG_ANALYZER_DEADCODE_DEADSTORES = YES;
 				CLANG_ANALYZER_GCD = YES;
 				CLANG_ANALYZER_LOCALIZABILITY_EMPTY_CONTEXT = YES;
@@ -667,7 +676,7 @@
 				CLANG_ANALYZER_SECURITY_KEYCHAIN_API = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_MODULES = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_STATIC_ANALYZER_MODE = deep;
 				CLANG_STATIC_ANALYZER_MODE_ON_ANALYZE_ACTION = deep;
@@ -787,6 +796,7 @@
 		056C590A1B189F1900C6214A /* GCov */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CC = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -850,6 +860,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CC = "$(SRCROOT)/Scripts/ccache.sh";
 				CLANG_ANALYZER_DEADCODE_DEADSTORES = YES;
 				CLANG_ANALYZER_GCD = YES;
 				CLANG_ANALYZER_LOCALIZABILITY_EMPTY_CONTEXT = YES;
@@ -875,7 +886,7 @@
 				CLANG_ANALYZER_SECURITY_KEYCHAIN_API = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_MODULES = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_STATIC_ANALYZER_MODE = deep;
 				CLANG_STATIC_ANALYZER_MODE_ON_ANALYZE_ACTION = deep;
@@ -991,7 +1002,7 @@
 				CLANG_ANALYZER_SECURITY_KEYCHAIN_API = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_MODULES = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_STATIC_ANALYZER_MODE = deep;
 				CLANG_STATIC_ANALYZER_MODE_ON_ANALYZE_ACTION = deep;
@@ -1138,6 +1149,7 @@
 		056C888418C8C76C006260B3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CC = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -1158,6 +1170,7 @@
 		056C888518C8C76C006260B3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CC = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
