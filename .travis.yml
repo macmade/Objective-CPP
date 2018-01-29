@@ -1,7 +1,22 @@
 language: objective-c
+cache:
+    directories:
+    - $HOME/.ccache
+install:
+- gem install xcpretty
+- brew install ccache
+- PATH=$PATH:/usr/local/opt/ccache/libexec
+- brew install macmade/tap/xcode-coveralls
+- export PYTHONUSERBASE=~/.local
+- easy_install --user scan-build
 script:
-- xctool -project "ObjectiveCPP.xcodeproj" -scheme "ObjectiveCPP Mac Static Library (C++11)" build test
-before_install:
-- bash Scripts/travis-before.sh
+- set -o pipefail && xcodebuild -project "ObjectiveCPP.xcodeproj" -scheme "ObjectiveCPP Mac Static Library (C++11)" build test | xcpretty
+before_script:
+- ccache -s
+- ccache -z
+after_script:
+- ccache -s
 after_success:
 - bash Scripts/travis-after.sh
+notifications:
+    slack: xs-labs:FXh1yLXNkpcVxKZhZU6icdhI
