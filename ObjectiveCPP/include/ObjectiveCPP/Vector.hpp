@@ -63,7 +63,7 @@ namespace ObjectiveCPP
     #pragma clang diagnostic ignored "-Wnullability-completeness"
     #endif
     template < typename T, typename ObjCClass >
-    NSArray * ArrayFromVectorIterator( typename std::vector< T >::const_iterator begin, typename std::vector< T >::const_iterator end, SEL initMethod )
+    NSArray * ArrayFromVectorIterator( typename std::vector< T >::iterator begin, typename std::vector< T >::iterator end, SEL initMethod )
     #ifdef __clang__
     #pragma clang diagnostic pop
     #endif
@@ -106,7 +106,9 @@ namespace ObjectiveCPP
     template < typename T, typename ObjCClass >
     NSArray * ArrayFromVector( const std::vector< T > & vector, SEL initMethod )
     {
-        return ArrayFromVectorIterator< T, ObjCClass >( vector.cbegin(), vector.cend(), initMethod );
+        std::vector< T > & v( const_cast< std::vector< T > & >( vector ) );
+        
+        return ArrayFromVectorIterator< T, ObjCClass >( v.begin(), v.end(), initMethod );
     }
     
     template < typename T, typename ObjCClass >
