@@ -58,17 +58,24 @@ namespace ObjectiveCPP
     NSArray * ArrayFromVector( const std::vector< float > & vector );
     NSArray * ArrayFromVector( const std::vector< double > & vector );
     
+    #ifdef __clang__
+    #pragma clang diagnostic push
+    #pragma clang diagnostic ignored "-Wnullability-completeness"
+    #endif
     template < typename T, typename ObjCClass >
-    NSArray * ArrayFromVector( const std::vector< T > & vector, SEL initMethod )
+    NSArray * ArrayFromVectorIterator( typename std::vector< T >::const_iterator begin, typename std::vector< T >::const_iterator end, SEL initMethod )
+    #ifdef __clang__
+    #pragma clang diagnostic pop
+    #endif
     {
         NSMutableArray * a;
         id ( * i )( id, SEL, T );
         
-        a = [ NSMutableArray arrayWithCapacity: vector.size() ];
+        a = [ [ NSMutableArray alloc ] init ];
         
         if( [ ObjCClass instancesRespondToSelector: initMethod ] )
         {
-            for( auto v: vector )
+            for( auto it = begin; it != end; it++ )
             {
                 {
                     id o;
@@ -78,7 +85,7 @@ namespace ObjectiveCPP
                     
                     if( i != NULL )
                     {
-                        o = i( o, initMethod, v );
+                        o = i( o, initMethod, *( it ) );
                         
                         if( o != nil )
                         {
@@ -94,6 +101,12 @@ namespace ObjectiveCPP
         }
         
         return [ NSArray arrayWithArray: a ];
+    }
+    
+    template < typename T, typename ObjCClass >
+    NSArray * ArrayFromVector( const std::vector< T > & vector, SEL initMethod )
+    {
+        return ArrayFromVectorIterator< T, ObjCClass >( vector.cbegin(), vector.cend(), initMethod );
     }
     
     template < typename T, typename ObjCClass >
