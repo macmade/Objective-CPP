@@ -8,7 +8,6 @@ install:
 - PATH=$PATH:/usr/local/opt/ccache/libexec
 - brew install macmade/tap/xcode-coveralls
 - export PYTHONUSERBASE=~/.local
-- easy_install --user scan-build
 script:
 - set -o pipefail && xcodebuild -project "ObjectiveCPP.xcodeproj" -scheme "ObjectiveCPP Mac Static Library (C++11)" build test | xcpretty
 before_script:
