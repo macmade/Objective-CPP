@@ -33,8 +33,9 @@
  * @abstract    Unit tests for NSString( ObjectiveCPP )
  */
 
+#define XSTEST_GTEST_COMPAT
+#import <XSTest/XSTest.hpp>
 #import <ObjectiveCPP.hpp>
-#import <GoogleMock/GoogleMock.h>
 
 using namespace testing;
 

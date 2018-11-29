@@ -18,6 +18,7 @@
 		051EA6121B9E50720018EAD6 /* Map.mm in Sources */ = {isa = PBXBuildFile; fileRef = 051EA6101B9E50720018EAD6 /* Map.mm */; };
 		051EA6131B9E50720018EAD6 /* Map.mm in Sources */ = {isa = PBXBuildFile; fileRef = 051EA6101B9E50720018EAD6 /* Map.mm */; };
 		051EA6141B9E50720018EAD6 /* Map.mm in Sources */ = {isa = PBXBuildFile; fileRef = 051EA6101B9E50720018EAD6 /* Map.mm */; };
+		0536387C21B09A070015CFA9 /* XSTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0536387921B099CE0015CFA9 /* XSTest.framework */; };
 		055AF8DE1B9E5C4400C3F939 /* List.mm in Sources */ = {isa = PBXBuildFile; fileRef = 055AF8DD1B9E5C4400C3F939 /* List.mm */; };
 		055AF8E41B9E5D0B00C3F939 /* Test-List.mm in Sources */ = {isa = PBXBuildFile; fileRef = 055AF8DF1B9E5C4C00C3F939 /* Test-List.mm */; };
 		055AF8E51B9E5D1000C3F939 /* List.mm in Sources */ = {isa = PBXBuildFile; fileRef = 055AF8DD1B9E5C4400C3F939 /* List.mm */; };
@@ -38,40 +39,25 @@
 		058B16B41B990D6700DF09FC /* NSString+ObjectiveCPP.mm in Sources */ = {isa = PBXBuildFile; fileRef = 058B16B11B990D6100DF09FC /* NSString+ObjectiveCPP.mm */; };
 		058B16B61B990D6700DF09FC /* NSString+ObjectiveCPP.mm in Sources */ = {isa = PBXBuildFile; fileRef = 058B16B11B990D6100DF09FC /* NSString+ObjectiveCPP.mm */; };
 		058B16B81B990D6800DF09FC /* NSString+ObjectiveCPP.mm in Sources */ = {isa = PBXBuildFile; fileRef = 058B16B11B990D6100DF09FC /* NSString+ObjectiveCPP.mm */; };
-		058B16D11B99102600DF09FC /* GoogleMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 056C58B31B18985500C6214A /* GoogleMock.framework */; };
 		058B16D51B99106F00DF09FC /* Test-NSString+ObjectiveCPP.mm in Sources */ = {isa = PBXBuildFile; fileRef = 058B169D1B990CBF00DF09FC /* Test-NSString+ObjectiveCPP.mm */; };
 		05DEB2B51B9D93B40006607F /* Test-Map.mm in Sources */ = {isa = PBXBuildFile; fileRef = 05DEB2A81B9D93820006607F /* Test-Map.mm */; };
 		05DEB2B61B9D93B40006607F /* Test-Vector.mm in Sources */ = {isa = PBXBuildFile; fileRef = 05DEB2AC1B9D938E0006607F /* Test-Vector.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		056C58B21B18985500C6214A /* PBXContainerItemProxy */ = {
+		0536387821B099CE0015CFA9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 056C58AB1B18985500C6214A /* GoogleMock.xcodeproj */;
+			containerPortal = 0536387421B099CE0015CFA9 /* XSTest.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 05818F861A685AEA0072A469;
-			remoteInfo = GoogleMock;
+			remoteGlobalIDString = 05D526E721A864BC0025CCEB;
+			remoteInfo = XSTest;
 		};
-		056C58B41B18985500C6214A /* PBXContainerItemProxy */ = {
+		0536387A21B09A030015CFA9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 056C58AB1B18985500C6214A /* GoogleMock.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 05E96ABD1A68600C00204102;
-			remoteInfo = gmock;
-		};
-		056C58B61B18985500C6214A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 056C58AB1B18985500C6214A /* GoogleMock.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 05E96B1F1A68634900204102;
-			remoteInfo = gtest;
-		};
-		056C58B81B18985500C6214A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 056C58AB1B18985500C6214A /* GoogleMock.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 05818F901A685AEA0072A469;
-			remoteInfo = GoogleMockTests;
+			containerPortal = 0536387421B099CE0015CFA9 /* XSTest.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 05D526E621A864BC0025CCEB;
+			remoteInfo = XSTest;
 		};
 		056C58C61B1898FF00C6214A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -79,13 +65,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 056C881118C8B85F006260B3;
 			remoteInfo = "ObjectiveCPP Mac Static Library";
-		};
-		058B16CF1B99102100DF09FC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 056C58AB1B18985500C6214A /* GoogleMock.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 05818F851A685AEA0072A469;
-			remoteInfo = GoogleMock;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -106,14 +85,13 @@
 		051EA5FA1B9E4BCE0018EAD6 /* Vector.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Vector.mm; sourceTree = "<group>"; };
 		051EA6101B9E50720018EAD6 /* Map.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Map.mm; sourceTree = "<group>"; };
 		051F09651946EB70004B6E47 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		0536387421B099CE0015CFA9 /* XSTest.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = XSTest.xcodeproj; path = Submodules/XSTest/XSTest.xcodeproj; sourceTree = "<group>"; };
 		054702AC1B1D8FA00036259D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		055AF8DB1B9E5C3D00C3F939 /* List.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = List.hpp; sourceTree = "<group>"; };
 		055AF8DD1B9E5C4400C3F939 /* List.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = List.mm; sourceTree = "<group>"; };
 		055AF8DF1B9E5C4C00C3F939 /* Test-List.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "Test-List.mm"; sourceTree = "<group>"; };
-		056C58AB1B18985500C6214A /* GoogleMock.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GoogleMock.xcodeproj; path = "Submodules/gmock-xcode/GoogleMock.xcodeproj"; sourceTree = "<group>"; };
 		056C58BF1B1898FF00C6214A /* ObjectiveCPP Tests (C++11).xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ObjectiveCPP Tests (C++11).xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		056C590E1B18A15A00C6214A /* travis-after.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "travis-after.sh"; sourceTree = "<group>"; };
-		056C590F1B18A15A00C6214A /* travis-before.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "travis-before.sh"; sourceTree = "<group>"; };
 		056C881218C8B85F006260B3 /* libObjectiveCPP.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libObjectiveCPP.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		056C884A18C8C547006260B3 /* libObjectiveCPP.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libObjectiveCPP.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		056C885F18C8C76B006260B3 /* ObjectiveCPP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ObjectiveCPP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -175,8 +153,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0536387C21B09A070015CFA9 /* XSTest.framework in Frameworks */,
 				050B84001EB925700090EA12 /* libc++.tbd in Frameworks */,
-				058B16D11B99102600DF09FC /* GoogleMock.framework in Frameworks */,
 				056BC7B21B2379D300B21D46 /* libObjectiveCPP.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -214,6 +192,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0536387521B099CE0015CFA9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0536387921B099CE0015CFA9 /* XSTest.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		0547029B1B1D8FA00036259D /* Unit-Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -226,22 +212,10 @@
 			path = "Unit-Tests";
 			sourceTree = "<group>";
 		};
-		056C58AC1B18985500C6214A /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				056C58B31B18985500C6214A /* GoogleMock.framework */,
-				056C58B51B18985500C6214A /* gmock.framework */,
-				056C58B71B18985500C6214A /* gtest.framework */,
-				056C58B91B18985500C6214A /* GoogleMockTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		056C59001B189E5700C6214A /* Scripts */ = {
 			isa = PBXGroup;
 			children = (
 				056C590E1B18A15A00C6214A /* travis-after.sh */,
-				056C590F1B18A15A00C6214A /* travis-before.sh */,
 			);
 			path = Scripts;
 			sourceTree = "<group>";
@@ -249,8 +223,8 @@
 		056C87C518C8B0F8006260B3 = {
 			isa = PBXGroup;
 			children = (
+				0536387421B099CE0015CFA9 /* XSTest.xcodeproj */,
 				0581E6F6201EF6370071E974 /* xcconfig */,
-				056C58AB1B18985500C6214A /* GoogleMock.xcodeproj */,
 				051F09651946EB70004B6E47 /* README.md */,
 				05BDE00918CDB2450028F339 /* ObjectiveCPP */,
 				056C59001B189E5700C6214A /* Scripts */,
@@ -483,7 +457,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				058B16D01B99102100DF09FC /* PBXTargetDependency */,
+				0536387B21B09A030015CFA9 /* PBXTargetDependency */,
 				056C58C71B1898FF00C6214A /* PBXTargetDependency */,
 			);
 			name = "ObjectiveCPP Tests (C++11)";
@@ -605,8 +579,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 056C58AC1B18985500C6214A /* Products */;
-					ProjectRef = 056C58AB1B18985500C6214A /* GoogleMock.xcodeproj */;
+					ProductGroup = 0536387521B099CE0015CFA9 /* Products */;
+					ProjectRef = 0536387421B099CE0015CFA9 /* XSTest.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -621,32 +595,11 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		056C58B31B18985500C6214A /* GoogleMock.framework */ = {
+		0536387921B099CE0015CFA9 /* XSTest.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
-			path = GoogleMock.framework;
-			remoteRef = 056C58B21B18985500C6214A /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		056C58B51B18985500C6214A /* gmock.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = gmock.framework;
-			remoteRef = 056C58B41B18985500C6214A /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		056C58B71B18985500C6214A /* gtest.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = gtest.framework;
-			remoteRef = 056C58B61B18985500C6214A /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		056C58B91B18985500C6214A /* GoogleMockTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = GoogleMockTests.xctest;
-			remoteRef = 056C58B81B18985500C6214A /* PBXContainerItemProxy */;
+			path = XSTest.framework;
+			remoteRef = 0536387821B099CE0015CFA9 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -756,15 +709,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		0536387B21B09A030015CFA9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = XSTest;
+			targetProxy = 0536387A21B09A030015CFA9 /* PBXContainerItemProxy */;
+		};
 		056C58C71B1898FF00C6214A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 056C881118C8B85F006260B3 /* ObjectiveCPP Mac Static Library (C++11) */;
 			targetProxy = 056C58C61B1898FF00C6214A /* PBXContainerItemProxy */;
-		};
-		058B16D01B99102100DF09FC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = GoogleMock;
-			targetProxy = 058B16CF1B99102100DF09FC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

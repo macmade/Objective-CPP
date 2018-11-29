@@ -33,8 +33,9 @@
  * @abstract    Unit tests for map functions
  */
 
+#define XSTEST_GTEST_COMPAT
+#import <XSTest/XSTest.hpp>
 #import <ObjectiveCPP.hpp>
-#import <GoogleMock/GoogleMock.h>
 
 /* Not wanted for Objective-C */
 #pragma clang diagnostic ignored "-Wobjc-missing-property-synthesis"
