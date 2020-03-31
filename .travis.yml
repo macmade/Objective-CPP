@@ -7,7 +7,7 @@ install:
 - gem install xcpretty
 - brew install ccache
 - PATH=$PATH:/usr/local/opt/ccache/libexec
-- brew install macmade/tap/xcode-coveralls
+- brew install --HEAD macmade/tap/xcode-coveralls
 - export PYTHONUSERBASE=~/.local
 script:
 - set -o pipefail && xcodebuild -project "ObjectiveCPP.xcodeproj" -scheme "ObjectiveCPP Mac Static Library (C++11)" build test | xcpretty
