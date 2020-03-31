@@ -68,7 +68,7 @@ using namespace testing;
 TEST( ObjectiveCPP_Vector, ArrayFromVector_String )
 {
     std::vector< std::string > v = { "hello, world", "hello, universe" };
-    NSArray                  * a;
+    NSArray< NSString * >    * a;
     
     a = ObjectiveCPP::ArrayFromVector( v );
     
@@ -83,8 +83,8 @@ TEST( ObjectiveCPP_Vector, ArrayFromVector_String )
 
 TEST( ObjectiveCPP_Vector, ArrayFromVector_Bool )
 {
-    std::vector< bool > v = { true, false, true };
-    NSArray           * a;
+    std::vector< bool >     v = { true, false, true };
+    NSArray< NSNumber * > * a;
     
     a = ObjectiveCPP::ArrayFromVector( v );
     
@@ -102,8 +102,8 @@ TEST( ObjectiveCPP_Vector, ArrayFromVector_Bool )
 template< typename T >
 void ObjectiveCPP_Vector_ArrayFromVector_Number_T( void )
 {
-    std::vector< T > v = { 0, 1, 2, 42 };
-    NSArray        * a;
+    std::vector< T >        v = { 0, 1, 2, 42 };
+    NSArray< NSNumber * > * a;
     
     a = ObjectiveCPP::ArrayFromVector( v );
     
@@ -138,8 +138,8 @@ TEST( ObjectiveCPP_Vector, ArrayFromVector_Number )
 
 TEST( ObjectiveCPP_Vector, ArrayFromVector_Custom )
 {
-    std::vector< std::string > v = { "hello, world", "hello, universe" };
-    NSArray                  * a;
+    std::vector< std::string >              v = { "hello, world", "hello, universe" };
+    NSArray< ObjectiveCPP_Vector_Test * > * a;
     
     a = ObjectiveCPP::ArrayFromVector< std::string, ObjectiveCPP_Vector_Test >( v, @selector( initWithSTDString: ) );
     
@@ -148,8 +148,8 @@ TEST( ObjectiveCPP_Vector, ArrayFromVector_Custom )
     ASSERT_TRUE( [ a[ 0 ] isKindOfClass: [ ObjectiveCPP_Vector_Test class ] ] );
     ASSERT_TRUE( [ a[ 1 ] isKindOfClass: [ ObjectiveCPP_Vector_Test class ] ] );
     
-    ASSERT_TRUE( ( ( ObjectiveCPP_Vector_Test * )a[ 0 ] ).string == "hello, world" );
-    ASSERT_TRUE( ( ( ObjectiveCPP_Vector_Test * )a[ 1 ] ).string == "hello, universe" );
+    ASSERT_TRUE( a[ 0 ].string == "hello, world" );
+    ASSERT_TRUE( a[ 1 ].string == "hello, universe" );
 }
 
 TEST( ObjectiveCPP_List, VectorFromArray_String )

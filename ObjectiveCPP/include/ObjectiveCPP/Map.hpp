@@ -59,15 +59,15 @@ namespace ObjectiveCPP
             for( auto p: map )
             {
                 {
-                    id oK;
-                    id oV;
+                    NSObject< NSCopying > * oK;
+                    NSObject              * oV;
                     
                     oK = [ ObjCClassK alloc ];
                     oV = [ ObjCClassV alloc ];
                     iK = reinterpret_cast< id ( * )( id, SEL, TK ) >( [ oK methodForSelector: initMethodK ] );
                     iV = reinterpret_cast< id ( * )( id, SEL, TV ) >( [ oV methodForSelector: initMethodV ] );
                     
-                    if( iK != NULL && iV != NULL )
+                    if( iK != nullptr && iV != nullptr )
                     {
                         oK = iK( oK, initMethodK, p.first );
                         oV = iV( oV, initMethodV, p.second );
@@ -99,8 +99,8 @@ namespace ObjectiveCPP
     std::map< TK, TV > MapFromDictionary( NSDictionary * dictionary, SEL getterK, SEL getterV )
     {
         std::map< TK, TV > m;
-        id                 oK;
-        id                 oV;
+        NSObject         * oK;
+        NSObject         * oV;
         TK ( * iK )( id, SEL );
         TV ( * iV )( id, SEL );
         
@@ -115,7 +115,7 @@ namespace ObjectiveCPP
                     iK = reinterpret_cast< TK ( * )( id, SEL ) >( [ oK methodForSelector: getterK ] );
                     iV = reinterpret_cast< TV ( * )( id, SEL ) >( [ oV methodForSelector: getterV ] );
                     
-                    if( iK != NULL && iV != NULL )
+                    if( iK != nullptr && iV != nullptr )
                     {
                         m.insert( { iK( oK, getterK ), iV( oV, getterV ) } );
                     }
