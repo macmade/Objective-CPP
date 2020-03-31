@@ -96,13 +96,17 @@ TEST( ObjectiveCPP_NSString, cppStringWithContentsOfFile_usedEncoding_error )
 TEST( ObjectiveCPP_NSString, cppStringWithContentsOfURL_encoding_error )
 {
     NSError * e;
+    NSURL   * u1;
+    NSURL   * u2;
     
-    e = nil;
+    e  = nil;
+    u1 = [ NSURL URLWithString: @"file:///etc/hosts" ];
+    u2 = [ NSURL URLWithString: @"file:///foo/bar" ];
     
-    ASSERT_TRUE( [ NSString cppStringWithContentsOfURL: [ NSURL URLWithString: @"file:///etc/hosts" ] encoding: NSUTF8StringEncoding error: &e ].length() > 0 );
+    ASSERT_TRUE( [ NSString cppStringWithContentsOfURL: u1 encoding: NSUTF8StringEncoding error: &e ].length() > 0 );
     ASSERT_TRUE( e == nil );
     
-    ASSERT_TRUE( [ NSString cppStringWithContentsOfURL: [ NSURL URLWithString: @"file:///foo/bar" ] encoding: NSUTF8StringEncoding error: &e ].length() == 0 );
+    ASSERT_TRUE( [ NSString cppStringWithContentsOfURL: u2 encoding: NSUTF8StringEncoding error: &e ].length() == 0 );
     ASSERT_TRUE( e != nil );
 }
 
@@ -110,15 +114,19 @@ TEST( ObjectiveCPP_NSString, cppStringWithContentsOfURL_usedEncoding_error )
 {
     NSError        * e;
     NSStringEncoding enc;
+    NSURL          * u1;
+    NSURL          * u2;
     
     e   = nil;
     enc = 0;
+    u1  = [ NSURL URLWithString: @"file:///etc/hosts" ];
+    u2  = [ NSURL URLWithString: @"file:///foo/bar" ];
     
-    ASSERT_TRUE( [ NSString cppStringWithContentsOfURL: [ NSURL URLWithString: @"file:///etc/hosts" ] usedEncoding: &enc error: &e ].length() > 0 );
+    ASSERT_TRUE( [ NSString cppStringWithContentsOfURL: u1 usedEncoding: &enc error: &e ].length() > 0 );
     ASSERT_TRUE( e == nil );
     ASSERT_TRUE( enc != 0 );
     
-    ASSERT_TRUE( [ NSString cppStringWithContentsOfURL: [ NSURL URLWithString: @"file:///foo/bar" ] usedEncoding: &enc error: &e ].length() == 0 );
+    ASSERT_TRUE( [ NSString cppStringWithContentsOfURL: u2 usedEncoding: &enc error: &e ].length() == 0 );
     ASSERT_TRUE( e != nil );
     ASSERT_TRUE( enc != 0 );
 }

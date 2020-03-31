@@ -54,7 +54,7 @@ static NSStringEncoding ObjectiveCPP_defaultCPPStringEncoding = NSUTF8StringEnco
     }
 }
 
-+ ( instancetype )stringWithCPPString: ( const std::string & )cppString
++ ( NSString * )stringWithCPPString: ( const std::string & )cppString
 {
     NSString * str;
     
@@ -63,7 +63,7 @@ static NSStringEncoding ObjectiveCPP_defaultCPPStringEncoding = NSUTF8StringEnco
     return ( str ) ? str : @"";
 }
 
-+ ( instancetype )stringWithCPPString: ( const std::string & )cppString encoding: ( NSStringEncoding )enc
++ ( NSString * )stringWithCPPString: ( const std::string & )cppString encoding: ( NSStringEncoding )enc
 {
     NSString * str;
     
@@ -92,7 +92,7 @@ static NSStringEncoding ObjectiveCPP_defaultCPPStringEncoding = NSUTF8StringEnco
     return [ [ NSString stringWithContentsOfURL: url usedEncoding: enc error: error ] cppStringUsingEncoding: *( enc ) ];
 }
 
-- ( instancetype )initWithCPPString: ( const std::string & )cppString
+- ( NSString * )initWithCPPString: ( const std::string & )cppString
 {
     NSString * str;
     
@@ -101,7 +101,7 @@ static NSStringEncoding ObjectiveCPP_defaultCPPStringEncoding = NSUTF8StringEnco
     return ( str ) ? str : @"";
 }
 
-- ( instancetype )initWithCPPString: ( const std::string & )cppString encoding: ( NSStringEncoding )encoding
+- ( NSString * )initWithCPPString: ( const std::string & )cppString encoding: ( NSStringEncoding )encoding
 {
     NSString * str;
     

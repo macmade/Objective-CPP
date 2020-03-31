@@ -68,7 +68,7 @@ using namespace testing;
 TEST( ObjectiveCPP_List, ArrayFromList_String )
 {
     std::list< std::string > l = { "hello, world", "hello, universe" };
-    NSArray                * a;
+    NSArray< NSString * >  * a;
     
     a = ObjectiveCPP::ArrayFromList( l );
     
@@ -83,8 +83,8 @@ TEST( ObjectiveCPP_List, ArrayFromList_String )
 
 TEST( ObjectiveCPP_List, ArrayFromList_Bool )
 {
-    std::list< bool > l = { true, false, true };
-    NSArray         * a;
+    std::list< bool >       l = { true, false, true };
+    NSArray< NSNumber * > * a;
     
     a = ObjectiveCPP::ArrayFromList( l );
     
@@ -102,8 +102,8 @@ TEST( ObjectiveCPP_List, ArrayFromList_Bool )
 template< typename T >
 void ObjectiveCPP_List_ArrayFromList_Number_T( void )
 {
-    std::list< T > l = { 0, 1, 2, 42 };
-    NSArray      * a;
+    std::list< T >          l = { 0, 1, 2, 42 };
+    NSArray< NSNumber * > * a;
     
     a = ObjectiveCPP::ArrayFromList( l );
     
@@ -138,8 +138,8 @@ TEST( ObjectiveCPP_List, ArrayFromList_Number )
 
 TEST( ObjectiveCPP_List, ArrayFromList_Custom )
 {
-    std::list< std::string > l = { "hello, world", "hello, universe" };
-    NSArray                * a;
+    std::list< std::string >              l = { "hello, world", "hello, universe" };
+    NSArray< ObjectiveCPP_List_Test * > * a;
     
     a = ObjectiveCPP::ArrayFromList< std::string, ObjectiveCPP_List_Test >( l, @selector( initWithSTDString: ) );
     
@@ -148,8 +148,8 @@ TEST( ObjectiveCPP_List, ArrayFromList_Custom )
     ASSERT_TRUE( [ a[ 0 ] isKindOfClass: [ ObjectiveCPP_List_Test class ] ] );
     ASSERT_TRUE( [ a[ 1 ] isKindOfClass: [ ObjectiveCPP_List_Test class ] ] );
     
-    ASSERT_TRUE( ( ( ObjectiveCPP_List_Test * )a[ 0 ] ).string == "hello, world" );
-    ASSERT_TRUE( ( ( ObjectiveCPP_List_Test * )a[ 1 ] ).string == "hello, universe" );
+    ASSERT_TRUE( a[ 0 ].string == "hello, world" );
+    ASSERT_TRUE( a[ 1 ].string == "hello, universe" );
 }
 
 TEST( ObjectiveCPP_List, ListFromArray_String )

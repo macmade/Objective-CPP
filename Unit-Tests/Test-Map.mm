@@ -89,8 +89,8 @@ using namespace testing;
 
 TEST( ObjectiveCPP_Map, DictionaryFromMap_Int_Int )
 {
-    std::map< int, int > m = { { 0, 1 }, { 2, 3 }, { 42, 43 } };
-    NSDictionary       * d;
+    std::map< int, int >                     m = { { 0, 1 }, { 2, 3 }, { 42, 43 } };
+    NSDictionary< NSNumber *, NSNumber * > * d;
     
     d = ObjectiveCPP::DictionaryFromMap< int, NSNumber >( m, @selector( initWithInt: ) );
     
@@ -111,8 +111,8 @@ TEST( ObjectiveCPP_Map, DictionaryFromMap_Int_Int )
 
 TEST( ObjectiveCPP_Map, DictionaryFromMap_String_String )
 {
-    std::map< std::string, std::string > m = { { "hello", "world" }, { "foo", "bar" } };
-    NSDictionary                       * d;
+    std::map< std::string, std::string >     m = { { "hello", "world" }, { "foo", "bar" } };
+    NSDictionary< NSString *, NSString * > * d;
     
     d = ObjectiveCPP::DictionaryFromMap( m );
     
@@ -130,8 +130,8 @@ TEST( ObjectiveCPP_Map, DictionaryFromMap_String_String )
 
 TEST( ObjectiveCPP_Map, ArrayFromVector_String_Custom )
 {
-    std::map< std::string, std::string > m = { { "hello", "world" }, { "foo", "bar" } };
-    NSDictionary                       * d;
+    std::map< std::string, std::string >                                 m = { { "hello", "world" }, { "foo", "bar" } };
+    NSDictionary< NSObject< NSCopying > *, ObjectiveCPP_Map_Test_V * > * d;
     
     d = ObjectiveCPP::DictionaryFromMap< std::string, std::string, NSString, ObjectiveCPP_Map_Test_V >( m, @selector( initWithCPPString: ), @selector( initWithSTDString: ) );
     
@@ -143,8 +143,8 @@ TEST( ObjectiveCPP_Map, ArrayFromVector_String_Custom )
     ASSERT_TRUE( [ [ d objectForKey: @"hello" ] isKindOfClass: [ ObjectiveCPP_Map_Test_V class ] ] );
     ASSERT_TRUE( [ [ d objectForKey: @"foo"   ] isKindOfClass: [ ObjectiveCPP_Map_Test_V class ] ] );
     
-    ASSERT_TRUE( ( ( ObjectiveCPP_Map_Test_K * )[ d objectForKey: @"hello" ] ).string == "world" );
-    ASSERT_TRUE( ( ( ObjectiveCPP_Map_Test_V * )[ d objectForKey: @"foo"   ] ).string == "bar" );
+    ASSERT_TRUE( [ d objectForKey: @"hello" ].string == "world" );
+    ASSERT_TRUE( [ d objectForKey: @"foo"   ].string == "bar" );
 }
 
 TEST( ObjectiveCPP_Map, MapFromDictionary_String_String )

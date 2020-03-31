@@ -71,12 +71,12 @@ namespace ObjectiveCPP
             for( auto v: vector )
             {
                 {
-                    id o;
+                    NSObject * o;
                     
                     o = [ ObjCClass alloc ];
                     i = reinterpret_cast< id ( * )( id, SEL, T ) >( [ o methodForSelector: initMethod ] );
                     
-                    if( i != NULL )
+                    if( i != nullptr )
                     {
                         o = i( o, initMethod, v );
                         
@@ -100,7 +100,7 @@ namespace ObjectiveCPP
     std::list< T > ListFromArray( NSArray * array, SEL getter )
     {
         std::list< T > l;
-        id             o;
+        NSObject     * o;
         T ( * i )( id, SEL );
         
         if( [ ObjCClass instancesRespondToSelector: getter ] )
@@ -111,7 +111,7 @@ namespace ObjectiveCPP
                 {
                     i = reinterpret_cast< T ( * )( id, SEL ) >( [ o methodForSelector: getter ] );
                     
-                    if( i != NULL )
+                    if( i != nullptr )
                     {
                         l.push_back( i( o, getter ) );
                     }
