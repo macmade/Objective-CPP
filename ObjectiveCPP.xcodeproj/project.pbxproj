@@ -547,32 +547,33 @@
 					056C58BE1B1898FF00C6214A = {
 						CreatedOnToolsVersion = 6.4;
 						DevelopmentTeam = 326Y53CJMD;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					056C881118C8B85F006260B3 = {
 						DevelopmentTeam = 326Y53CJMD;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					056C884918C8C547006260B3 = {
 						DevelopmentTeam = 326Y53CJMD;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					056C885E18C8C76B006260B3 = {
 						DevelopmentTeam = 326Y53CJMD;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					056C88A918C8C8AC006260B3 = {
 						DevelopmentTeam = 326Y53CJMD;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
 			buildConfigurationList = 056C87C918C8B0F8006260B3 /* Build configuration list for PBXProject "ObjectiveCPP" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 056C87C518C8B0F8006260B3;
 			productRefGroup = 056C87CF18C8B0F8006260B3 /* Products */;
@@ -766,6 +767,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0581E6F9201EF6370071E974 /* Debug - ccache.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 			};
 			name = Debug;
@@ -774,6 +777,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0581E6F7201EF6370071E974 /* Release - ccache.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 			};
 			name = Release;
