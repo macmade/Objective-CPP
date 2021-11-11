@@ -874,7 +874,7 @@
 					"$(inherited)",
 					ObjectiveCPP/include,
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = ObjectiveCPP;
 				SDKROOT = iphoneos;
@@ -891,7 +891,7 @@
 					"$(inherited)",
 					ObjectiveCPP/include,
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = ObjectiveCPP;
 				SDKROOT = iphoneos;
