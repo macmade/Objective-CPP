@@ -67,6 +67,10 @@ namespace ObjectiveCPP
         id ( * i )( id, SEL, T );
         
         a = [ [ NSMutableArray alloc ] init ];
+
+        #if !defined( __clang__ ) || !defined( __has_feature ) || !__has_feature( objc_arc )
+        [ a autorelease ];
+        #endif
         
         if( [ ObjCClass instancesRespondToSelector: initMethod ] )
         {
