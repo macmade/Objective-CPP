@@ -48,6 +48,16 @@
                ReferencedContainer = "container:ObjectiveCPP.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "05D39C9D2A017A0A00EDD81C"
+               BuildableName = "ObjectiveCPP Tests (C++11 MRC).xctest"
+               BlueprintName = "ObjectiveCPP Tests (C++11 MRC)"
+               ReferencedContainer = "container:ObjectiveCPP.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

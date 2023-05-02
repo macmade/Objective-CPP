@@ -40,6 +40,13 @@
 		058B16B61B990D6700DF09FC /* NSString+ObjectiveCPP.mm in Sources */ = {isa = PBXBuildFile; fileRef = 058B16B11B990D6100DF09FC /* NSString+ObjectiveCPP.mm */; };
 		058B16B81B990D6800DF09FC /* NSString+ObjectiveCPP.mm in Sources */ = {isa = PBXBuildFile; fileRef = 058B16B11B990D6100DF09FC /* NSString+ObjectiveCPP.mm */; };
 		058B16D51B99106F00DF09FC /* Test-NSString+ObjectiveCPP.mm in Sources */ = {isa = PBXBuildFile; fileRef = 058B169D1B990CBF00DF09FC /* Test-NSString+ObjectiveCPP.mm */; };
+		05D39CA32A017A0A00EDD81C /* Test-Vector.mm in Sources */ = {isa = PBXBuildFile; fileRef = 05DEB2AC1B9D938E0006607F /* Test-Vector.mm */; };
+		05D39CA42A017A0A00EDD81C /* Test-List.mm in Sources */ = {isa = PBXBuildFile; fileRef = 055AF8DF1B9E5C4C00C3F939 /* Test-List.mm */; };
+		05D39CA52A017A0A00EDD81C /* Test-Map.mm in Sources */ = {isa = PBXBuildFile; fileRef = 05DEB2A81B9D93820006607F /* Test-Map.mm */; };
+		05D39CA62A017A0A00EDD81C /* Test-NSString+ObjectiveCPP.mm in Sources */ = {isa = PBXBuildFile; fileRef = 058B169D1B990CBF00DF09FC /* Test-NSString+ObjectiveCPP.mm */; };
+		05D39CA82A017A0A00EDD81C /* XSTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0536387921B099CE0015CFA9 /* XSTest.framework */; };
+		05D39CA92A017A0A00EDD81C /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 050B83FD1EB9255D0090EA12 /* libc++.tbd */; };
+		05D39CAA2A017A0A00EDD81C /* libObjectiveCPP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 056C881218C8B85F006260B3 /* libObjectiveCPP.a */; };
 		05DEB2B51B9D93B40006607F /* Test-Map.mm in Sources */ = {isa = PBXBuildFile; fileRef = 05DEB2A81B9D93820006607F /* Test-Map.mm */; };
 		05DEB2B61B9D93B40006607F /* Test-Vector.mm in Sources */ = {isa = PBXBuildFile; fileRef = 05DEB2AC1B9D938E0006607F /* Test-Vector.mm */; };
 /* End PBXBuildFile section */
@@ -60,6 +67,20 @@
 			remoteInfo = XSTest;
 		};
 		056C58C61B1898FF00C6214A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 056C87C618C8B0F8006260B3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 056C881118C8B85F006260B3;
+			remoteInfo = "ObjectiveCPP Mac Static Library";
+		};
+		05D39C9F2A017A0A00EDD81C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0536387421B099CE0015CFA9 /* XSTest.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 05D526E621A864BC0025CCEB;
+			remoteInfo = XSTest;
+		};
+		05D39CA12A017A0A00EDD81C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 056C87C618C8B0F8006260B3 /* Project object */;
 			proxyType = 1;
@@ -142,6 +163,7 @@
 		058B16B11B990D6100DF09FC /* NSString+ObjectiveCPP.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "NSString+ObjectiveCPP.mm"; sourceTree = "<group>"; };
 		05AFBBB81B3E0F78003830B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		05BDE01818CDB2450028F339 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		05D39CB02A017A0A00EDD81C /* ObjectiveCPP Tests (C++11 MRC).xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ObjectiveCPP Tests (C++11 MRC).xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		05DEB2821B9D8BB30006607F /* Vector.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Vector.hpp; sourceTree = "<group>"; };
 		05DEB2861B9D8BBB0006607F /* Map.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Map.hpp; sourceTree = "<group>"; };
 		05DEB2A81B9D93820006607F /* Test-Map.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "Test-Map.mm"; sourceTree = "<group>"; };
@@ -186,6 +208,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05D39CA72A017A0A00EDD81C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05D39CA82A017A0A00EDD81C /* XSTest.framework in Frameworks */,
+				05D39CA92A017A0A00EDD81C /* libc++.tbd in Frameworks */,
+				05D39CAA2A017A0A00EDD81C /* libObjectiveCPP.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,6 +274,7 @@
 				056C885F18C8C76B006260B3 /* ObjectiveCPP.framework */,
 				056C88AA18C8C8AC006260B3 /* libObjectiveCPP.a */,
 				056C58BF1B1898FF00C6214A /* ObjectiveCPP Tests (C++11).xctest */,
+				05D39CB02A017A0A00EDD81C /* ObjectiveCPP Tests (C++11 MRC).xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -535,6 +568,26 @@
 			productReference = 056C88AA18C8C8AC006260B3 /* libObjectiveCPP.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		05D39C9D2A017A0A00EDD81C /* ObjectiveCPP Tests (C++11 MRC) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 05D39CAD2A017A0A00EDD81C /* Build configuration list for PBXNativeTarget "ObjectiveCPP Tests (C++11 MRC)" */;
+			buildPhases = (
+				05D39CA22A017A0A00EDD81C /* Sources */,
+				05D39CA72A017A0A00EDD81C /* Frameworks */,
+				05D39CAB2A017A0A00EDD81C /* Resources */,
+				05D39CAC2A017A0A00EDD81C /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				05D39C9E2A017A0A00EDD81C /* PBXTargetDependency */,
+				05D39CA02A017A0A00EDD81C /* PBXTargetDependency */,
+			);
+			name = "ObjectiveCPP Tests (C++11 MRC)";
+			productName = "ObjectiveCPP Tests";
+			productReference = 05D39CB02A017A0A00EDD81C /* ObjectiveCPP Tests (C++11 MRC).xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -565,6 +618,9 @@
 						DevelopmentTeam = 326Y53CJMD;
 						ProvisioningStyle = Manual;
 					};
+					05D39C9D2A017A0A00EDD81C = {
+						ProvisioningStyle = Manual;
+					};
 				};
 			};
 			buildConfigurationList = 056C87C918C8B0F8006260B3 /* Build configuration list for PBXProject "ObjectiveCPP" */;
@@ -591,6 +647,7 @@
 				056C885E18C8C76B006260B3 /* ObjectiveCPP Mac Framework (C++11) */,
 				056C88A918C8C8AC006260B3 /* ObjectiveCPP iOS Static Library (C++11) */,
 				056C58BE1B1898FF00C6214A /* ObjectiveCPP Tests (C++11) */,
+				05D39C9D2A017A0A00EDD81C /* ObjectiveCPP Tests (C++11 MRC) */,
 			);
 		};
 /* End PBXProject section */
@@ -620,6 +677,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		05D39CAB2A017A0A00EDD81C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -637,6 +701,19 @@
 			shellScript = "export | egrep '(BUILT_PRODUCTS_DIR)|(CURRENT_ARCH)|(OBJECT_FILE_DIR_normal)|(SRCROOT)|(OBJROOT)' > Scripts/xcenv-lib.sh\n";
 		};
 		056C59111B18A17000C6214A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export | egrep '(BUILT_PRODUCTS_DIR)|(CURRENT_ARCH)|(OBJECT_FILE_DIR_normal)|(SRCROOT)|(OBJROOT)' > Scripts/xcenv-tests.sh";
+		};
+		05D39CAC2A017A0A00EDD81C /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -707,6 +784,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		05D39CA22A017A0A00EDD81C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05D39CA32A017A0A00EDD81C /* Test-Vector.mm in Sources */,
+				05D39CA42A017A0A00EDD81C /* Test-List.mm in Sources */,
+				05D39CA52A017A0A00EDD81C /* Test-Map.mm in Sources */,
+				05D39CA62A017A0A00EDD81C /* Test-NSString+ObjectiveCPP.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -719,6 +807,16 @@
 			isa = PBXTargetDependency;
 			target = 056C881118C8B85F006260B3 /* ObjectiveCPP Mac Static Library (C++11) */;
 			targetProxy = 056C58C61B1898FF00C6214A /* PBXContainerItemProxy */;
+		};
+		05D39C9E2A017A0A00EDD81C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = XSTest;
+			targetProxy = 05D39C9F2A017A0A00EDD81C /* PBXContainerItemProxy */;
+		};
+		05D39CA02A017A0A00EDD81C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 056C881118C8B85F006260B3 /* ObjectiveCPP Mac Static Library (C++11) */;
+			targetProxy = 05D39CA12A017A0A00EDD81C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -901,6 +999,48 @@
 			};
 			name = Release;
 		};
+		05D39CAE2A017A0A00EDD81C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include",
+					ObjectiveCPP/include,
+				);
+				INFOPLIST_FILE = "Unit-Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.xs-labs.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		05D39CAF2A017A0A00EDD81C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include",
+					ObjectiveCPP/include,
+				);
+				INFOPLIST_FILE = "Unit-Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.xs-labs.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -954,6 +1094,15 @@
 			buildConfigurations = (
 				056C88CA18C8C8AD006260B3 /* Debug */,
 				056C88CB18C8C8AD006260B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		05D39CAD2A017A0A00EDD81C /* Build configuration list for PBXNativeTarget "ObjectiveCPP Tests (C++11 MRC)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05D39CAE2A017A0A00EDD81C /* Debug */,
+				05D39CAF2A017A0A00EDD81C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
