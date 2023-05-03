@@ -32,6 +32,12 @@
 #import <XSTest/XSTest.hpp>
 #import <ObjectiveCPP.hpp>
 
+#if !defined( __clang__ ) || !defined( __has_feature ) || !__has_feature( objc_arc )
+#define AUTORELEASE( o ) [ o autorelease ]
+#else
+#define AUTORELEASE( o ) o
+#endif
+
 using namespace testing;
 
 TEST( ObjectiveCPP_NSString, defaultCPPStringEncoding )
@@ -128,13 +134,13 @@ TEST( ObjectiveCPP_NSString, cppStringWithContentsOfURL_usedEncoding_error )
 
 TEST( ObjectiveCPP_NSString, initWithCPPString )
 {
-    ASSERT_TRUE( [ [ [ NSString alloc ] initWithCPPString: "hello, world" ] isEqualToString: @"hello, world" ] );
+    ASSERT_TRUE( [ AUTORELEASE( [ [ NSString alloc ] initWithCPPString: "hello, world" ] ) isEqualToString: @"hello, world" ] );
 }
 
 TEST( ObjectiveCPP_NSString, initWithCPPString_encoding )
 {
-    ASSERT_TRUE( [ [ [ NSString alloc ] initWithCPPString: "hello, world" encoding: NSUTF8StringEncoding  ] isEqualToString: @"hello, world" ] );
-    ASSERT_TRUE( [ [ [ NSString alloc ] initWithCPPString: "hello, world" encoding: NSASCIIStringEncoding ] isEqualToString: @"hello, world" ] );
+    ASSERT_TRUE( [ AUTORELEASE( [ [ NSString alloc ] initWithCPPString: "hello, world" encoding: NSUTF8StringEncoding  ] ) isEqualToString: @"hello, world" ] );
+    ASSERT_TRUE( [ AUTORELEASE( [ [ NSString alloc ] initWithCPPString: "hello, world" encoding: NSASCIIStringEncoding ] ) isEqualToString: @"hello, world" ] );
 }
 
 TEST( ObjectiveCPP_NSString, cppString )
