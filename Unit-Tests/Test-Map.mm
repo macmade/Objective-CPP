@@ -127,17 +127,47 @@ TEST( ObjectiveCPP_Map, ArrayFromVector_String_Custom )
 {
     std::map< std::string, std::string >                                 m = { { "hello", "world" }, { "foo", "bar" } };
     NSDictionary< NSObject< NSCopying > *, ObjectiveCPP_Map_Test_V * > * d;
-    
+
     d = ObjectiveCPP::DictionaryFromMap< std::string, std::string, NSString, ObjectiveCPP_Map_Test_V >( m, @selector( initWithCPPString: ), @selector( initWithSTDString: ) );
-    
+
     ASSERT_TRUE( d.count == m.size() );
-    
+
     ASSERT_TRUE( [ d objectForKey: @"hello" ] != nil );
     ASSERT_TRUE( [ d objectForKey: @"foo"   ] != nil );
-    
+
     ASSERT_TRUE( [ [ d objectForKey: @"hello" ] isKindOfClass: [ ObjectiveCPP_Map_Test_V class ] ] );
     ASSERT_TRUE( [ [ d objectForKey: @"foo"   ] isKindOfClass: [ ObjectiveCPP_Map_Test_V class ] ] );
-    
+
+    ASSERT_TRUE( [ d objectForKey: @"hello" ].string == "world" );
+    ASSERT_TRUE( [ d objectForKey: @"foo"   ].string == "bar" );
+}
+
+TEST( ObjectiveCPP_Map, ArrayFromVector_String_Custom_BlockBased )
+{
+    std::map< std::string, std::string >                                 m = { { "hello", "world" }, { "foo", "bar" } };
+    NSDictionary< NSObject< NSCopying > *, ObjectiveCPP_Map_Test_V * > * d;
+
+    d = ObjectiveCPP::DictionaryFromMap< std::string, std::string, NSString, ObjectiveCPP_Map_Test_V >
+    (
+        m,
+        ^( const std::string & s )
+        {
+            return [ [ NSString alloc ] initWithCPPString: s ];
+        },
+        ^( const std::string & s )
+        {
+            return [ [ ObjectiveCPP_Map_Test_V alloc ] initWithSTDString: s ];
+        }
+    );
+
+    ASSERT_TRUE( d.count == m.size() );
+
+    ASSERT_TRUE( [ d objectForKey: @"hello" ] != nil );
+    ASSERT_TRUE( [ d objectForKey: @"foo"   ] != nil );
+
+    ASSERT_TRUE( [ [ d objectForKey: @"hello" ] isKindOfClass: [ ObjectiveCPP_Map_Test_V class ] ] );
+    ASSERT_TRUE( [ [ d objectForKey: @"foo"   ] isKindOfClass: [ ObjectiveCPP_Map_Test_V class ] ] );
+
     ASSERT_TRUE( [ d objectForKey: @"hello" ].string == "world" );
     ASSERT_TRUE( [ d objectForKey: @"foo"   ].string == "bar" );
 }

@@ -52,42 +52,60 @@ namespace ObjectiveCPP
     NSArray * ArrayFromList( const std::list< unsigned long long > & list );
     NSArray * ArrayFromList( const std::list< float > & list );
     NSArray * ArrayFromList( const std::list< double > & list );
-    
+
     template < typename T, typename ObjCClass >
     NSArray * ArrayFromList( const std::list< T > & list, SEL initMethod )
     {
         NSMutableArray * a;
         id ( * i )( id, SEL, T );
-        
+
         a = [ NSMutableArray arrayWithCapacity: list.size() ];
-        
+
         if( [ ObjCClass instancesRespondToSelector: initMethod ] )
         {
             for( auto v: list )
             {
                 {
                     NSObject * o;
-                    
+
                     o = [ ObjCClass alloc ];
                     i = reinterpret_cast< id ( * )( id, SEL, T ) >( [ o methodForSelector: initMethod ] );
-                    
+
                     if( i != nullptr )
                     {
                         o = i( o, initMethod, v );
-                        
+
                         if( o != nil )
                         {
                             [ a addObject: o ];
                         }
                     }
-                    
+
                     #if !defined( __clang__ ) || !defined( __has_feature ) || !__has_feature( objc_arc )
                     [ o release ];
                     #endif
                 }
             }
         }
-        
+
+        return [ NSArray arrayWithArray: a ];
+    }
+
+    template < typename T, typename ObjCClass >
+    NSArray * ArrayFromList( const std::list< T > & list, ObjCClass * _Nullable ( ^ _Nonnull convert )( const T & ) )
+    {
+        NSMutableArray * a = [ NSMutableArray arrayWithCapacity: list.size() ];
+
+        for( const auto & v: list )
+        {
+            ObjCClass * o = convert( v );
+
+            if( o != nil )
+            {
+                [ a addObject: o ];
+            }
+        }
+
         return [ NSArray arrayWithArray: a ];
     }
     

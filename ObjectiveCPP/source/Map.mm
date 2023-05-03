@@ -33,6 +33,17 @@ namespace ObjectiveCPP
 {
     NSDictionary * DictionaryFromMap( const std::map< std::string, std::string > & map )
     {
-        return DictionaryFromMap< std::string, std::string, NSString, NSString >( map, @selector( initWithCPPString: ), @selector( initWithCPPString: ) );
+        return DictionaryFromMap< std::string, std::string, NSString, NSString >
+        (
+            map,
+            ^( const std::string & s )
+            {
+                return [ [ NSString alloc ] initWithCPPString: s ];
+            },
+            ^( const std::string & s )
+            {
+                return [ [ NSString alloc ] initWithCPPString: s ];
+            }
+        );
     }
 }

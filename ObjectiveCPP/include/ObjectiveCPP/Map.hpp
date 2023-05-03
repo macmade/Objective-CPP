@@ -39,16 +39,16 @@ NS_ASSUME_NONNULL_BEGIN
 namespace ObjectiveCPP
 {
     NSDictionary * DictionaryFromMap( const std::map< std::string, std::string > & map );
-    
+
     template < typename TK, typename TV, typename ObjCClassK, typename ObjCClassV >
     NSDictionary * DictionaryFromMap( const std::map< TK, TV > & map, SEL initMethodK, SEL initMethodV )
     {
         NSMutableDictionary * d;
         id ( * iK )( id, SEL, TK );
         id ( * iV )( id, SEL, TV );
-        
+
         d = [ NSMutableDictionary dictionaryWithCapacity: map.size() ];
-        
+
         if( [ ObjCClassK instancesRespondToSelector: initMethodK ] && [ ObjCClassV instancesRespondToSelector: initMethodV ] )
         {
             for( auto p: map )
@@ -56,23 +56,23 @@ namespace ObjectiveCPP
                 {
                     NSObject< NSCopying > * oK;
                     NSObject              * oV;
-                    
+
                     oK = [ ObjCClassK alloc ];
                     oV = [ ObjCClassV alloc ];
                     iK = reinterpret_cast< id ( * )( id, SEL, TK ) >( [ oK methodForSelector: initMethodK ] );
                     iV = reinterpret_cast< id ( * )( id, SEL, TV ) >( [ oV methodForSelector: initMethodV ] );
-                    
+
                     if( iK != nullptr && iV != nullptr )
                     {
                         oK = iK( oK, initMethodK, p.first );
                         oV = iV( oV, initMethodV, p.second );
-                        
+
                         if( oK != nil && oV != nil )
                         {
                             [ d setObject: oV forKey: oK ];
                         }
                     }
-                    
+
                     #if !defined( __clang__ ) || !defined( __has_feature ) || !__has_feature( objc_arc )
                     [ oK release ];
                     [ oV release ];
@@ -80,7 +80,26 @@ namespace ObjectiveCPP
                 }
             }
         }
-        
+
+        return [ NSDictionary dictionaryWithDictionary: d ];
+    }
+
+    template < typename TK, typename TV, typename ObjCClassK, typename ObjCClassV >
+    NSDictionary * DictionaryFromMap( const std::map< TK, TV > & map, ObjCClassK * _Nullable ( ^ _Nonnull convertKey )( const TK & ), ObjCClassV * _Nullable ( ^ _Nonnull convertValue )( const TV & ) )
+    {
+        NSMutableDictionary * d = [ NSMutableDictionary dictionaryWithCapacity: map.size() ];
+
+        for( auto p: map )
+        {
+            ObjCClassK * k = convertKey( p.first );
+            ObjCClassV * v = convertValue( p.second );
+
+            if( k != nil && v != nil )
+            {
+                [ d setObject: v forKey: k ];
+            }
+        }
+
         return [ NSDictionary dictionaryWithDictionary: d ];
     }
     
@@ -89,7 +108,7 @@ namespace ObjectiveCPP
     {
         return DictionaryFromMap< T, T, ObjCClass, ObjCClass >( map, initMethod, initMethod );
     }
-    
+
     template < typename TK, typename TV, typename ObjCClassK, typename ObjCClassV >
     std::map< TK, TV > MapFromDictionary( NSDictionary * dictionary, SEL getterK, SEL getterV )
     {
@@ -98,18 +117,18 @@ namespace ObjectiveCPP
         NSObject         * oV;
         TK ( * iK )( id, SEL );
         TV ( * iV )( id, SEL );
-        
+
         if( [ ObjCClassK instancesRespondToSelector: getterK ] &&  [ ObjCClassV instancesRespondToSelector: getterV ] )
         {
             for( oK in dictionary )
             {
                 oV = [ dictionary objectForKey: oK ];
-                
+
                 if( [ oK isKindOfClass: [ ObjCClassK class ] ] && [ oV isKindOfClass: [ ObjCClassV class ] ] )
                 {
                     iK = reinterpret_cast< TK ( * )( id, SEL ) >( [ oK methodForSelector: getterK ] );
                     iV = reinterpret_cast< TV ( * )( id, SEL ) >( [ oV methodForSelector: getterV ] );
-                    
+
                     if( iK != nullptr && iV != nullptr )
                     {
                         m.insert( { iK( oK, getterK ), iV( oV, getterV ) } );
@@ -117,7 +136,7 @@ namespace ObjectiveCPP
                 }
             }
         }
-        
+
         return m;
     }
     

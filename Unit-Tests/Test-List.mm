@@ -135,14 +135,37 @@ TEST( ObjectiveCPP_List, ArrayFromList_Custom )
 {
     std::list< std::string >              l = { "hello, world", "hello, universe" };
     NSArray< ObjectiveCPP_List_Test * > * a;
-    
+
     a = ObjectiveCPP::ArrayFromList< std::string, ObjectiveCPP_List_Test >( l, @selector( initWithSTDString: ) );
-    
+
     ASSERT_TRUE( a.count == l.size() );
-    
+
     ASSERT_TRUE( [ a[ 0 ] isKindOfClass: [ ObjectiveCPP_List_Test class ] ] );
     ASSERT_TRUE( [ a[ 1 ] isKindOfClass: [ ObjectiveCPP_List_Test class ] ] );
-    
+
+    ASSERT_TRUE( a[ 0 ].string == "hello, world" );
+    ASSERT_TRUE( a[ 1 ].string == "hello, universe" );
+}
+
+TEST( ObjectiveCPP_List, ArrayFromList_Custom_BlockBased )
+{
+    std::list< std::string >              l = { "hello, world", "hello, universe" };
+    NSArray< ObjectiveCPP_List_Test * > * a;
+
+    a = ObjectiveCPP::ArrayFromList< std::string, ObjectiveCPP_List_Test >
+    (
+        l,
+        ^( const std::string & s )
+        {
+            return [ [ ObjectiveCPP_List_Test alloc ] initWithSTDString: s ];
+        }
+    );
+
+    ASSERT_TRUE( a.count == l.size() );
+
+    ASSERT_TRUE( [ a[ 0 ] isKindOfClass: [ ObjectiveCPP_List_Test class ] ] );
+    ASSERT_TRUE( [ a[ 1 ] isKindOfClass: [ ObjectiveCPP_List_Test class ] ] );
+
     ASSERT_TRUE( a[ 0 ].string == "hello, world" );
     ASSERT_TRUE( a[ 1 ].string == "hello, universe" );
 }

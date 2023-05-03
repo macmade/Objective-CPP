@@ -33,71 +33,169 @@ namespace ObjectiveCPP
 {
     NSArray * ArrayFromVector( const std::vector< std::string > & vector )
     {
-        return ArrayFromVector< std::string, NSString >( vector, @selector( initWithCPPString: ) );
+        return ArrayFromVector< std::string, NSString >
+        (
+            vector,
+            ^( const std::string & v )
+            {
+                return [ [ NSString alloc ] initWithCPPString: v ];
+            }
+        );
     }
     
     NSArray * ArrayFromVector( const std::vector< bool > & vector )
     {
-        return ArrayFromVector< bool, NSNumber >( vector, @selector( initWithBool: ) );
+        return ArrayFromVector< bool, NSNumber >
+        (
+            vector,
+            ^( const bool & v )
+            {
+                return [ [ NSNumber alloc ] initWithBool: v ];
+            }
+        );
     }
     
     NSArray * ArrayFromVector( const std::vector< signed char > & vector )
     {
-        return ArrayFromVector< signed char, NSNumber >( vector, @selector( initWithChar: ) );
+        return ArrayFromVector< signed char, NSNumber >
+        (
+            vector,
+            ^( const signed char & v )
+            {
+                return [ [ NSNumber alloc ] initWithChar: v ];
+            }
+        );
     }
     
     NSArray * ArrayFromVector( const std::vector< unsigned char > & vector )
     {
-        return ArrayFromVector< unsigned char, NSNumber >( vector, @selector( initWithUnsignedChar: ) );
+        return ArrayFromVector< unsigned char, NSNumber >
+        (
+            vector,
+            ^( const unsigned char & v )
+            {
+                return [ [ NSNumber alloc ] initWithUnsignedChar: v ];
+            }
+        );
     }
     
     NSArray * ArrayFromVector( const std::vector< signed short > & vector )
     {
-        return ArrayFromVector< signed short, NSNumber >( vector, @selector( initWithShort: ) );
+        return ArrayFromVector< signed short, NSNumber >
+        (
+            vector,
+            ^( const signed short & v )
+            {
+                return [ [ NSNumber alloc ] initWithShort: v ];
+            }
+        );
     }
     
     NSArray * ArrayFromVector( const std::vector< unsigned short > & vector )
     {
-        return ArrayFromVector< unsigned short, NSNumber >( vector, @selector( initWithUnsignedShort: ) );
+        return ArrayFromVector< unsigned short, NSNumber >
+        (
+            vector,
+            ^( const unsigned short & v )
+            {
+                return [ [ NSNumber alloc ] initWithUnsignedShort: v ];
+            }
+        );
     }
     
     NSArray * ArrayFromVector( const std::vector< signed int > & vector )
     {
-        return ArrayFromVector< signed int, NSNumber >( vector, @selector( initWithInt: ) );
+        return ArrayFromVector< signed int, NSNumber >
+        (
+            vector,
+            ^( const signed int & v )
+            {
+                return [ [ NSNumber alloc ] initWithInt: v ];
+            }
+        );
     }
     
     NSArray * ArrayFromVector( const std::vector< unsigned int > & vector )
     {
-        return ArrayFromVector< unsigned int, NSNumber >( vector, @selector( initWithUnsignedInt: ) );
+        return ArrayFromVector< unsigned int, NSNumber >
+        (
+            vector,
+            ^( const unsigned int & v )
+            {
+                return [ [ NSNumber alloc ] initWithUnsignedInt: v ];
+            }
+        );
     }
     
     NSArray * ArrayFromVector( const std::vector< signed long > & vector )
     {
-        return ArrayFromVector< signed long, NSNumber >( vector, @selector( initWithLong: ) );
+        return ArrayFromVector< signed long, NSNumber >
+        (
+            vector,
+            ^( const signed long & v )
+            {
+                return [ [ NSNumber alloc ] initWithLong: v ];
+            }
+        );
     }
     
     NSArray * ArrayFromVector( const std::vector< unsigned long > & vector )
     {
-        return ArrayFromVector< unsigned long, NSNumber >( vector, @selector( initWithUnsignedLong: ) );
+        return ArrayFromVector< unsigned long, NSNumber >
+        (
+            vector,
+            ^( const unsigned long & v )
+            {
+                return [ [ NSNumber alloc ] initWithUnsignedLong: v ];
+            }
+        );
     }
     
     NSArray * ArrayFromVector( const std::vector< signed long long > & vector )
     {
-        return ArrayFromVector< signed long long, NSNumber >( vector, @selector( initWithLong: ) );
+        return ArrayFromVector< signed long long, NSNumber >
+        (
+            vector,
+            ^( const signed long long & v )
+            {
+                return [ [ NSNumber alloc ] initWithLongLong: v ];
+            }
+        );
     }
     
     NSArray * ArrayFromVector( const std::vector< unsigned long long > & vector )
     {
-        return ArrayFromVector< unsigned long long, NSNumber >( vector, @selector( initWithUnsignedLongLong: ) );
+        return ArrayFromVector< unsigned long long, NSNumber >
+        (
+            vector,
+            ^( const unsigned long long & v )
+            {
+                return [ [ NSNumber alloc ] initWithUnsignedLongLong: v ];
+            }
+        );
     }
     
     NSArray * ArrayFromVector( const std::vector< float > & vector )
     {
-        return ArrayFromVector< float, NSNumber >( vector, @selector( initWithFloat: ) );
+        return ArrayFromVector< float, NSNumber >
+        (
+            vector,
+            ^( const float & v )
+            {
+                return [ [ NSNumber alloc ] initWithFloat: v ];
+            }
+        );
     }
     
     NSArray * ArrayFromVector( const std::vector< double > & vector )
     {
-        return ArrayFromVector< double, NSNumber >( vector, @selector( initWithDouble: ) );
+        return ArrayFromVector< double, NSNumber >
+        (
+            vector,
+            ^( const double & v )
+            {
+                return [ [ NSNumber alloc ] initWithDouble: v ];
+            }
+        );
     }
 }

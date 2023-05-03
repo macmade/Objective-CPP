@@ -135,14 +135,37 @@ TEST( ObjectiveCPP_Vector, ArrayFromVector_Custom )
 {
     std::vector< std::string >              v = { "hello, world", "hello, universe" };
     NSArray< ObjectiveCPP_Vector_Test * > * a;
-    
+
     a = ObjectiveCPP::ArrayFromVector< std::string, ObjectiveCPP_Vector_Test >( v, @selector( initWithSTDString: ) );
-    
+
     ASSERT_TRUE( a.count == v.size() );
-    
+
     ASSERT_TRUE( [ a[ 0 ] isKindOfClass: [ ObjectiveCPP_Vector_Test class ] ] );
     ASSERT_TRUE( [ a[ 1 ] isKindOfClass: [ ObjectiveCPP_Vector_Test class ] ] );
-    
+
+    ASSERT_TRUE( a[ 0 ].string == "hello, world" );
+    ASSERT_TRUE( a[ 1 ].string == "hello, universe" );
+}
+
+TEST( ObjectiveCPP_Vector, ArrayFromVector_Custom_BlockBased )
+{
+    std::vector< std::string >              v = { "hello, world", "hello, universe" };
+    NSArray< ObjectiveCPP_Vector_Test * > * a;
+
+    a = ObjectiveCPP::ArrayFromVector< std::string, ObjectiveCPP_Vector_Test >
+    (
+        v,
+        ^( const std::string & s )
+        {
+            return [ [ ObjectiveCPP_Vector_Test alloc ] initWithSTDString: s ];
+        }
+    );
+
+    ASSERT_TRUE( a.count == v.size() );
+
+    ASSERT_TRUE( [ a[ 0 ] isKindOfClass: [ ObjectiveCPP_Vector_Test class ] ] );
+    ASSERT_TRUE( [ a[ 1 ] isKindOfClass: [ ObjectiveCPP_Vector_Test class ] ] );
+
     ASSERT_TRUE( a[ 0 ].string == "hello, world" );
     ASSERT_TRUE( a[ 1 ].string == "hello, universe" );
 }
@@ -176,3 +199,72 @@ TEST( ObjectiveCPP_List, VectorFromArray_Int )
     ASSERT_TRUE( *( std::next( v.begin(), 2 ) ) == 2 );
     ASSERT_TRUE( *( std::next( v.begin(), 3 ) ) == 42 );
 }
+
+/*
+ * @macmade - 03.05.2023
+ *
+ * Conversion from std::vector< std::string > to NSArray< NSString * > *
+ * started to produce leaks at some point.
+ *
+ * I'm not sure if the issue is related to Xcode or macOS.
+ *
+ * Initializing a NSString object by calling directly the IMP returned by
+ * methodForSelector results in a CFString object leaking.
+ * I'm not sure what's going on, as the NSString object itself doesn't leak
+ * (I'm assuming the CFString is NSString's internal representation).
+ *
+ * Also it does not happen with other objects, dealloc is getting called as
+ * expected.
+ * Maybe because NSString is a class-cluster, and ARC gets confused...
+ *
+ * The code below demonstrates the issue.
+ *
+ * It has been fixed by adding oveloads with a user-provided block responsible
+ * for the conversion of objects.
+ * Old methods have been kept for compatibility, but all internal conversions
+ * now use the new overloads.
+ */
+
+/*
+static void TestLeaks() __attribute__( ( constructor ) );
+static void TestLeaks()
+{
+    std::vector< std::string > vector = { "This needs to be a very long string so we avoid any small buffer optimization in NSString or tagged pointers..." };
+
+    // Should leak
+    while( true )
+    {
+        volatile int x = 0;
+
+        if( x != 0 )
+        {
+            break;
+        }
+
+        @autoreleasepool
+        {
+            NSArray * array = ObjectiveCPP::ArrayFromVector< std::string, NSString >( vector, @selector( initWithCPPString: ) );
+
+            ( void )array;
+        }
+    }
+
+    // Shouldn't leak
+    while( true )
+    {
+        volatile int x = 0;
+
+        if( x != 0 )
+        {
+            break;
+        }
+
+        @autoreleasepool
+        {
+            NSArray * array = ObjectiveCPP::ArrayFromVector( vector );
+
+            ( void )array;
+        }
+    }
+}
+*/

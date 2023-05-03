@@ -101,13 +101,43 @@ namespace ObjectiveCPP
         
         return [ NSArray arrayWithArray: a ];
     }
-    
+
+    template < typename T, typename ObjCClass >
+    NSArray * ArrayFromVectorIterator( typename std::vector< T >::iterator begin, typename std::vector< T >::iterator end, ObjCClass * _Nullable ( ^ _Nonnull convert )( const T & ) )
+    {
+        NSMutableArray * a = [ [ NSMutableArray alloc ] init ];
+
+        #if !defined( __clang__ ) || !defined( __has_feature ) || !__has_feature( objc_arc )
+        [ a autorelease ];
+        #endif
+
+        for( auto it = begin; it != end; it++ )
+        {
+            ObjCClass * o = convert( *( it ) );
+
+            if( o != nil )
+            {
+                [ a addObject: o ];
+            }
+        }
+
+        return [ NSArray arrayWithArray: a ];
+    }
+
     template < typename T, typename ObjCClass >
     NSArray * ArrayFromVector( const std::vector< T > & vector, SEL initMethod )
     {
         std::vector< T > & v( const_cast< std::vector< T > & >( vector ) );
-        
+
         return ArrayFromVectorIterator< T, ObjCClass >( v.begin(), v.end(), initMethod );
+    }
+
+    template < typename T, typename ObjCClass >
+    NSArray * ArrayFromVector( const std::vector< T > & vector, ObjCClass * _Nullable ( ^ _Nonnull convert )( const T & ) )
+    {
+        std::vector< T > & v( const_cast< std::vector< T > & >( vector ) );
+
+        return ArrayFromVectorIterator< T, ObjCClass >( v.begin(), v.end(), convert );
     }
     
     template < typename T, typename ObjCClass >
