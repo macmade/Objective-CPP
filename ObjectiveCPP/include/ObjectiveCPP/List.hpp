@@ -38,32 +38,32 @@ NS_ASSUME_NONNULL_BEGIN
 
 namespace ObjectiveCPP
 {
-    NSArray * ArrayFromList( const std::list< std::string > & vector );
-    NSArray * ArrayFromList( const std::list< bool > & vector );
-    NSArray * ArrayFromList( const std::list< signed char > & vector );
-    NSArray * ArrayFromList( const std::list< unsigned char > & vector );
-    NSArray * ArrayFromList( const std::list< signed short > & vector );
-    NSArray * ArrayFromList( const std::list< unsigned short > & vector );
-    NSArray * ArrayFromList( const std::list< signed int > & vector );
-    NSArray * ArrayFromList( const std::list< unsigned int > & vector );
-    NSArray * ArrayFromList( const std::list< signed long > & vector );
-    NSArray * ArrayFromList( const std::list< unsigned long > & vector );
-    NSArray * ArrayFromList( const std::list< signed long long > & vector );
-    NSArray * ArrayFromList( const std::list< unsigned long long > & vector );
-    NSArray * ArrayFromList( const std::list< float > & vector );
-    NSArray * ArrayFromList( const std::list< double > & vector );
+    NSArray * ArrayFromList( const std::list< std::string > & list );
+    NSArray * ArrayFromList( const std::list< bool > & list );
+    NSArray * ArrayFromList( const std::list< signed char > & list );
+    NSArray * ArrayFromList( const std::list< unsigned char > & list );
+    NSArray * ArrayFromList( const std::list< signed short > & list );
+    NSArray * ArrayFromList( const std::list< unsigned short > & list );
+    NSArray * ArrayFromList( const std::list< signed int > & list );
+    NSArray * ArrayFromList( const std::list< unsigned int > & list );
+    NSArray * ArrayFromList( const std::list< signed long > & list );
+    NSArray * ArrayFromList( const std::list< unsigned long > & list );
+    NSArray * ArrayFromList( const std::list< signed long long > & list );
+    NSArray * ArrayFromList( const std::list< unsigned long long > & list );
+    NSArray * ArrayFromList( const std::list< float > & list );
+    NSArray * ArrayFromList( const std::list< double > & list );
     
     template < typename T, typename ObjCClass >
-    NSArray * ArrayFromList( const std::list< T > & vector, SEL initMethod )
+    NSArray * ArrayFromList( const std::list< T > & list, SEL initMethod )
     {
         NSMutableArray * a;
         id ( * i )( id, SEL, T );
         
-        a = [ NSMutableArray arrayWithCapacity: vector.size() ];
+        a = [ NSMutableArray arrayWithCapacity: list.size() ];
         
         if( [ ObjCClass instancesRespondToSelector: initMethod ] )
         {
-            for( auto v: vector )
+            for( auto v: list )
             {
                 {
                     NSObject * o;

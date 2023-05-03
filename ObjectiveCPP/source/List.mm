@@ -31,73 +31,73 @@
 
 namespace ObjectiveCPP
 {
-    NSArray * ArrayFromList( const std::list< std::string > & vector )
+    NSArray * ArrayFromList( const std::list< std::string > & list )
     {
-        return ArrayFromList< std::string, NSString >( vector, @selector( initWithCPPString: ) );
+        return ArrayFromList< std::string, NSString >( list, @selector( initWithCPPString: ) );
     }
     
-    NSArray * ArrayFromList( const std::list< bool > & vector )
+    NSArray * ArrayFromList( const std::list< bool > & list )
     {
-        return ArrayFromList< bool, NSNumber >( vector, @selector( initWithBool: ) );
+        return ArrayFromList< bool, NSNumber >( list, @selector( initWithBool: ) );
     }
     
-    NSArray * ArrayFromList( const std::list< signed char > & vector )
+    NSArray * ArrayFromList( const std::list< signed char > & list )
     {
-        return ArrayFromList< signed char, NSNumber >( vector, @selector( initWithChar: ) );
+        return ArrayFromList< signed char, NSNumber >( list, @selector( initWithChar: ) );
     }
     
-    NSArray * ArrayFromList( const std::list< unsigned char > & vector )
+    NSArray * ArrayFromList( const std::list< unsigned char > & list )
     {
-        return ArrayFromList< unsigned char, NSNumber >( vector, @selector( initWithUnsignedChar: ) );
+        return ArrayFromList< unsigned char, NSNumber >( list, @selector( initWithUnsignedChar: ) );
     }
     
-    NSArray * ArrayFromList( const std::list< signed short > & vector )
+    NSArray * ArrayFromList( const std::list< signed short > & list )
     {
-        return ArrayFromList< signed short, NSNumber >( vector, @selector( initWithShort: ) );
+        return ArrayFromList< signed short, NSNumber >( list, @selector( initWithShort: ) );
     }
     
-    NSArray * ArrayFromList( const std::list< unsigned short > & vector )
+    NSArray * ArrayFromList( const std::list< unsigned short > & list )
     {
-        return ArrayFromList< unsigned short, NSNumber >( vector, @selector( initWithUnsignedShort: ) );
+        return ArrayFromList< unsigned short, NSNumber >( list, @selector( initWithUnsignedShort: ) );
     }
     
-    NSArray * ArrayFromList( const std::list< signed int > & vector )
+    NSArray * ArrayFromList( const std::list< signed int > & list )
     {
-        return ArrayFromList< signed int, NSNumber >( vector, @selector( initWithInt: ) );
+        return ArrayFromList< signed int, NSNumber >( list, @selector( initWithInt: ) );
     }
     
-    NSArray * ArrayFromList( const std::list< unsigned int > & vector )
+    NSArray * ArrayFromList( const std::list< unsigned int > & list )
     {
-        return ArrayFromList< unsigned int, NSNumber >( vector, @selector( initWithUnsignedInt: ) );
+        return ArrayFromList< unsigned int, NSNumber >( list, @selector( initWithUnsignedInt: ) );
     }
     
-    NSArray * ArrayFromList( const std::list< signed long > & vector )
+    NSArray * ArrayFromList( const std::list< signed long > & list )
     {
-        return ArrayFromList< signed long, NSNumber >( vector, @selector( initWithLong: ) );
+        return ArrayFromList< signed long, NSNumber >( list, @selector( initWithLong: ) );
     }
     
-    NSArray * ArrayFromList( const std::list< unsigned long > & vector )
+    NSArray * ArrayFromList( const std::list< unsigned long > & list )
     {
-        return ArrayFromList< unsigned long, NSNumber >( vector, @selector( initWithUnsignedLong: ) );
+        return ArrayFromList< unsigned long, NSNumber >( list, @selector( initWithUnsignedLong: ) );
     }
     
-    NSArray * ArrayFromList( const std::list< signed long long > & vector )
+    NSArray * ArrayFromList( const std::list< signed long long > & list )
     {
-        return ArrayFromList< signed long long, NSNumber >( vector, @selector( initWithLong: ) );
+        return ArrayFromList< signed long long, NSNumber >( list, @selector( initWithLong: ) );
     }
     
-    NSArray * ArrayFromList( const std::list< unsigned long long > & vector )
+    NSArray * ArrayFromList( const std::list< unsigned long long > & list )
     {
-        return ArrayFromList< unsigned long long, NSNumber >( vector, @selector( initWithUnsignedLongLong: ) );
+        return ArrayFromList< unsigned long long, NSNumber >( list, @selector( initWithUnsignedLongLong: ) );
     }
     
-    NSArray * ArrayFromList( const std::list< float > & vector )
+    NSArray * ArrayFromList( const std::list< float > & list )
     {
-        return ArrayFromList< float, NSNumber >( vector, @selector( initWithFloat: ) );
+        return ArrayFromList< float, NSNumber >( list, @selector( initWithFloat: ) );
     }
     
-    NSArray * ArrayFromList( const std::list< double > & vector )
+    NSArray * ArrayFromList( const std::list< double > & list )
     {
-        return ArrayFromList< double, NSNumber >( vector, @selector( initWithDouble: ) );
+        return ArrayFromList< double, NSNumber >( list, @selector( initWithDouble: ) );
     }
 }
